@@ -20,3 +20,6 @@ Gemfile.lock
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Drafts, because they're kept on a per-machine basis
+_drafts
