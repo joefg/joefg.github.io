@@ -23,7 +23,7 @@ These are the laws of how a robot should behave, according to Isaac Asimov and t
 
 These laws prohibit a robot from injuring a human being, through malice or negligence. At the same time, these laws prevent a robot from obeying an order that orders them to kill a human being. It also prevents the robot from killing a human to save itself. These laws are to be followed by the robot, not the operator; this should, in theory, precent a malicious operator from giving the robot an unlawful order, and it gives the robot a reference for refusing an order.
 
-![This is not what we want.](/public/img/asimov1/doggo.png)
+![This is not what we want.](/public/img/asimov1/doggo.webp)
 
 ## Trolley Ethics
 
@@ -35,7 +35,7 @@ This is a popular thought experiment.
 >
 > Which is the most ethical choice?
 
-![This is what a robot will have to do at some point](/public/img/asimov1/te1.png)
+![This is what a robot will have to do at some point](/public/img/asimov1/te1.webp)
 
 Imagine a robot has to do this, under the three laws of robotics, under the following assumptions:
 

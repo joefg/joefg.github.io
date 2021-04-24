@@ -34,11 +34,11 @@ Anything that can be viewed of as a *contract* can be made into a *smart contrac
 
 > I promise to pay the bearer on demand the sum of twenty pounds.
 
-![Glastonbury and Shepton Mallet Banknote, ~1830](/public/img/crypto_ideas/glasto_note.jpg)
+![Glastonbury and Shepton Mallet Banknote, ~1830](/public/img/crypto_ideas/glasto_note.webp)
 
 It is therefore theoretically possible to have a smart contract for each banknote to ensure that each Winston (£5) can actually be pinned to £5 worth of a precious metal. This likely won't happen, as it is the first step towards the return of the Gold Standard, but it's a fun thought experiment.
 
-![Lewes Pound, ~2009](/public/img/crypto_ideas/lewes_pound.jpg)
+![Lewes Pound, ~2009](/public/img/crypto_ideas/lewes_pound.webp)
 
 It gets even wilder still when you further explore the implications of this: *you could codify most parts of contract law as a smart contract*. This is where the expression [Code Is Law](https://core.ac.uk/download/pdf/288477539.pdf) comes from. You could put a house sale as a smart contract: "On the satisfaction of a house survey for the buyer and proof of funds for the seller, issue a new deed for the house, deactivate the old deed, and open the metal box with a new set of house keys inside it while the old set are incinerates".
 

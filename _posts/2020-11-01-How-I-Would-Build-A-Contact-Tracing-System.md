@@ -18,15 +18,15 @@ The existing methodology, of taking a graph-based approach (building up an infec
 ## Social Graph Epidemiology
 The first task would be how to represent an individual's social graph. Let's start you, person *a*.
 
-![you](/public/img/amateur_epidemiology/you.png)
+![you](/public/img/amateur_epidemiology/you.webp)
 
 This is you. Let's say you carry the virus, but don't know it yet. You go to a pub with your friends, *b*, *c*, *d*, and *e*.
 
-![your friends](/public/img/amateur_epidemiology/pub.png).
+![your friends](/public/img/amateur_epidemiology/pub.webp).
 
 After you've been to the pub, your friend *Mr. B* has to go back to his house, where his housemates *f*, *g*, and *h* live. The next morning, *Mr. F* goes to work, grabs his coffee from *j*, and flirts with the secretary *k*, before sitting down at his desk, next to Messrs *l* and *n*.
 
-![your friends' friends'](/public/img/amateur_epidemiology/pub-work-pub.png).
+![your friends' friends'](/public/img/amateur_epidemiology/pub-work-pub.webp).
 
 Now, recall that you have the virus. You have *directly* given the virus to four other people. One of these people have given it to three other people, and one of those people may have given it to four people. From one person, eleven people might have it, be carrying it, or suffering from it.
 
