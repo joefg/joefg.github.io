@@ -26,6 +26,11 @@ header, footer {
     width: 100%;
     text-align: center;
     text-decoration: none;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 }
 
 #text {
