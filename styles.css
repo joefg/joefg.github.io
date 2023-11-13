@@ -65,6 +65,7 @@ header, footer {
         transition: all .25s cubic-bezier(.08,.59,.29,.99);
         border-radius: 10px;
         border: dashed var(--accentColor) 2px;
+        user-select: none;
     }
 
     .link:hover {
