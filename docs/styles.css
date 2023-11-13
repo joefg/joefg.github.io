@@ -26,6 +26,9 @@ header, footer {
     width: 100%;
     text-align: center;
     text-decoration: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
 }
 
 header a, footer a {
