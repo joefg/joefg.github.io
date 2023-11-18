@@ -1,0 +1,31 @@
+<!doctype html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+	<link rel="stylesheet" href="/styles.css">
+	<title>{{ site.title }}</title>
+</head>
+<body>
+	<header>
+		{%- if site.photo -%}
+			<img id="user-photo" src="{{ site.photo }}" alt="User photo"/>
+		{%- endif -%}
+		{%- if site.title -%}
+			<h1><a href="/">{{ site.title }}</a></h1>
+		{%- endif -%}
+		{%- if site.blurb -%}
+			<h2>{{ site.blurb }}</h2>
+		{%- endif -%}
+	</header>
+
+	<main>
+		{{ content | safe }}
+	</main>
+
+	{%- if site.footer -%}
+	<footer>
+		{{ site.footer }}
+	</footer>
+	{%- endif -%}
+	</body>
+</html>
