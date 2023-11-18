@@ -1,7 +1,9 @@
 :root {
     --bgColor:#1C1C1C;
     --accentColor: #E6E6E6;
-    --font: monospace;
+    --linkColor: green;
+    --headerFont: monospace;
+    --bodyFont: sans-serif;
 }
 
 body {
@@ -22,7 +24,7 @@ header, footer {
     font-weight: 600;
     line-height: 1.25;
     display: block;
-    font-family: var(--font);
+    font-family: var(--headerFont);
     width: 100%;
     text-align: center;
     text-decoration: none;
@@ -36,6 +38,28 @@ header a, footer a {
         text-decoration: none;
     }
 
+article {
+    max-width: 675px;
+    width: auto;
+    display: block;
+    margin: 27px auto;
+
+    color: var(--accentColor);
+    font-family: var(--bodyFont);
+    font-size: 1rem;
+}
+
+article a {
+        color: var(--linkColor);
+    }
+
+article img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;
+    }
+
 #text {
     max-width: 675px;
     width: auto;
@@ -43,7 +67,7 @@ header a, footer a {
     margin: 27px auto;
 
     color: var(--accentColor);
-    font-family: var(--font);
+    font-family: var(--headerFont);
     font-size: 1rem;
     text-align: center;
 }
@@ -59,7 +83,7 @@ header a, footer a {
         display: block;
         background-color: var(--accentColor);
         color: var(--bgColor);
-        font-family: var(--font);
+        font-family: var(--headerFont);
         text-align: center;
         margin-bottom: 20px;
         padding: 17px;
