@@ -4,6 +4,7 @@
     --linkColor: green;
     --headerFont: monospace;
     --bodyFont: sans-serif;
+    --contentWidth: 675px;
 }
 
 body {
@@ -37,7 +38,7 @@ header, footer {
 }
 
 article {
-    max-width: 675px;
+    max-width: var(--contentWidth);
     width: auto;
     display: block;
     margin: 27px auto;
@@ -59,7 +60,7 @@ article {
 }
 
 #text {
-    max-width: 675px;
+    max-width: var(--contentWidth);
     width: auto;
     display: block;
     margin: 27px auto;
@@ -71,7 +72,7 @@ article {
 }
 
 #links {
-    max-width: 675px;
+    max-width: var(--contentWidth);
     width: auto;
     display: block;
     margin: 27px auto;
@@ -96,4 +97,8 @@ article {
         background-color: var(--bgColor);
         color: var(--accentColor);
     }
+}
+
+hr {
+    width: 675px;
 }
