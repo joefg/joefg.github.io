@@ -104,5 +104,5 @@ article img {
     }
 
 hr {
-    width: 675px;
+    max-width: 675px;
 }
