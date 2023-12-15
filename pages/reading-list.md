@@ -2,6 +2,7 @@
 layout: layouts/page.njk
 title: 📚 Reading List
 visible: true
+order: 0
 ---
 
 Some recommendations. Some are books, some are websites, some are even comments

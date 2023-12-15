@@ -7,7 +7,7 @@ layout: layouts/home.njk
 </div>
 {%- endif -%}
 <hr/>
-{%- set pagelist = search.pages("type=pages visible=true", "page.order") -%} 
+{%- set pagelist = search.pages("type=pages visible=true", "order=asc") -%}
 {%- if pagelist | length -%}
 	{%- include "templates/pages.njk" -%}
 {%- endif -%}
