@@ -6,6 +6,7 @@ const site = lume();
 site.use(postcss());
 site.use(date());
 site.ignore("README.md");
+site.copy("favicon.ico");
 site.copy("CNAME");
 site.copy("img");
 
