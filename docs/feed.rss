@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" version="2.0">
+  <channel>
+    <title>My RSS Feed</title>
+    <link>https://jfg.name/</link>
+    <atom:link href="https://jfg.name/feed.rss" rel="self" type="application/rss+xml"/>
+    <description></description>
+    <lastBuildDate>Sat, 17 Feb 2024 19:22:06 GMT</lastBuildDate>
+    <language>en</language>
+    <generator>Lume v2.0.3</generator>
+    <item>
+      <link>https://jfg.name/</link>
+      <guid isPermaLink="false">https://jfg.name/</guid>
+      <content:encoded>
+        <![CDATA[<h2>Posts</h2>
+        
+        <ul class="postList" style="list-style:none">
+        
+        <li class="postList-post">
+        <a href="https://jfg.name/posts/cgis-not-dead/" ><strong>CGI&#39;s not dead, I wrote some yesterday</strong></a>
+        -
+        <em><time datetime="01/04/2023">
+        01/04/2023
+        </time></em>
+        </li>
+        
+        </ul>
+        
+        ]]>
+      </content:encoded>
+      <pubDate>Sat, 17 Feb 2024 19:17:12 GMT</pubDate>
+    </item>
+    <item>
+      <title>CGI&apos;s not dead, I wrote some yesterday</title>
+      <link>https://jfg.name/posts/cgis-not-dead/</link>
+      <guid isPermaLink="false">https://jfg.name/posts/cgis-not-dead/</guid>
+      <description>Build like it&apos;s 1999 with CGI</description>
+      <content:encoded>
+        <![CDATA[<blockquote>
+        <p>The past is a different place; they do things differently there.</p>
+        </blockquote>
+        <p>Build like it's 1999 with Common Gateway Interface scripts!</p>
+        <p>It's also a great learning experience. Learn the <a href="https://www.ietf.org/rfc/rfc2616.txt">HTTP specification</a> by implementing it!</p>
+        <h2>Old School</h2>
+        <p>The humble <a href="https://www.rfc-editor.org/rfc/rfc3875">Common Gateway Interface</a> was the first stab at making dynamic web pages. It represents a standardised way for a web server to pass request information to a program such that the program can interpret the request and build a response, using operating system primitives.</p>
+        <pre><code>+---------+  request   +--------+  stdin   +---------+
+        | Browser | ---------&gt; | Server | -------&gt; | Program |
+        |         | &lt;--------- |        | &lt;------- |         |
+        +---------+  response  +--------+  stdout  +---------+
+        (stdout)      |       stderr
+        errors |
+        (stderr)|    +----------+
+        +--&gt; | Error    |
+        | Logs     |
+        +----------+
+        </code></pre>
+        <p>Request goes into the program via <code>stdin</code>, and the output to be passed to the server is returned by <code>stdout</code>, with errors put into <code>stderr</code> going into the logs.</p>
+        <p>Even though it's old, it is <a href="https://docs.python.org/3/library/cgi.html">still in Python's standard libary</a>, albeit for not much longer. As long as your script can read <code>os.environ['QUERY_STRING']</code> or the equivalent in your programming language from the environment variables, it'll work, and as long as it can return a string to the web server, it'll work. The <code>cgi</code> library is a helpful abstraction in most cases.</p>
+        <p>The execution model is very simple: one process per HTTP request. In this way, it's possible to have very cheap isolation of database connections, provided you don't mind plenty of database connections being spawned under high load. <a href="http://z505.com/cgi-bin/qkcont/qkcont.cgi?p=Myths%20About%20CGI%20Scalability">The operating system does a lot for you anyway</a>.</p>
+        <p><code>CGI</code> is incredibly portable. Every wondered why some consumer routers have <code>.cgi</code> in the URLs of the various admin pages that they use? That is a <code>CGI</code> script. The set-and-forget devices are optimised to use as few libraries as possible, and what is simpler than <code>stdin</code>, <code>stdout</code>, and <code>stderr</code>?</p>
+        <p>Here's an example <code>CGI</code> script for <code>bash</code>.</p>
+        <pre><code class="language-bash">#!/usr/bin/env bash
+        
+        function content_type() {
+        case $1 in
+        'plain')
+        printf &quot;Content-Type: text/plain\n&quot;
+        ;;
+        'json')
+        printf &quot;Content-Type: application/json\n&quot;
+        ;;
+        'html')
+        printf &quot;Content-Type: text/html\n&quot;
+        ;;
+        *)
+        printf &quot;Content-Type: text/plain\n&quot;
+        ;;
+        esac
+        }
+        
+        function status() {
+        case $1 in
+        '200')
+        printf &quot;200 OK\n&quot;
+        ;;
+        '400')
+        printf &quot;400 Bad Request\n&quot;
+        ;;
+        '401')
+        printf &quot;401 Unauthorised\n&quot;
+        ;;
+        '403')
+        printf &quot;403 Forbidden\n&quot;
+        ;;
+        '404')
+        printf &quot;404 Not Found\n&quot;
+        ;;
+        '418')
+        printf &quot;418 I'm a teapot\n&quot;
+        ;;
+        '451')
+        printf &quot;451 Unavailable For Legal Reasons\n&quot;
+        ;;
+        '500')
+        printf &quot;500 Internal Server Error\n&quot;
+        ;;
+        *)
+        printf &quot;200 OK\n&quot;
+        ;;
+        esac
+        }
+        
+        function headers() {
+        status $1
+        content_type $2
+        printf &quot;\n&quot;
+        }
+        
+        headers 200 text
+        env
+        </code></pre>
+        <p>What can be simpler than that?</p>
+        <h2>Footguns</h2>
+        <p>The downside to <code>CGI</code>'s flexibility is how easy it is to footgun yourself with <code>CGI</code>.</p>
+        <ol>
+        <li>
+        <p>It's very easy to misconfigure something. Forgot to set <code>chmod +x</code>? That <code>CGI</code> script is now a file ready to download. It is possible to set your webserver to not serve files ending with a filetype or in a directory if they're not executable, but this is an additional step, not the default. It's easy to accidentally expose secrets this way if you're lazy and put hardcoded credentials in your scripts.</p>
+        </li>
+        <li>
+        <p>You have to aggressively filter what goes in the script. Most frameworks do this by default, but not <code>CGI</code>, not in the land of <code>stdin/stdout/stderr</code>. This is one of the reasons why web frameworks eventually superseded <code>CGI</code> in production usage.</p>
+        </li>
+        <li>
+        <p>One process per HTTP request. Memory leaks are made substantially worse under load. Freeing up memory involves blindly <code>kill -9</code> on lots of HTTP requests.</p>
+        </li>
+        </ol>
+        <p>Most of this can be boiled down to system administration headaches. <code>CGI</code> development requires some faculty with system administration and system administration tools. It is for this reason I don't recommend it for production web server usage unless you are able to keep the system very simple and are able to spend plenty of time tightening up inputs from the web client.</p>
+        <h2>What I Use It For</h2>
+        <p>I use it for prototyping, mostly because it's very simple and it lets me build out core functionality before worrying about technical details too much. I have a simple Python wrapper around <code>cgi</code> and <code>sqlite</code> that allows me to do this.</p>
+        <p>The structure I use looks like this:</p>
+        <pre><code>├── index.html
+        ├── index.js
+        ├── index.css
+        ├── data/
+        │   └── database.db
+        └── cgi-bin
+        ├── helper.py
+        ├── login.py
+        ├── logout.py
+        └── function.py
+        </code></pre>
+        <p>I can use the following helper functions to create an endpoint.</p>
+        <pre><code class="language-python">import os
+        import sys
+        
+        import http.cookies
+        import sqlite3
+        
+        content = {
+        'json': 'Content-Type: application/json;\n',
+        'text': 'Content-Type: text/plain;\n',
+        'html': 'Content-Type: text/html;\n'
+        }
+        
+        responses = {
+        'continue':                       '100 Continue',
+        'switching-protocols':            '101 Switching Protocols',
+        'processing':                     '102 Processing',
+        'ok':                             '200 OK',
+        'created':                        '201 Created',
+        'accepted':                       '202 Accepted',
+        'non-authoritative':              '203 Non-Authoritative Information',
+        'no-content':                     '204 No Content',
+        'reset-content':                  '205 Reset Content',
+        'partial-content':                '206 Partial Content',
+        'multi-status':                   '207 Multi-Status',
+        'already-reported':               '205 Already Reported',
+        'im-used':                        '205 IM Used',
+        'multiple-choices':               '300 Multiple Choices',
+        'permanently-moved':              '301 Moved Permanently',
+        'found':                          '302 Found',
+        'see-other':                      '303 See Other',
+        'not_modified':                   '304 Not Modified',
+        'use-proxy':                      '305 Use Proxy',
+        'temporary-redirect':             '307 Temporary Redirect',
+        'permanant-redirect':             '308 Permanent Redirect',
+        'bad-request':                    '400 Bad Request',
+        'unauthorised':                   '401 Unauthorized',
+        'payment-required':               '402 Payment Required',
+        'forbidden':                      '403 Forbidden',
+        'not-found':                      '404 Not Found',
+        'method-not-allowed':             '405 Method Not Allowed',
+        'not-acceptable':                 '406 Not Acceptable',
+        'proxy-auth-needed':              '407 Proxy Authentication Required',
+        'timeout':                        '408 Request Timeout',
+        'conflict':                       '409 Conflict',
+        'gone':                           '410 Gone',
+        'length-required':                '411 Length Required',
+        'precondition-failed':            '412 Precondition Failed',
+        'payload-too-large':              '413 Payload Too Large',
+        'request-uri-too-long':           '414 Request-URI Too Long',
+        'unsupported-media-type':         '415 Unsupported Media Type',
+        'range-not-satisfiable':          '416 Requested Range Not Satisfiable',
+        'expectation-failed':             '417 Expectation Failed',
+        'teapot':                         '418 I\'m a teapot',
+        'misdirected':                    '421 Misdirected Request',
+        'unprocessable':                  '422 Unprocessable Entity',
+        'locked':                         '423 Locked',
+        'failed-dependency':              '424 Failed Dependency',
+        'upgrade-required':               '426 Upgrade Required',
+        'precondition-required':          '428 Precondition Required',
+        'too-many-requests':              '429 Too Many Requests',
+        'fields-too-large':               '431 Request Header Fields Too Large',
+        'connection-closed':              '444 Connection Closed Without Response',
+        'censorship':                     '451 Unavailable For Legal Reasons',
+        'client-closed':                  '499 Client Closed Request',
+        'internal-error':                 '500 Internal Server Error',
+        'not-implemented':                '501 Not Implemented',
+        'bad-gateway':                    '502 Bad Gateway',
+        'service-unavailable':            '503 Service Unavailable',
+        'gateway-timeout':                '504 Gateway Timeout',
+        'unsupported':                    '505 HTTP Version Not Supported',
+        'variant-negotiates':             '506 Variant Also Negotiates',
+        'insufficient-storage':           '507 Insufficient Storage',
+        'loop':                           '508 Loop Detected',
+        'not-extended':                   '510 Not Extended',
+        'network-authorisation-required': '511 Network Authentication Required',
+        'network-timeout':                '599 Network Connect Timeout Error'
+        }
+        
+        def build_headers(status, content_type):
+        return &quot;&quot;.join([responses.get(status), content.get(content_type)])
+        
+        def get_fields(field_storage):
+        return {k:field_storage[k].value for k in field_storage.keys()}
+        
+        def get_cookie(cookie_string):
+        cookie = http.cookies.SimpleCookie()
+        cookie.load(cookie_string)
+        return {k:cookie[k].value for k in cookie}
+        
+        def set_cookie(args):
+        cookie = http.cookies.SimpleCookie()
+        for key in args:
+        cookie[key] = args[key]
+        return cookie
+        
+        def redirect_to(url, message):
+        return '''
+        &lt;head&gt;
+        &lt;meta http-equiv=&quot;refresh&quot; content=&quot;5; URL={url}&quot; /&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;p&gt;{message}&lt;/p&gt;
+        &lt;p&gt;If you are not redirected in five seconds, &lt;a href=&quot;{url}&quot;&gt;click here&lt;/a&gt;.&lt;/p&gt;
+        &lt;/body&gt;
+        '''.format(url=url, message=message)
+        
+        def db(location):
+        def factory(cursor, row):
+        d = {}
+        for idx, col in enumerate(cursor.description):
+        d[col[0]] = row[idx]
+        return d
+        
+        conn = sqlite3.connect(os.path.join(location))
+        conn.row_factory = factory
+        cur = conn.cursor()
+        return conn, cur
+        </code></pre>
+        <p>To spawn a basic development server, I just run <code>python3 -m http.server --cgi</code> in the root of the project. The really neat thing is that you don't have to reload the server at all, because scripts are loaded and executed with every request. True stateless development!</p>
+        <p>Working this way means I don't have to worry about setting up <code>FastAPI</code> or <code>Django</code>, or making a <code>Docker</code> container before I have to. I can focus on the business logic and datastore, and when it's time to scale up, I can move most of those functions to a framework mostly intact. I love the <code>Python + CGI + SQLite + VanillaJS</code> prototyping stack. I use it for prototyping, then I move away it once it reaches its limits.</p>
+        ]]>
+      </content:encoded>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost/</loc>
-    <lastmod>2023-12-26</lastmod>
+    <loc>https://jfg.name/</loc>
+    <lastmod>2024-02-17T19:17:12.745Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jfg.name/posts/cgis-not-dead/</loc>
+    <lastmod>2023-04-01T00:00:00.000Z</lastmod>
   </url>
 </urlset>

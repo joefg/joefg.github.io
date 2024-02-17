@@ -1,13 +1,21 @@
 title: jfg.name
-blurb: Computer Programmer
-photo: https://avatars.githubusercontent.com/u/13489445
 
-footer: >
-  Made with lumetree in England 🏴󠁧󠁢󠁥󠁮󠁧󠁿 // ❤️
+description: jfg.name, a blog
 
-links:
-  - title: 🖥️ GitHub
-    url: https://github.com/joefg
-  - title: 📧 E-Mail
-    url: mailto://mr.jfg@proton.me
- 
+blurb: |
+  Computer programmer.
+
+footer: Made with deno and lume in England 🏴󠁧󠁢󠁥󠁮󠁧󠁿.
+
+mugshot: https://avatars.githubusercontent.com/u/13489445
+
+author:
+  name: jfg
+  email: jfg@jfg.name
+
+github: https://github.com/joefg
+
+repo: https://github.com/joefg/lume-simple-blog
+
+#links:
+#  📯 Telegram Channel: https://t.me/s/joefg_channel

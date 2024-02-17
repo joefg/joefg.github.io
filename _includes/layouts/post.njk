@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+bodyClass: body-post
+---
+
+<div class="post">
+  <div class="post-header">
+    <h1 class="post-title">{{ title }}</h1>
+
+    <em><time class="post-date" datetime="{{ date | date('dd/MM/yyyy') }}">
+      {{ date | date('dd/MM/yyyy') }}
+    </time></em>
+  </div>
+
+  <div class="post-body">
+    {{ content | safe }}
+  </div>
+</div>

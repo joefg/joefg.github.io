@@ -1,8 +1,0 @@
-{%- if pagelist|length -%}
-<div id="links">
-	{%- for page in pagelist -%}
-			<a href="{{ page.data.url }}" class="link">{{ page.data.title }}</a>
-	{%- endfor -%}
-</div>
-<hr/>
-{%- endif -%}

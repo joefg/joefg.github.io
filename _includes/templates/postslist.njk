@@ -1,0 +1,17 @@
+<ul class="postList" style="list-style:none">
+  {% for post in postslist %}
+  <li class="postList-post">
+    <a href="{{ post.url }}" {% if entry.data.url == url %} aria-current="page"{% endif %}>
+      {%- if post.title -%}
+        <strong>{{ post.title }}</strong>
+      {%- else %}
+        <code>{{ post.url }}</code>
+      {%- endif -%}
+    </a>
+    -
+    <em><time datetime="{{ post.date | date('dd/MM/yyyy') }}">
+      {{ post.date | date('dd/MM/yyyy') }}
+    </time></em>
+  </li>
+{% endfor %}
+</ul>
