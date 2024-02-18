@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://jfg.name/</loc>
-    <lastmod>2024-02-17T19:17:12.745Z</lastmod>
+    <lastmod>2024-02-17T19:27:58.505Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jfg.name/posts/accelerate/</loc>
+    <lastmod>2024-02-23T00:00:00.000Z</lastmod>
   </url>
   <url>
     <loc>https://jfg.name/posts/cgis-not-dead/</loc>

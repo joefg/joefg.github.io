@@ -5,9 +5,170 @@
     <link>https://jfg.name/</link>
     <atom:link href="https://jfg.name/feed.rss" rel="self" type="application/rss+xml"/>
     <description></description>
-    <lastBuildDate>Sat, 17 Feb 2024 19:22:06 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Feb 2024 16:54:42 GMT</lastBuildDate>
     <language>en</language>
     <generator>Lume v2.0.3</generator>
+    <item>
+      <title>White Heat: The case for Acceleration</title>
+      <link>https://jfg.name/posts/accelerate/</link>
+      <guid isPermaLink="false">https://jfg.name/posts/accelerate/</guid>
+      <description>Acceleration and its future</description>
+      <content:encoded>
+        <![CDATA[<p>A nation needs three key elements:</p>
+        <ol>
+        <li>Agriculture</li>
+        <li>Energy production</li>
+        <li>Human capital</li>
+        </ol>
+        <p>Everything else is downstream of these things. No food means armies marching on
+        empty stomachs. No energy production means no industrial capital. No human
+        capital means we're growing crops and installing wind turbines for nothing.</p>
+        <p>A simple question: has the per-capita demand equivalents of these things
+        decreased in the past ten years, or increased?</p>
+        <p>For ascendant nations, the energy portion of this has <a href="https://ourworldindata.org/grapher/per-capita-energy-use?tab=chart">increased, not
+        decreased</a>.
+        Such is the nature of <a href="https://en.wikipedia.org/wiki/Jevons_paradox">the Jevons
+        Paradox</a>. For stagnant and
+        declining powers, the opposite is true.</p>
+        <hr>
+        <p>For <a href="https://www.gov.uk/government/publications/net-zero-strategy">Net Zero
+        policy</a> to work,
+        it has to cap all three of these things and eventually make the per-capita
+        amounts of agriculture, energy production, and human capital use reverse.</p>
+        <p>A cap on agriculture combined with an increasing amount of human capital results
+        in that human capital starving. A cap on energy production combined with an
+        increasing amount of human capital results in energy shortages. In the biz, we
+        call this &quot;<a href="https://en.wikipedia.org/wiki/Demand_response#Load_shedding">Load
+        shedding</a>&quot;. And the
+        less stated about the cap on human capital, the better: who wants to live in a
+        country where education levels are stagnant?</p>
+        <p>Regardless: caps on supply without caps on demand results in artificial
+        scarcity, and caps on demand are completely unfeasible without resorting to
+        a 1984-style surveillance state, and given Britain doesn't even have a way to
+        unify patient records between NHS trusts, it wouldn't work even if it was
+        desirable that it did.</p>
+        <p>It's time to move on.</p>
+        <hr>
+        <p>Let's look at proxies for the three basic elements.</p>
+        <pre><code>1. Agriculture -&gt; Land, crops, livestock, machinery
+        
+        2. Energy production -&gt; Fuel extraction, fuel consumption, energy storage
+        
+        3. Human capital -&gt; Food, shelter, physical safety, healthcare, education
+        </code></pre>
+        <p>How do we keep agriculture and energy production pace with the expansion in
+        human capital?</p>
+        <p>Let's start by looking at what we <em>shouldn't</em> do.</p>
+        <p>We <em>shouldn't</em>:</p>
+        <ul>
+        <li>
+        <p>Pay farmers to <a href="https://www.gov.uk/government/publications/apply-for-a-lump-sum-payment-to-leave-or-retire-from-farming/how-to-apply-for-a-lump-sum-payment-to-leave-or-retire-from-farming">exit the agriculture
+        business</a>.</p>
+        </li>
+        <li>
+        <p>Prevent nuclear energy projects from happening because <a href="https://twitter.com/mlanetrain/status/1556381583585804291?lang=en">&quot;it'll only come
+        online in ten
+        years' time&quot;</a>.</p>
+        </li>
+        <li>
+        <p>Keep adding more human capital without considering the human capital use per
+        capita or productivity per capita. This requires more nuanced discussion
+        that just isn't possible in today's social climate.</p>
+        </li>
+        </ul>
+        <p>So what should we do instead?</p>
+        <ul>
+        <li>
+        <p>Encourage farmers to stay in the agriculture business. Make it easier for them
+        to increase farm productivity. Encourage productivity increases through
+        superior technology. If <a href="https://library.wur.nl/WebQuery/wurpubs/fulltext/498900">the Dutch can do
+        it</a>, Britain can do
+        it too. Make food cheap again!</p>
+        </li>
+        <li>
+        <p>Build more energy production facilities. Cheap energy makes everything
+        possible. Build nuclear power stations in every postcode area! Not just
+        nuclear, either. Let there be a plurality of energy sources. The more the
+        merrier.</p>
+        </li>
+        <li>
+        <p>Aim to increase the productivity of human capital. Instead of just adding more
+        human capital units to the human capital pile, encourage people to pursue
+        life-long learning. We used to do this with the <a href="https://en.wikipedia.org/wiki/Polytechnic_(United_Kingdom)">Polytechnic
+        system</a>. The
+        internet allows people to educate themselves for free, but there is still
+        more to do here.</p>
+        </li>
+        </ul>
+        <hr>
+        <p>Look at these charts, courtesy of the
+        <a href="https://www.ons.gov.uk/economy/inflationandpriceindices#timeseries">ONS</a>.</p>
+        <table>
+        <thead>
+        <tr>
+        <th>Housing (1987-2024)</th>
+        <th>Consumer Electronics (1987-2024)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><img src="https://jfg.name/img/rpi-housing.webp" alt="Housing, 1987-2024"></td>
+        <td><img src="https://jfg.name/img/rpi-electronics.webp" alt="Electrical Appliances, 1987-2024"></td>
+        </tr>
+        </tbody>
+        </table>
+        <p>The cost of housing has increased, while the <a href="https://www.tiktok.com/@newhomequalitycontrol/video/7043682965079084293">quality of housing has
+        decreased</a>.
+        Do you not want your
+        <a href="https://twitter.com/CrossDavidB/status/1548273039376203777">Deanobox</a>,
+        Anon?</p>
+        <p>Meanwhile, consumer electronics have decreased in cost to the consumer <strong>and</strong>
+        increased in quality. Compare an old cathode-ray box to a new 4K OLED panel,
+        compare an old Nokia to a new iPhone, compare a PlayStation 1 to a PlayStation
+        5.</p>
+        <p>Who would you want running the world: the people who made housing ruinously
+        expensive with paper-thin walls, or the people who made televisions cheap while
+        making the screens contain 36 times as many pixels?</p>
+        <p>Imagine if your house was 36 times as good. Imagine if your healthcare was 36
+        times as good. Imagine if your education was 36 times as good. Why aren't they?</p>
+        <hr>
+        <p>Cheap is better than free. Just because something could be free at the point of
+        use doesn't mean that there are no costs to production. Making something free to
+        the user simply means that the user will use it without consideration to cost.
+        Remember the Dogecoin <a href="https://bitcoinwiki.org/wiki/faucet">faucets</a>? Where are
+        they now?</p>
+        <blockquote>
+        <p>cheap &gt; free</p>
+        </blockquote>
+        <p>Cheap, though? I think we can agree on making things cheaper. The only people
+        who won't agree are the
+        <a href="https://en.wikipedia.org/wiki/Greater_fool_theory">bagholders</a>. I don't see
+        anyone crying for speculators. Progress has its casualties.</p>
+        <hr>
+        <blockquote>
+        <p>You can climb a mountain</p>
+        <p>You can swim the sea</p>
+        <p>You can jump into the fire</p>
+        <p>But you'll never be free</p>
+        </blockquote>
+        <p>When you think about it, acceleration is just thermodynamics. It's all just
+        thermodynamics. <a href="https://www.scientificamerican.com/article/a-new-physics-theory-of-life/">Life is on fire, didn't you
+        know</a>.</p>
+        <p>The arrow of time goes in one direction. It never goes back. Deceleration is
+        really acceleration in decay. Regardless of how much it decays, it won't stop.
+        It will just creep along. Human growth is accelerating. Society must also
+        accelerate. Technology is one way to achieve that.</p>
+        <hr>
+        <p><img src="https://jfg.name/img/pixel-horizon.webp" alt="A horizon made of pixels"></p>
+        <blockquote>
+        <p>Acceleration is the highest form of charity.</p>
+        </blockquote>
+        <p>If you want the future to be bright, you need to accelerate. Step on the
+        accelerator pedal with both feet. The future can look after itself.</p>
+        ]]>
+      </content:encoded>
+      <pubDate>Fri, 23 Feb 2024 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <link>https://jfg.name/</link>
       <guid isPermaLink="false">https://jfg.name/</guid>
@@ -15,6 +176,14 @@
         <![CDATA[<h2>Posts</h2>
         
         <ul class="postList" style="list-style:none">
+        
+        <li class="postList-post">
+        <a href="https://jfg.name/posts/accelerate/" ><strong>White Heat: The case for Acceleration</strong></a>
+        -
+        <em><time datetime="23/02/2024">
+        23/02/2024
+        </time></em>
+        </li>
         
         <li class="postList-post">
         <a href="https://jfg.name/posts/cgis-not-dead/" ><strong>CGI&#39;s not dead, I wrote some yesterday</strong></a>
@@ -28,7 +197,7 @@
         
         ]]>
       </content:encoded>
-      <pubDate>Sat, 17 Feb 2024 19:17:12 GMT</pubDate>
+      <pubDate>Sat, 17 Feb 2024 19:27:58 GMT</pubDate>
     </item>
     <item>
       <title>CGI&apos;s not dead, I wrote some yesterday</title>
