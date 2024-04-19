@@ -5,9 +5,119 @@
     <link>https://jfg.name/</link>
     <atom:link href="https://jfg.name/feed.rss" rel="self" type="application/rss+xml"/>
     <description></description>
-    <lastBuildDate>Tue, 26 Mar 2024 22:48:30 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 19 Apr 2024 22:17:14 GMT</lastBuildDate>
     <language>en</language>
     <generator>Lume v2.0.3</generator>
+    <item>
+      <title>Using Jupyter with Pipenv</title>
+      <link>https://jfg.name/posts/using-jupyter-with-pipenv/</link>
+      <guid isPermaLink="false">https://jfg.name/posts/using-jupyter-with-pipenv/</guid>
+      <description>Building a data science environment</description>
+      <content:encoded>
+        <![CDATA[<p>Being vaguely involved in data science tooling means I have some exposure to
+        <a href="https://jupyter.org/">Jupyter</a>, and this is the setup that I found works for me.</p>
+        <h2>Environment Management</h2>
+        <p>I use <a href="https://pipenv.pypa.io/en/latest/">Pipenv</a>-- no real reason to use this
+        over <a href="https://python-poetry.org/">Poetry</a>, but I like Pipenv's ability to create
+        a virtualenv elsewhere on the system and I think the API's a little bit cleaner.</p>
+        <p>Really, as long as it creates a virtualenv and Jupyter can see this virtualenv,
+        it'll be fine.</p>
+        <p>Make sure you have Pipenv installed, then make a Pipenv environment.</p>
+        <pre><code class="language-bash">pipenv --python 3.11        # Create the environment
+        pipenv install jupyter      # Add jupyter to it
+        pipenv run jupyter notebook # Spawn a Jupyter server
+        </code></pre>
+        <p>This approach does create a Jupyter install per project. I think this is fine,
+        it cuts down complexity, and Jupyter isn't that heavy these days. If you want to
+        use a system-wide Jupyter, you can do the following:</p>
+        <pre><code class="language-bash"># Inside your project folder
+        cd project-folder/
+        pipenv install ipykernel
+        
+        # Add the kernel to the user's ipython kernels
+        pipenv shell
+        python3 -m ipykernel install --user --name=&lt;your-venv-name&gt;
+        
+        # Outside of the shell (deactivate)
+        jupyter notebook
+        </code></pre>
+        <p>This should allow your kernel to be used inside the system Jupyter server. I
+        prefer not doing this and keeping it simpler with a Jupyter server inside every
+        data science environment. There are disadvantages here: you can't run more than
+        one project at a time, and you can't share kernels between projects, but I
+        haven't run into those yet.</p>
+        <h2>The Runfile</h2>
+        <p>In keeping with the
+        <a href="https://github.blog/2015-06-30-scripts-to-rule-them-all/">Runfiles</a> that I use
+        elsewhere, this is a slim one that I use.</p>
+        <pre><code class="language-bash">#!/usr/bin/env bash
+        set -euo pipefail
+        
+        function help(){
+        cat &lt;&lt; EOF
+        Python Data Science Environment
+        
+        help    : Display help text
+        restore : Fetch dependencies
+        dev     : Spawn a notebook server
+        EOF
+        }
+        
+        function run_restore(){
+        pipenv install
+        }
+        
+        function run_dev(){
+        pipenv run jupyter notebook
+        }
+        
+        function main(){
+        cmd=${1-restore}
+        shift || true
+        case &quot;$cmd&quot; in
+        help)
+        help
+        ;;
+        restore)
+        run_restore
+        ;;
+        dev)
+        run_dev
+        ;;
+        *)
+        echo &quot;no-op $cmd&quot;
+        ;;
+        esac
+        }
+        
+        main &quot;$@&quot;
+        </code></pre>
+        <p>This allows me to <code>./run restore</code> to fetch my dependencies and <code>./run dev</code> to
+        spawn a notebook. Two commands that are shared with other projects to reduce
+        cognitive load. No more &quot;oh, what's that command to run it again?&quot;, and if I
+        need a refresher. <code>./run help</code> tells me everything I need to stand it up again.</p>
+        <h2>Git Gotchas</h2>
+        <ol>
+        <li>
+        <p>Add <code>/.ipynb_checkpoints</code> to your <code>.gitignore</code>. They can get pretty large in
+        size and dealing with those is no fun later.</p>
+        </li>
+        <li>
+        <p>Be careful when committing notebooks because they can contain results from
+        cells. This might be what you want, but running them again changes the notebook
+        and this shows up in the diff. Git shows this as a gigantic JSON mess, and
+        GitHub/GitLab's no better.</p>
+        </li>
+        </ol>
+        <p>In the early stages of your project, make a choice to either include results or
+        not include results. If you choose not to, you can use a tool like
+        <a href="https://github.com/kynan/nbstripout">nbstripout</a> and a git hook to clean prior
+        to the commit. I'm inclined to not include the results because results should be
+        reproducible on any machine.</p>
+        ]]>
+      </content:encoded>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>In praise of SQLite</title>
       <link>https://jfg.name/posts/in-praise-of-sqlite/</link>
@@ -320,6 +430,14 @@
         <![CDATA[<h2>Posts</h2>
         
         <ul class="postList" style="list-style:none">
+        
+        <li class="postList-post">
+        <a href="https://jfg.name/posts/using-jupyter-with-pipenv/" ><strong>Using Jupyter with Pipenv</strong></a>
+        -
+        <em><time datetime="19/04/2024">
+        19/04/2024
+        </time></em>
+        </li>
         
         <li class="postList-post">
         <a href="https://jfg.name/posts/in-praise-of-sqlite/" ><strong>In praise of SQLite</strong></a>
