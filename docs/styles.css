@@ -382,8 +382,16 @@ input {
 img {
 	max-width: 100%;
 }
+#mugshot {
+	float: left;
+	padding: 15px;
+	border-radius: 25px 
+}
 nav .nav-link + .nav-link:before {
 	content: '|'
+}
+footer {
+	text-align: center;
 }
 footer .footer-item + .footer-item:before {
 	content: '|'

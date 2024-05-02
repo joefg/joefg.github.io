@@ -2,8 +2,18 @@
 @import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/base16/apprentice.min.css";
 @import "https://fonts.xz.style/serve/inter.css";
 
+#mugshot {
+	float: left;
+	padding: 15px;
+	border-radius: 25px 
+}
+
 nav .nav-link + .nav-link:before {
 	content: '|'
+}
+
+footer {
+	text-align: center;
 }
 
 footer .footer-item + .footer-item:before {
