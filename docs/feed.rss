@@ -5,9 +5,282 @@
     <link>https://jfg.name/</link>
     <atom:link href="https://jfg.name/feed.rss" rel="self" type="application/rss+xml"/>
     <description></description>
-    <lastBuildDate>Mon, 06 May 2024 12:13:08 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 07 May 2024 20:48:46 GMT</lastBuildDate>
     <language>en</language>
     <generator>Lume v2.0.3</generator>
+    <item>
+      <title>Developer Ergonomics</title>
+      <link>https://jfg.name/posts/developer-ergonomics/</link>
+      <guid isPermaLink="false">https://jfg.name/posts/developer-ergonomics/</guid>
+      <description>Building a comfy setup</description>
+      <content:encoded>
+        <![CDATA[<p>I spend six-plus hours a day developing software. This is what I use to stay
+        sane.</p>
+        <blockquote>
+        <p>Ergonomics is a method of design that focuses on creating objects based on the
+        physical measure of the human body and the physical processes of people.</p>
+        <p><a href="http://blogs.evergreen.edu/brookewalsh/what-is-ergonomics/">http://blogs.evergreen.edu/brookewalsh/what-is-ergonomics/</a></p>
+        </blockquote>
+        <h2>Linting and Typing</h2>
+        <p>First things first: do your projects have linters? Are they typed, either at run
+        time or with a type checker?</p>
+        <p>Start there. Use a linter. Use a type system.</p>
+        <p>It's more work, but it's worth it. Here's an example:</p>
+        <pre><code class="language-python">import sqlite3
+        
+        class SpatialiteConnection():
+        def __init__(self, location):
+        if location:
+        self.conn = sqlite3.connect(os.path.join(location))
+        else:
+        self.conn = sqlite3.connect(':memory:')
+        self.conn.row_factory = lambda cursor, result: \
+        dict(zip([column[0] for column in cursor.description], result))
+        self.conn.enable_load_extension(True)
+        self.conn.execute('SELECT load_extension(&quot;mod_spatialite&quot;)')
+        self.conn.execute('SELECT InitSpatialMetaData(1);')
+        
+        def __enter__(self):
+        return self.conn
+        
+        def __exit__(self, exc_type, exc_value, exc_traceback):
+        self.conn.close()
+        </code></pre>
+        <p>How are you supposed to know what this class expects and what it returns when
+        used in the context handler? And what happens when another developer comes along
+        and changes what it returns? You don't compile Python, and while your unit tests
+        might still work, that change in type might only be apparent on an unhappy path
+        only traversed in production, which is not what you want.</p>
+        <p>Let's add some types here.</p>
+        <pre><code class="language-python">from typing import Optional
+        import sqlite3
+        
+        class SpatialiteConnection():
+        def __init__(self, location: Optional[str]) -&gt; None:
+        if location:
+        self.conn = sqlite3.connect(os.path.join(location))
+        else:
+        self.conn = sqlite3.connect(':memory:')
+        self.conn.row_factory = lambda cursor, result: \
+        dict(zip([column[0] for column in cursor.description], result))
+        self.conn.enable_load_extension(True)
+        self.conn.execute('SELECT load_extension(&quot;mod_spatialite&quot;)')
+        self.conn.execute('SELECT InitSpatialMetaData(1);')
+        
+        def __enter__(self) -&gt; sqlite3.Connection:
+        return self.conn
+        
+        def __exit__(self, exc_type, exc_value, exc_traceback) -&gt; None:
+        self.conn.close()
+        </code></pre>
+        <p>Adding types makes things more obvious to the developer, and using a type
+        checker such as Python's <a href="https://www.mypy-lang.org/">Mypy</a> or a typing system
+        such as <a href="https://www.typescriptlang.org/">TypeScript</a> as part of the development
+        process picks off type-related blunders.</p>
+        <p>This comes at the expense of development speed; in my experience, a type system
+        slows down iteration in the early stages, so take this into consideration before
+        sticking a type checker on your project.</p>
+        <p>I believe this trade-off to be wise, so set up a linter and a typing system
+        before you write a single line of code, and that'll set your project in good
+        stead.</p>
+        <h2>Runfiles and Task Runners</h2>
+        <p>If you juggle lots of projects, it can be a mild nuisance remembering if it was
+        <code>python3 -m uvicorn main:app</code> which ran it, or whether it was <code>yarn run serve</code>,
+        or <code>source venv/bin/activate; python3 bin/serve.py</code> or whatever.</p>
+        <p>Avoid all of this by using one run file template across all projects. Use the
+        same commands across all projects to do the same thing:</p>
+        <ul>
+        <li>
+        <p><code>restore</code> for fetching dependencies</p>
+        </li>
+        <li>
+        <p><code>build</code> for constructing prerequisites for a clean run</p>
+        </li>
+        <li>
+        <p><code>dev</code> for a development environment</p>
+        </li>
+        <li>
+        <p><code>serve</code> for a production service</p>
+        </li>
+        <li>
+        <p><code>console</code> for accessing an administration interface for a service</p>
+        </li>
+        <li>
+        <p><code>test</code> for running all tests</p>
+        </li>
+        <li>
+        <p><code>lint</code> for running all linters and type checkers</p>
+        </li>
+        </ul>
+        <p>Something like <a href="https://github.blog/2015-06-30-scripts-to-rule-them-all/">Scripts To Rule Them
+        All</a>.</p>
+        <p>It's a shame there's not one single standard for a task runner. Deno has a <a href="https://docs.deno.com/runtime/manual/tools/task_runner">task
+        runner</a> built-in, which
+        allows me editing this page to build the site by running <code>deno task build</code>, but
+        that's not quite the same as a single task runner with hardcoded arguments
+        pointing to user-defined commands.</p>
+        <p>Not having a common task runner means every single org builds their own, which
+        is a huge detriment to new starters.</p>
+        <h2>Note Taking</h2>
+        <p>I keep my daily notes in <code>~/.todo</code>, with this script:</p>
+        <pre><code class="language-sh">#!/usr/bin/env sh
+        
+        function header(){
+        cat &lt;&lt; EOM
+        $(date '+%d/%m/%Y')
+        
+        ---
+        
+        EOM
+        }
+        
+        function todo(){
+        local TODAY_FILE=~/.todo/$(date -I).md
+        local YESTERDAY_FILE=~/.todo/$(date -I --date='yesterday').md
+        
+        mkdir -p ~/.todo
+        if [ ! -f $TODAY_FILE ]; then
+        touch $TODAY_FILE
+        header &gt; $TODAY_FILE
+        if [ -f $YESTERDAY_FILE ]; then
+        cat $YESTERDAY_FILE &gt;&gt; $TODAY_FILE
+        fi
+        fi
+        
+        $EDITOR $TODAY_FILE
+        }
+        
+        todo
+        </code></pre>
+        <p>This creates a todo notepad containing yesterday's todo list, which serves as a
+        useful reminder of anything left over from the previous business day. All notes
+        are written in beautiful Markdown, with conversion handled with
+        <a href="https://pandoc.org/">Pandoc</a> and
+        diagrams written in <a href="https://graphviz.org/">Graphviz</a>.</p>
+        <p>I have a grid lined Moleskine which I've been jotting ideas down in for the past
+        ten years. My handwriting is not great, but jotting something down which makes
+        you think about what you're writing because there's no <code>db</code> movement for
+        parchment.</p>
+        <p>If I'm out and about and I don't have access to a notepad, I'll write something
+        down in a messaging app and send it to myself.</p>
+        <p><em>The Pragmatic Programmer</em> calls these
+        <a href="https://www.oreilly.com/library/view/the-pragmatic-programmer/9780135956977/f_0041.xhtml">Daybooks</a>.
+        I found them to be immensely useful. Being able to recognise a problem that you
+        may have encountered before and immediately finding your solution (or thoughts
+        approaching a solution) is almost like a superpower. I did have a prototype of
+        feeding my daybooks into a language model so I can ask myself if I encountered a
+        problem before, but it didn't go anywhere.</p>
+        <h2>Tiling Windows</h2>
+        <p>I like a good tiling window manager. For a long time I used
+        <a href="https://i3wm.org/">i3</a> and <a href="https://swaywm.org/">Sway</a>, but stopped because of
+        the customisation minefield that both of those things encourage. I used to have
+        plenty of time to soup up a Sway config, but now I don't, so I moved back to a
+        more conventional desktop environment.</p>
+        <p>I use <a href="https://www.gnome.org/">Gnome</a>. Ubuntu ships with <a href="https://extensions.gnome.org/extension/3733/tiling-assistant/">Tiling
+        Assistant</a>, but I
+        prefer <a href="https://extensions.gnome.org/extension/4548/tactile">Tactile</a>. Tiling
+        Assistant is simpler but Tactile is more comprehensive. Both allow me to manage
+        either squeezing as much as I can into a 13-inch laptop screen or organising
+        over multiple displays. I do this using the following settings:</p>
+        <pre><code>-- four windows
+        
+        | W | R |
+        | S | F |
+        
+        -- nine windows
+        
+        | Q | W | E |
+        | A | S | F |
+        | Z | X | C |
+        
+        -- twelve windows
+        
+        | Q | W | E | R |
+        | A | S | D | F |
+        | Z | X | C | V |
+        </code></pre>
+        <p>I use the four-windows setup for smaller screens, nine-windows for larger
+        screens, and twelve-windows for multiple screens.</p>
+        <p>One layout that I use is to keep the editor in regions W to C, with R to V for
+        the terminal and Q to Z for the web browser. This puts the editor right in
+        front of you, limiting how much you strain your eyes.</p>
+        <p><img src="https://jfg.name/img/ergonomics-layout.webp" alt="Ergonomic windows"></p>
+        <p>The aim is to have the thing you're going to be interacting with most often
+        front and centre, with everything else in the periphery.</p>
+        <p>The important thing is that a tiling window manager makes this possible. If
+        you're on Windows,
+        <a href="https://learn.microsoft.com/en-gb/windows/powertoys/fancyzones">FancyZones</a>
+        does similar.</p>
+        <p>I also use workspaces. One workspace is for communications and emails, one for
+        media, and one is for development work. This allow me to keep my flow when
+        developing.</p>
+        <p>It's a shame that there's no way to have a text editor appear over the thing
+        which is directly affected by the text being edited, but here we are.</p>
+        <h2>Text Editor and the Terminal</h2>
+        <p>I like Neovim and use it to write the first draft, but I use VSCode with
+        <a href="https://marketplace.visualstudio.com/items?itemName=vscodevim.vim">VSCodeVim</a>
+        to touch it up. VSCode's terminal has support for tmux which is also handy.</p>
+        <p>VSCode's <a href="https://code.visualstudio.com/docs/editor/intellisense">IntelliSense</a>
+        and
+        <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance">Pylance</a>
+        makes refactoring Python easier, so no more <code>git grep -i some_function -- *.py</code>
+        and whack-a-mole renaming or project-wide <code>sed</code> magic. It is worth noting that
+        the technology behind this, Language Servers, are <a href="https://github.com/VonHeikemen/lsp-zero.nvim">available for
+        Neovim</a> and other editors.</p>
+        <p>I use tmux inside the standard Gnome terminal, which works well enough for me.</p>
+        <p>The <a href="https://github.com/tmux/tmux/wiki/Getting-Started">standard tmux keymap</a> is
+        OK, but could be improved. I find <a href="https://zserge.com/posts/tmux/">tmux for mere
+        mortals</a> to have a pretty solid layout and I've
+        used it for many years now.</p>
+        <p>I still use tmux and Neovim for smaller projects because they stay out of my
+        way, but if I want linters and type checking in the editor window or
+        <a href="https://containers.dev/">Development Containers</a> I'll use VSCode.</p>
+        <h2>Hardware</h2>
+        <p>Get a good chair. I'm happy with my
+        <a href="https://en.wikipedia.org/wiki/Aeron_chair">Aeron</a>-- it helps to know someone
+        who works in liquidations for the various Silicon Fen startups to get one at a
+        discount. Paying £1000 for a chair as a solo developer is comical, but a
+        lightly-used Aeron at £300 is a good deal. You place your carcass on it for a
+        good portion of the day, so make it comfortable.</p>
+        <p>Get a decent desk. A wobbly desk will drive you crazy. It should sit high enough
+        so you don't slouch. I don't believe in the standing desk hype, but the
+        adjustability is helpful. Keep your drinks on a coaster to avoid staining the
+        desk.</p>
+        <p>Get a proper monitor stand. Your copy of &quot;Structure and Interpretation of
+        Computer Programs&quot; belongs on a bookshelf, not under your monitor. The centre of
+        the monitor should be level with your eyes. If you have multiple monitors, make
+        sure you're not staring at bezels when looking straight ahead. It's also worth
+        considering getting a docking station so there's no rat's nest of cables running
+        from your laptop to the monitor.</p>
+        <p>Bluetooth headphones are worth having. I got tired of wired headsets leaving a
+        mess and I took the plunge after standing up too quickly, pulling my very
+        expensive laptop off the desk and onto the hard wood floor.</p>
+        <p>A decent keyboard is good to have as is a decent mouse, but as long as the
+        keyboard goes &quot;click click click&quot; and the mouse has more than the usual amount
+        of buttons I'm happy.</p>
+        <h2>Habits</h2>
+        <p>Sitting at a desk for eight hours a day is <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7700832/">probably killing
+        you</a>. At least break the
+        day up!</p>
+        <p>For your lunch hour: turn your phone off. Leave the desk. Go for a walk. Don't
+        look at any screen. Don't doomscroll. That email can wait. Don't get in your car
+        and drive to the shop. Just enjoy being outdoors for a bit. You'll come back
+        refreshed and ready to work again.</p>
+        <p>If I find myself at a mental block, I take a break. I have a pull-up bar sitting
+        on my door, a pair of gymnast rings, and a pair of paralettes on my desk. I do
+        pull-ups and press-ups, some light calisthenics to take my mind off work for a
+        bit. I find the <a href="https://pomofocus.io/">Pomodoro Technique</a> to work well with
+        enforcing breaks.</p>
+        <p>It's very important to spend time away from the screen. Pick a hobby that's
+        preferably away from a screen and away from any sort of internet connection.
+        Ever wondered why so many software developers take up kayaking, hiking, and rock
+        climbing?  It's because of this. The red pipelines can't reach you when you're
+        disconnected.</p>
+        <p><img src="https://jfg.name/img/rather-be-kayaking.webp" alt="Rather be kayaking"></p>
+        ]]>
+      </content:encoded>
+      <pubDate>Tue, 07 May 2024 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <link>https://jfg.name/</link>
       <guid isPermaLink="false">https://jfg.name/</guid>
@@ -15,6 +288,12 @@
         <![CDATA[<h2>Posts</h2>
         
         <ul class="postList" style="list-style:none">
+        
+        <li class="postList-post">
+        <a href="https://jfg.name/posts/developer-ergonomics/" ><strong>Developer Ergonomics</strong></a>
+        -
+        <em><time datetime="07/05/2024">07/05/2024</time></em>
+        </li>
         
         <li class="postList-post">
         <a href="https://jfg.name/posts/using-jupyter-with-pipenv/" ><strong>Using Jupyter with Pipenv</strong></a>
