@@ -2,8 +2,12 @@
 layout: layouts/base.njk
 bodyClass: body-home
 ---
+{% for name, link in site.badges %}
+<img src="{{ link }}"/>
+{% endfor %}
+
+{{ content | safe }}
+
 <h2>Posts</h2>
 {% set postslist = search.pages("type=posts", "date=desc") %}
 {% include "templates/postslist.njk" %}
-
-{{ content | safe }}
