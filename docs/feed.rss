@@ -5,9 +5,15 @@
     <link>https://jfg.name/</link>
     <atom:link href="https://jfg.name/feed.rss" rel="self" type="application/rss+xml"/>
     <description></description>
-    <lastBuildDate>Tue, 07 May 2024 20:48:46 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 May 2024 16:59:50 GMT</lastBuildDate>
     <language>en</language>
     <generator>Lume v2.0.3</generator>
+    <item>
+      <link>https://jfg.name/</link>
+      <guid isPermaLink="false">https://jfg.name/</guid>
+      <content:encoded><![CDATA[]]></content:encoded>
+      <pubDate>Sat, 25 May 2024 16:59:11 GMT</pubDate>
+    </item>
     <item>
       <title>Developer Ergonomics</title>
       <link>https://jfg.name/posts/developer-ergonomics/</link>
@@ -280,50 +286,6 @@
         ]]>
       </content:encoded>
       <pubDate>Tue, 07 May 2024 00:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <link>https://jfg.name/</link>
-      <guid isPermaLink="false">https://jfg.name/</guid>
-      <content:encoded>
-        <![CDATA[<h2>Posts</h2>
-        
-        <ul class="postList" style="list-style:none">
-        
-        <li class="postList-post">
-        <a href="https://jfg.name/posts/developer-ergonomics/" ><strong>Developer Ergonomics</strong></a>
-        -
-        <em><time datetime="07/05/2024">07/05/2024</time></em>
-        </li>
-        
-        <li class="postList-post">
-        <a href="https://jfg.name/posts/using-jupyter-with-pipenv/" ><strong>Using Jupyter with Pipenv</strong></a>
-        -
-        <em><time datetime="19/04/2024">19/04/2024</time></em>
-        </li>
-        
-        <li class="postList-post">
-        <a href="https://jfg.name/posts/in-praise-of-sqlite/" ><strong>In praise of SQLite</strong></a>
-        -
-        <em><time datetime="26/03/2024">26/03/2024</time></em>
-        </li>
-        
-        <li class="postList-post">
-        <a href="https://jfg.name/posts/accelerate/" ><strong>White Heat: The case for Acceleration</strong></a>
-        -
-        <em><time datetime="23/02/2024">23/02/2024</time></em>
-        </li>
-        
-        <li class="postList-post">
-        <a href="https://jfg.name/posts/cgis-not-dead/" ><strong>CGI&#39;s not dead, I wrote some yesterday</strong></a>
-        -
-        <em><time datetime="01/04/2023">01/04/2023</time></em>
-        </li>
-        
-        </ul>
-        
-        ]]>
-      </content:encoded>
-      <pubDate>Fri, 03 May 2024 17:18:14 GMT</pubDate>
     </item>
     <item>
       <title>Using Jupyter with Pipenv</title>
