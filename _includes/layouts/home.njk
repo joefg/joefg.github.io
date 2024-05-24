@@ -2,4 +2,8 @@
 layout: layouts/base.njk
 bodyClass: body-home
 ---
+<h2>Posts</h2>
+{% set postslist = search.pages("type=posts", "date=desc") %}
+{% include "templates/postslist.njk" %}
+
 {{ content | safe }}
