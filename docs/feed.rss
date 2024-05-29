@@ -5,14 +5,99 @@
     <link>https://jfg.name/</link>
     <atom:link href="https://jfg.name/feed.rss" rel="self" type="application/rss+xml"/>
     <description></description>
-    <lastBuildDate>Sat, 25 May 2024 16:59:50 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 May 2024 15:14:01 GMT</lastBuildDate>
     <language>en</language>
     <generator>Lume v2.0.3</generator>
+    <item>
+      <title>Bring back .plan files</title>
+      <link>https://jfg.name/posts/bring-back-dotplans/</link>
+      <guid isPermaLink="false">https://jfg.name/posts/bring-back-dotplans/</guid>
+      <description>Why we should go back to the future and embrace plain text</description>
+      <content:encoded>
+        <![CDATA[<blockquote>
+        <p>TL;DR we should bring back dotplans using Markdown and HTTP(S)</p>
+        </blockquote>
+        <h2>What's a dotplan?</h2>
+        <p><code>.plan</code> files are a holdover from a period of time when everyone who was on a
+        networked computing environment could reasonably use a command line. They used
+        to be a way of finding information about a specific user (like whether they were
+        online, what their office hours were, and in the case of remote workers, where
+        in the world they actually were). All a user had to do was run <code>finger &lt;user&gt;@&lt;host&gt;</code> and they would be given this information.</p>
+        <p>A famous use of the <code>.plan</code> file: <a href="https://github.com/ESWAT/john-carmack-plan-archive">John
+        Carmack</a> would use them to
+        document what he was doing. In the days of Quake and Doom, there would even be
+        websites which were a frontend to <code>finger</code> which would archive what he was
+        doing, and this practice spread out of Id Software and into the wider Dallas
+        game design bubble.</p>
+        <p>I think many people are sick of the always-on nature of modern communications.</p>
+        <p>Why can't we bring <code>.plan</code> files back?</p>
+        <h2>What has changed since those days</h2>
+        <ol>
+        <li>
+        <p>Most networked devices are not a UNIX and do not have the <code>finger</code>
+        <a href="https://en.wikipedia.org/wiki/Finger_(protocol)">daemon</a> running, and even if
+        they did, most routers sinkhole it from the outside world in the case of
+        residential connections, and most sysadmins now frown upon running any unneeded
+        services on developer machines.</p>
+        </li>
+        <li>
+        <p>Hosting a website is very easy. <code>.plan</code> files came around because it was
+        easier to write to a text file for an already-running daemon to pick up than it
+        was to stand up a web server with which to write text to. It's the opposite now.
+        For example, this site is currently hosted on GitHub Pages, which is very easy
+        for anyone with a GitHub account and a modicum of Git experience.</p>
+        </li>
+        <li>
+        <p>We have X <em>the everything app</em> now. Even John Carmack gave up his blog in
+        favour of Xitter. The nice thing about this distinction is that you can keep
+        your <code>.plan</code> file somewhere which requires a little technical skill to get at,
+        so you can write about technical topics and anything else with much greater
+        candour.</p>
+        </li>
+        </ol>
+        <p>With this in mind, let's update the concept of a <code>.plan</code> file to the modern day.</p>
+        <h2>Proposing: neoplan</h2>
+        <p>I propose <em>neoplan</em>: a HTTP(s) dotplan file. Back to the future with <code>neoplan</code>.
+        An anti-Facebook or anti-Xitter for people with technical chops. No images, no
+        comments, no dogpiles, no algorithms, just text.</p>
+        <p>I used something similar in a previous job: we were all on servers running
+        Apache on a VPN, and before Slack and Teams, we would put our office hours on
+        <code>index.html</code>, along with what we were doing that day and where in the world we
+        were working from.</p>
+        <h3>Hosting</h3>
+        <p>Stick it in plain text on <code>&lt;host&gt;/.plan</code>. Serve it over HTTP(s) in
+        plain text.  Write it in Markdown (but this is entirely up to you, even write it
+        in <a href="https://orgmode.org/">Org Mode</a> if you want). Update it in the text editor
+        of your choice. It's literally a text file. You could even set your web server
+        up to periodically copy notes from a Dropbox or something like that. It's up to you, but
+        you will be constrained by it being literally plain text and that is absolutely fine.</p>
+        <h3>Fetching</h3>
+        <p>It should be accessible over HTTP(S) with a single <code>curl</code> request. The following should work:</p>
+        <pre><code>curl &lt;host&gt;/.plan | $EDITOR
+        </code></pre>
+        <p>Alias this command to <code>neoplan</code> or something like that. It's just a <code>curl</code> oneliner.</p>
+        <h3>Goals</h3>
+        <p>I don't want this to become gentrified like many other technical works. I don't
+        want a GUI for browsing <code>.plan</code> files. It should be down to the developer to
+        make something that works for them in this respect.</p>
+        <p>I want this to be for technical people only. The only way it can stay this way
+        is for it to be both complex for outsiders and ridiculously simple for insiders.
+        Tough enough to be significant but simple enough to protect. I want the
+        specification for this to fit in one sentence with a client in one line of Bash
+        so that it becomes part of software oral tradition.</p>
+        <p>It should be a safe space away from algorithms, indexers, and AI-generated slop.
+        While anything accessible over HTTP will be absorbed by the borg at some point,
+        I want this to be something that developers actually care about enough to not
+        want to ruin it for everyone.</p>
+        ]]>
+      </content:encoded>
+      <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <link>https://jfg.name/</link>
       <guid isPermaLink="false">https://jfg.name/</guid>
       <content:encoded><![CDATA[]]></content:encoded>
-      <pubDate>Sat, 25 May 2024 16:59:11 GMT</pubDate>
+      <pubDate>Mon, 27 May 2024 13:06:14 GMT</pubDate>
     </item>
     <item>
       <title>Developer Ergonomics</title>

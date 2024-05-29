@@ -18,6 +18,7 @@ site
   .copy("img")
   .copy("favicon.ico")
   .copy("CNAME")
+  .copy(".plan")
   .use(postcss())
   .use(sitemap())
   .use(feed())
