@@ -3,7 +3,7 @@ layout: layouts/base.njk
 menu:
   visible: true
   title: Projects
-  order: 0
+  order: 2
 ---
 
 # Projects
