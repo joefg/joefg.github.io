@@ -5,9 +5,188 @@
     <link>https://jfg.name/</link>
     <atom:link href="https://jfg.name/feed.rss" rel="self" type="application/rss+xml"/>
     <description></description>
-    <lastBuildDate>Sat, 06 Jul 2024 17:27:37 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jul 2024 18:27:34 GMT</lastBuildDate>
     <language>en</language>
     <generator>Lume v2.0.3</generator>
+    <item>
+      <title>In praise of jq</title>
+      <link>https://jfg.name/posts/in-praise-of-jq/</link>
+      <guid isPermaLink="false">https://jfg.name/posts/in-praise-of-jq/</guid>
+      <description>jq, the valuable JSON flick knife</description>
+      <content:encoded>
+        <![CDATA[<p>Question for you: Given the following poorly-formatted set of lon/lat, how would
+        you assemble these into a <a href="https://geojson.org/">GeoJSON</a>?</p>
+        <pre><code class="language-json">[
+        [-3.5, 51],
+        [-1.25, 51.75],
+        [1.24, 52.64]
+        ]
+        </code></pre>
+        <p>You could use Python.</p>
+        <pre><code class="language-python">import json
+        
+        with open('file.json', 'r') as f:
+        points = json.load(f)
+        
+        ret = {
+        &quot;type&quot;: &quot;FeatureCollection&quot;,
+        &quot;features&quot;: [
+        {
+        &quot;type&quot;: &quot;Feature&quot;,
+        &quot;properties&quot;: {},
+        &quot;geometry&quot;: {
+        &quot;type&quot;: &quot;Point&quot;,
+        &quot;coordinates&quot;: point
+        }
+        } for point in points
+        ]
+        }
+        
+        print(json.dumps(ret, indent=4))
+        
+        # {
+        #     &quot;type&quot;: &quot;FeatureCollection&quot;,
+        #     &quot;features&quot;: [
+        #         {
+        #             &quot;type&quot;: &quot;Feature&quot;,
+        #             &quot;properties&quot;: {},
+        #             &quot;geometry&quot;: {
+        #                 &quot;type&quot;: &quot;Point&quot;,
+        #                 &quot;coordinates&quot;: [
+        #                     -3.5,
+        #                     51
+        #                 ]
+        #             }
+        #         },
+        #         {
+        #             &quot;type&quot;: &quot;Feature&quot;,
+        #             &quot;properties&quot;: {},
+        #             &quot;geometry&quot;: {
+        #                 &quot;type&quot;: &quot;Point&quot;,
+        #                 &quot;coordinates&quot;: [
+        #                     -1.25,
+        #                     51.75
+        #                 ]
+        #             }
+        #         },
+        #         {
+        #             &quot;type&quot;: &quot;Feature&quot;,
+        #             &quot;properties&quot;: {},
+        #             &quot;geometry&quot;: {
+        #                 &quot;type&quot;: &quot;Point&quot;,
+        #                 &quot;coordinates&quot;: [
+        #                     1.24,
+        #                     52.64
+        #                 ]
+        #             }
+        #         }
+        #     ]
+        # }
+        </code></pre>
+        <p>You could also use <code>jq</code>.</p>
+        <pre><code class="language-sh">$ jq -s '
+        {
+        &quot;type&quot; : &quot;FeatureCollection&quot;,
+        &quot;features&quot;: [ .[] |
+        {
+        &quot;type&quot; : &quot;Feature&quot;, 
+        &quot;properties&quot;: {}, 
+        &quot;geometry&quot;: 
+        {
+        &quot;type&quot; : &quot;Point&quot;,
+        &quot;coordinates&quot;: .[]
+        } 
+        } 
+        ]
+        }' &lt; points.json 
+        
+        ###
+        
+        {
+        &quot;type&quot;: &quot;FeatureCollection&quot;,
+        &quot;features&quot;: [
+        {
+        &quot;type&quot;: &quot;Feature&quot;,
+        &quot;properties&quot;: {},
+        &quot;geometry&quot;: {
+        &quot;type&quot;: &quot;Point&quot;,
+        &quot;coordinates&quot;: [
+        -3.5,
+        51
+        ]
+        }
+        },
+        {
+        &quot;type&quot;: &quot;Feature&quot;,
+        &quot;properties&quot;: {},
+        &quot;geometry&quot;: {
+        &quot;type&quot;: &quot;Point&quot;,
+        &quot;coordinates&quot;: [
+        -1.25,
+        51.75
+        ]
+        }
+        },
+        {
+        &quot;type&quot;: &quot;Feature&quot;,
+        &quot;properties&quot;: {},
+        &quot;geometry&quot;: {
+        &quot;type&quot;: &quot;Point&quot;,
+        &quot;coordinates&quot;: [
+        1.24,
+        52.64
+        ]
+        }
+        }
+        ]
+        }
+        </code></pre>
+        <p><a href="https://stedolan.github.io/jq/">jq</a> is a marvel. It's a contender for being a
+        proper standard Linux tool. It's designed to be portable: don't have it on your
+        server? No problem, just <code>scp</code> the executable and it works exactly the same as
+        it does on your machine. It works nicely with <code>stdin</code> and <code>stdout</code>. There's a
+        build for <a href="https://stedolan.github.io/jq/download/">most operating systems</a>, and
+        if there wasn't, building it is easy provided you have a good C compiler.</p>
+        <p>If you have <a href="https://github.com/junegunn/fzf">fzf</a> installed (and you should),
+        you can have a rudimentary <code>jq</code> REPL in your terminal on a file of your choice.</p>
+        <pre><code class="language-sh">fjson() {
+        echo '' | fzf --print-query --preview &quot;cat *.json | jq {q}&quot;
+        }
+        </code></pre>
+        <p>Just piping a JSON string into <code>jq</code> prettifies it by default, and adds colours
+        if it detects that it's in a terminal.</p>
+        <pre><code class="language-sh">$ jq &lt; points.json 
+        
+        ###
+        
+        [
+        [
+        -3.5,
+        51
+        ],
+        [
+        -1.25,
+        51.75
+        ],
+        [
+        1.24,
+        52.64
+        ]
+        ]
+        </code></pre>
+        <p>If your JSON's too big, it even minifies it with <code>-c</code>.</p>
+        <pre><code class="language-sh">$ jq -c &lt; points.json
+        
+        ###
+        
+        [[-3.5,51],[-1.25,51.75],[1.24,52.64]]
+        </code></pre>
+        <p>Frankly, it should be installed by default on all operating systems. It's that
+        useful.</p>
+        ]]>
+      </content:encoded>
+      <pubDate>Tue, 16 Jul 2024 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <link>https://jfg.name/projects/</link>
       <guid isPermaLink="false">https://jfg.name/projects/</guid>
@@ -27,7 +206,7 @@
         using a free <a href="https://pages.dev/">Cloudflare Pages</a> account.</p>
         ]]>
       </content:encoded>
-      <pubDate>Sat, 06 Jul 2024 17:27:29 GMT</pubDate>
+      <pubDate>Wed, 10 Jul 2024 19:19:44 GMT</pubDate>
     </item>
     <item>
       <link>https://jfg.name/</link>
