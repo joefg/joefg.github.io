@@ -1,13 +1,13 @@
-title: jfg.name
+title: joefg.github.io
 
 description: jfg.name, a blog
 
-blurb: |
-  Computer programmer.
+#blurb: Computer programmer.
 
 footer: Made with deno and lume in England 🏴󠁧󠁢󠁥󠁮󠁧󠁿.
+#repo: https://github.com/joefg/lume-simple-blog
 
-mugshot: https://avatars.githubusercontent.com/u/13489445
+#mugshot: https://avatars.githubusercontent.com/u/13489445
 
 author:
   name: jfg

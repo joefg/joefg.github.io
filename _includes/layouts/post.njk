@@ -8,12 +8,12 @@ bodyClass: body-post
     <h1 class="post-title">{{ title }}</h1>
     <em>
       <time class="post-date" datetime="{{ date | date('dd/MM/yyyy') }}">
-      {{ date | date('dd/MM/yyyy') }}
+        {{ date | date('dd/MM/yyyy') }}
       </time>
+      {%- if location -%}
+      📍 {{ location }}
+      {%- endif -%}
     </em>
-    {%- if location -%}
-    - 📍 <em>{{ location }}</em>
-    {%- endif -%}
   </div>
   <hr/>
   <div class="post-body">

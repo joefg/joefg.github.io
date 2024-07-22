@@ -1,0 +1,10 @@
+---
+layout: layouts/home.njk
+menu:
+  visible: true
+  title: Home
+  order: 0
+---
+<h2>Posts</h2>
+{% set postslist = search.pages("type=posts", "date=desc") %}
+{% include "templates/postslist.njk" %}
