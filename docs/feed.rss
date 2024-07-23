@@ -5,193 +5,89 @@
     <link>https://jfg.name/</link>
     <atom:link href="https://jfg.name/feed.rss" rel="self" type="application/rss+xml"/>
     <description></description>
-    <lastBuildDate>Thu, 18 Jul 2024 18:28:03 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jul 2024 17:21:01 GMT</lastBuildDate>
     <language>en</language>
     <generator>Lume v2.0.3</generator>
     <item>
-      <title>In praise of jq</title>
-      <link>https://jfg.name/posts/in-praise-of-jq/</link>
-      <guid isPermaLink="false">https://jfg.name/posts/in-praise-of-jq/</guid>
-      <description>jq, the valuable JSON flick knife</description>
+      <link>https://jfg.name/about/</link>
+      <guid isPermaLink="false">https://jfg.name/about/</guid>
       <content:encoded>
-        <![CDATA[<p>Question for you: Given the following poorly-formatted set of lon/lat, how would
-        you assemble these into a <a href="https://geojson.org/">GeoJSON</a>?</p>
-        <pre><code class="language-json">[
-        [-3.5, 51],
-        [-1.25, 51.75],
-        [1.24, 52.64]
-        ]
-        </code></pre>
-        <p>You could use Python.</p>
-        <pre><code class="language-python">import json
-        
-        with open('file.json', 'r') as f:
-        points = json.load(f)
-        
-        ret = {
-        &quot;type&quot;: &quot;FeatureCollection&quot;,
-        &quot;features&quot;: [
-        {
-        &quot;type&quot;: &quot;Feature&quot;,
-        &quot;properties&quot;: {},
-        &quot;geometry&quot;: {
-        &quot;type&quot;: &quot;Point&quot;,
-        &quot;coordinates&quot;: point
-        }
-        } for point in points
-        ]
-        }
-        
-        print(json.dumps(ret, indent=4))
-        
-        # {
-        #     &quot;type&quot;: &quot;FeatureCollection&quot;,
-        #     &quot;features&quot;: [
-        #         {
-        #             &quot;type&quot;: &quot;Feature&quot;,
-        #             &quot;properties&quot;: {},
-        #             &quot;geometry&quot;: {
-        #                 &quot;type&quot;: &quot;Point&quot;,
-        #                 &quot;coordinates&quot;: [
-        #                     -3.5,
-        #                     51
-        #                 ]
-        #             }
-        #         },
-        #         {
-        #             &quot;type&quot;: &quot;Feature&quot;,
-        #             &quot;properties&quot;: {},
-        #             &quot;geometry&quot;: {
-        #                 &quot;type&quot;: &quot;Point&quot;,
-        #                 &quot;coordinates&quot;: [
-        #                     -1.25,
-        #                     51.75
-        #                 ]
-        #             }
-        #         },
-        #         {
-        #             &quot;type&quot;: &quot;Feature&quot;,
-        #             &quot;properties&quot;: {},
-        #             &quot;geometry&quot;: {
-        #                 &quot;type&quot;: &quot;Point&quot;,
-        #                 &quot;coordinates&quot;: [
-        #                     1.24,
-        #                     52.64
-        #                 ]
-        #             }
-        #         }
-        #     ]
-        # }
-        </code></pre>
-        <p>You could also use <code>jq</code>.</p>
-        <pre><code class="language-sh">$ jq -s '
-        {
-        &quot;type&quot; : &quot;FeatureCollection&quot;,
-        &quot;features&quot;: [ .[] |
-        {
-        &quot;type&quot; : &quot;Feature&quot;, 
-        &quot;properties&quot;: {}, 
-        &quot;geometry&quot;: 
-        {
-        &quot;type&quot; : &quot;Point&quot;,
-        &quot;coordinates&quot;: .[]
-        } 
-        } 
-        ]
-        }' &lt; points.json 
-        
-        ###
-        
-        {
-        &quot;type&quot;: &quot;FeatureCollection&quot;,
-        &quot;features&quot;: [
-        {
-        &quot;type&quot;: &quot;Feature&quot;,
-        &quot;properties&quot;: {},
-        &quot;geometry&quot;: {
-        &quot;type&quot;: &quot;Point&quot;,
-        &quot;coordinates&quot;: [
-        -3.5,
-        51
-        ]
-        }
-        },
-        {
-        &quot;type&quot;: &quot;Feature&quot;,
-        &quot;properties&quot;: {},
-        &quot;geometry&quot;: {
-        &quot;type&quot;: &quot;Point&quot;,
-        &quot;coordinates&quot;: [
-        -1.25,
-        51.75
-        ]
-        }
-        },
-        {
-        &quot;type&quot;: &quot;Feature&quot;,
-        &quot;properties&quot;: {},
-        &quot;geometry&quot;: {
-        &quot;type&quot;: &quot;Point&quot;,
-        &quot;coordinates&quot;: [
-        1.24,
-        52.64
-        ]
-        }
-        }
-        ]
-        }
-        </code></pre>
-        <p><a href="https://stedolan.github.io/jq/">jq</a> is a marvel. It's a contender for being a
-        proper standard Linux tool. It's designed to be portable: don't have it on your
-        server? No problem, just <code>scp</code> the executable and it works exactly the same as
-        it does on your machine. It works nicely with <code>stdin</code> and <code>stdout</code>. There's a
-        build for <a href="https://stedolan.github.io/jq/download/">most operating systems</a>, and
-        if there wasn't, building it is easy provided you have a good C compiler.</p>
-        <p>If you have <a href="https://github.com/junegunn/fzf">fzf</a> installed (and you should),
-        you can have a rudimentary <code>jq</code> REPL in your terminal on a file of your choice.</p>
-        <pre><code class="language-sh">fjson() {
-        echo '' | fzf --print-query --preview &quot;cat *.json | jq {q}&quot;
-        }
-        </code></pre>
-        <p>Just piping a JSON string into <code>jq</code> prettifies it by default, and adds colours
-        if it detects that it's in a terminal.</p>
-        <pre><code class="language-sh">$ jq &lt; points.json 
-        
-        ###
-        
-        [
-        [
-        -3.5,
-        51
-        ],
-        [
-        -1.25,
-        51.75
-        ],
-        [
-        1.24,
-        52.64
-        ]
-        ]
-        </code></pre>
-        <p>If your JSON's too big, it even minifies it with <code>-c</code>.</p>
-        <pre><code class="language-sh">$ jq -c &lt; points.json
-        
-        ###
-        
-        [[-3.5,51],[-1.25,51.75],[1.24,52.64]]
-        </code></pre>
-        <p>Frankly, it should be installed by default on all operating systems. It's that
-        useful.</p>
+        <![CDATA[<h2>About</h2>
+        <p class="notice">
+        <b>Notice</b>
+        <br/>
+        The author does not leave contact details and does not wish to
+        engage in private communications with anyone he does not know in
+        person.
+        </p>
+        <p>Joe is a software developer, with a current emphasis on Geospatial and
+        Geomatics.</p>
+        <p>This site is built with <a href="https://deno.com/">Deno</a>, <a href="https://lume.land/">Lume</a>,
+        and <a href="https://simplecss.org/">Simple.css</a>, packaged together in
+        <a href="https://github.com/joefg/lume-simple-blog">lume-simple-blog</a>.</p>
         ]]>
       </content:encoded>
-      <pubDate>Tue, 16 Jul 2024 00:00:00 GMT</pubDate>
+      <pubDate>Tue, 23 Jul 2024 17:17:13 GMT</pubDate>
+    </item>
+    <item>
+      <link>https://jfg.name/</link>
+      <guid isPermaLink="false">https://jfg.name/</guid>
+      <content:encoded>
+        <![CDATA[<h2>Posts</h2>
+        
+        <ul class="postList" style="list-style:none">
+        
+        <li class="postList-post">
+        <a href="https://jfg.name/posts/bring-back-dotplans/" ><strong>Bring back .plan files</strong></a>
+        -
+        <em><time datetime="29/05/2024">
+        29/05/2024
+        </time></em>
+        </li>
+        
+        <li class="postList-post">
+        <a href="https://jfg.name/posts/developer-ergonomics/" ><strong>Developer Ergonomics</strong></a>
+        -
+        <em><time datetime="07/05/2024">
+        07/05/2024
+        </time></em>
+        </li>
+        
+        <li class="postList-post">
+        <a href="https://jfg.name/posts/using-jupyter-with-pipenv/" ><strong>Using Jupyter with Pipenv</strong></a>
+        -
+        <em><time datetime="19/04/2024">
+        19/04/2024
+        </time></em>
+        </li>
+        
+        <li class="postList-post">
+        <a href="https://jfg.name/posts/accelerate/" ><strong>White Heat: The case for Acceleration</strong></a>
+        -
+        <em><time datetime="23/02/2024">
+        23/02/2024
+        </time></em>
+        </li>
+        
+        <li class="postList-post">
+        <a href="https://jfg.name/posts/cgis-not-dead/" ><strong>CGI&#39;s not dead, I wrote some yesterday</strong></a>
+        -
+        <em><time datetime="01/04/2023">
+        01/04/2023
+        </time></em>
+        </li>
+        
+        </ul>
+        
+        ]]>
+      </content:encoded>
+      <pubDate>Tue, 23 Jul 2024 16:58:59 GMT</pubDate>
     </item>
     <item>
       <link>https://jfg.name/projects/</link>
       <guid isPermaLink="false">https://jfg.name/projects/</guid>
       <content:encoded>
-        <![CDATA[<h1>Projects</h1>
+        <![CDATA[<h2>Projects</h2>
         <p><a href="https://git-for-graduates.pages.dev/">Git for Graduates</a> (2024)</p>
         <img src="https://jfg.name/img/git-for-grads.webp" width="300"/>
         <p>I wrote this guide after teaching some graduate developers how to use Git
@@ -206,13 +102,7 @@
         using a free <a href="https://pages.dev/">Cloudflare Pages</a> account.</p>
         ]]>
       </content:encoded>
-      <pubDate>Wed, 10 Jul 2024 19:19:44 GMT</pubDate>
-    </item>
-    <item>
-      <link>https://jfg.name/</link>
-      <guid isPermaLink="false">https://jfg.name/</guid>
-      <content:encoded><![CDATA[]]></content:encoded>
-      <pubDate>Sat, 06 Jul 2024 16:44:48 GMT</pubDate>
+      <pubDate>Tue, 23 Jul 2024 16:53:25 GMT</pubDate>
     </item>
     <item>
       <title>Bring back .plan files</title>
@@ -681,150 +571,6 @@
         ]]>
       </content:encoded>
       <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>In praise of SQLite</title>
-      <link>https://jfg.name/posts/in-praise-of-sqlite/</link>
-      <guid isPermaLink="false">https://jfg.name/posts/in-praise-of-sqlite/</guid>
-      <description>Why I reach for SQLite first.</description>
-      <content:encoded>
-        <![CDATA[<p><a href="https://www.sqlite.org/index.html">SQLite</a> is a fantastic datastore that is
-        applicable to most use cases. Think of it as <code>fopen()</code> with testable SQL
-        queries. It finds regular use in most mobile devices, many desktop and mobile
-        applications, some embedded devices, a few web services as well...</p>
-        <p>While it primarily exists at the edges of the network, it can also work at the
-        centre of the network.</p>
-        <p><a href="https://corecursive.com/066-sqlite-with-richard-hipp/">The story of how it happened is something to
-        read</a>, and in an age of
-        software that stops being supported as soon as it becomes unfashionable, it's a
-        big relief to find that SQLite's developers plan to support it <a href="https://www.sqlite.org/lts.html">through to
-        2050</a>.</p>
-        <h2>Exploration</h2>
-        <p>A trick I like to use is using SQLite to manipulate CSV files. One old
-        interview question used to be searching inside a CSV, and loading the CSV into
-        SQLite means you can use good old SQL queries to do this.</p>
-        <pre><code>$ sqlite3 file.db
-        sqlite&gt; .mode csv
-        sqlite&gt; .import file.csv imported_csv
-        sqlite&gt; .exit
-        </code></pre>
-        <p>I remember being given a 2GB CSV dump to do with ▇▇▇▇▇▇▇▇▇▇ and trying to open
-        it with Excel. Someone showed me how to load a big CSV into SQLite and perform a
-        query on it, and this became the first version of a tool that I'm told is still
-        used today. Another <a href="https://til.simonwillison.net/sqlite/one-line-csv-operations">trick is using SQLite and a bash
-        oneliner</a> to
-        effectively run a <code>SELECT</code> over a CSV. Data scientists: don't discount it! Ditch
-        the Excel macro and learn some reproducible SQL instead.</p>
-        <p>Another tool I like to use is <a href="https://datasette.io/">Datasette</a>. I found it to
-        work well with exploring data, although it's not as comprehensive as something
-        like QGIS for manipulating this data.</p>
-        <h2>In-memory operations</h2>
-        <p>It is also possible to use SQLite
-        <a href="https://www.sqlite.org/inmemorydb.html">in-memory</a>. I find this to be a useful
-        alternative to <a href="https://pandas.pydata.org/">Pandas</a>, especially if the
-        operations wanted are simple enough and you don't want the mess of a gigantic
-        Pandas call for things like aggregation over rows. Just open it as an in-memory
-        database, insert your data, do your operations, then close the connection.</p>
-        <pre><code class="language-python">import sqlite3
-        
-        conn = sqlite3.connect(':memory:')
-        conn.execute(&quot;select 1;&quot;).fetchall() # -&gt; [(1,)]
-        </code></pre>
-        <p>I tend to do this for small datasets because operations done in RAM are quicker
-        than reads and writes to a database file. The added bonus is that you can change
-        <code>:memory:</code> for a file, then inspect this database file while you halt your
-        program in the debugger.</p>
-        <h2>Geospatial data</h2>
-        <p>I tend to prototype GIS projects using
-        <a href="https://www.gaia-gis.it/fossil/libspatialite/index">SpatiaLite</a>. SpatiaLite is
-        also <a href="https://docs.qgis.org/2.8/en/docs/training_manual/databases/spatialite.html">supported in
-        QGIS</a>,
-        and anything that can open a SQLite file can also open SpatiaLite with
-        <code>mod_spatialite</code> installed. SpatiaLite is an extension to SQLite, so to enable
-        it in your Python application, you can simply <code>SELECT load_extension(&quot;mod_spatialite&quot;)</code> to enable it.</p>
-        <pre><code class="language-python">import os
-        import sqlite3
-        
-        def connect(path):
-        conn = sqlite3.connect(os.path.join(path))
-        conn.enable_load_extension(True)
-        conn.execute(&quot;SELECT load_extension('mod_spatialite')&quot;)
-        conn.execute(&quot;SELECT InitSpatialMetaData(1);&quot;)
-        
-        return conn, conn.cursor()
-        
-        conn, cur = connect('path/to/database.db')
-        conn.close()
-        </code></pre>
-        <p>My only issue is that this requires an additional <code>mod_spatialite</code> and
-        <code>spatialite-bin</code> on any machine which needs to use the spatial functionality.
-        <a href="https://docs.djangoproject.com/en/5.0/ref/contrib/gis/install/spatialite/">This guide is helpful for
-        installation</a>.</p>
-        <h2>Prototyping</h2>
-        <p><a href="https://www.youtube.com/watch?v=gUYBFDPZ5qk">Fireship built a simple chat application with
-        PocketBase</a>. You can think of
-        PocketBase as a <a href="https://pocketbase.io/">wrapper and web server around SQLite</a>,
-        although that is selling it massively short.</p>
-        <p>Datasette also allows you to expose an API to query your SQLite database, but
-        PocketBase is more comprehensive in my opinion and it also has an administration
-        panel out of the box with sensible default options.</p>
-        <p>I tend to use it to make a datastore before choosing which database to actually
-        use, but I find that I'm able to take <code>sqlite</code> quite far anyway.</p>
-        <h2>The cutting edge</h2>
-        <p>If you find yourself wanting to scale your database, read the <a href="https://www.sqlite.org/arch.html">Architecture doc</a> first. Get familiar with how it works, and where the slow points are likely to be.</p>
-        <p>In my experience, look in this order:</p>
-        <ol>
-        <li>
-        <p>Your queries-- are they using indexes?</p>
-        </li>
-        <li>
-        <p>Your structure-- do you index what you need to index?</p>
-        </li>
-        <li>
-        <p>Your connections-- do you read and write in one place only?</p>
-        </li>
-        </ol>
-        <p>Once you've exhausted these, look into the <a href="https://www.sqlite.org/wal.html">WAL</a>. Out of the box, SQLite implements atomicity through a rollback journal, which locks the file. Compare to WAL per the docs:</p>
-        <blockquote>
-        <ol>
-        <li>
-        <p>WAL is significantly faster in most scenarios.</p>
-        </li>
-        <li>
-        <p>WAL provides more concurrency as readers do not block writers and a writer
-        does not block readers. Reading and writing can proceed concurrently.</p>
-        </li>
-        <li>
-        <p>Disk I/O operations tends to be more sequential using WAL.</p>
-        </li>
-        <li>
-        <p>WAL uses many fewer fsync() operations and is thus less vulnerable to
-        problems on systems where the fsync() system call is broken.</p>
-        </li>
-        </ol>
-        </blockquote>
-        <p>It's no panacea, and you should read the document closely and evaluate whether
-        the trade-offs are worth it. Sometimes the database <em>isn't</em> the problem. Being a
-        file-based database, you are ultimately at the mercy of the filesystem. Once you
-        start down this rabbit hole, it's time to look into database servers.</p>
-        <h2>Alternatives</h2>
-        <p>If you're doing a lot of column-wise analytics work, give
-        <a href="https://duckdb.org/">DuckDB</a> a go. Like SQLite, it can be used in-memory. There
-        are libraries available for Python, R, Java, and Node. Installation is a single
-        binary at simplest. There's support for importing
-        <a href="https://parquet.apache.org/">Parquets</a>. There's a reasonable <a href="https://duckdb.org/docs/extensions/spatial">Spatial
-        extension</a> which is easier to set up
-        than SpatiaLite ever has been.</p>
-        <p>There's even a <a href="https://duckdb.org/docs/extensions/sqlite">SQLite extension</a>
-        which can talk to SQLite files!</p>
-        <p>There will come a point where embedded databases quite simply won't scale, and
-        that's fine. SQLite has some problems with concurrency. If you're fine with
-        allowing only one connection to SQLite (essentially making a quasi-service),
-        that's fine, but consider a database server instead, like PostgreSQL, or MySQL,
-        or MariaDB.</p>
-        ]]>
-      </content:encoded>
-      <pubDate>Tue, 26 Mar 2024 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>White Heat: The case for Acceleration</title>

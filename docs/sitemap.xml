@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://jfg.name/</loc>
-    <lastmod>2024-07-06T16:44:48.755Z</lastmod>
+    <lastmod>2024-07-23T16:58:59.898Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jfg.name/about/</loc>
+    <lastmod>2024-07-23T17:17:13.558Z</lastmod>
   </url>
   <url>
     <loc>https://jfg.name/posts/accelerate/</loc>
@@ -21,19 +25,11 @@
     <lastmod>2024-05-07T00:00:00.000Z</lastmod>
   </url>
   <url>
-    <loc>https://jfg.name/posts/in-praise-of-jq/</loc>
-    <lastmod>2024-07-16T00:00:00.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jfg.name/posts/in-praise-of-sqlite/</loc>
-    <lastmod>2024-03-26T00:00:00.000Z</lastmod>
-  </url>
-  <url>
     <loc>https://jfg.name/posts/using-jupyter-with-pipenv/</loc>
     <lastmod>2024-04-19T00:00:00.000Z</lastmod>
   </url>
   <url>
     <loc>https://jfg.name/projects/</loc>
-    <lastmod>2024-07-10T19:19:44.075Z</lastmod>
+    <lastmod>2024-07-23T16:53:25.963Z</lastmod>
   </url>
 </urlset>
