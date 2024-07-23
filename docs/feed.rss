@@ -5,9 +5,33 @@
     <link>https://jfg.name/</link>
     <atom:link href="https://jfg.name/feed.rss" rel="self" type="application/rss+xml"/>
     <description></description>
-    <lastBuildDate>Tue, 23 Jul 2024 19:55:20 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jul 2024 21:15:54 GMT</lastBuildDate>
     <language>en</language>
     <generator>Lume v2.0.3</generator>
+    <item>
+      <link>https://jfg.name/projects/</link>
+      <guid isPermaLink="false">https://jfg.name/projects/</guid>
+      <content:encoded>
+        <![CDATA[<h2>Projects</h2>
+        <h3 style="text-align: center">
+        <a href="https://git-for-graduates.pages.dev/">Git for Graduates</a> (2024)
+        </h3>
+        <p><img src="https://jfg.name/img/git-for-grads.webp" width="300" style="display: block;
+        margin: 0 auto"/></p>
+        <p>I wrote this guide after teaching some graduate developers how to use Git
+        effectively. Most universities don't teach it to the standard required in
+        industry, with many graduates being unable to distinguish between a merge and a
+        rebase in interview. This book is intended to be &quot;everything I wish I knew about
+        Git when I was a graduate&quot;, a halfway between &quot;just read the man file&quot; and <a href="https://git-scm.com/book/en/v2">the
+        excellent Pro Git book</a>.</p>
+        <p>This ebook is formatted to be easily readable on a phone screen during a lunch
+        break, and it is free, <em>forever</em>. I wrote it over a period of two weeks from
+        notes I put together. It uses <code>pandoc</code> to generate the PDF, and it is hosted
+        using a free <a href="https://pages.dev/">Cloudflare Pages</a> account.</p>
+        ]]>
+      </content:encoded>
+      <pubDate>Tue, 23 Jul 2024 21:15:07 GMT</pubDate>
+    </item>
     <item>
       <link>https://jfg.name/about/</link>
       <guid isPermaLink="false">https://jfg.name/about/</guid>
@@ -31,7 +55,7 @@
         reproduced elsewhere. Media must not be hotlinked.</p>
         ]]>
       </content:encoded>
-      <pubDate>Tue, 23 Jul 2024 19:48:06 GMT</pubDate>
+      <pubDate>Tue, 23 Jul 2024 21:03:25 GMT</pubDate>
     </item>
     <item>
       <link>https://jfg.name/</link>
@@ -86,27 +110,6 @@
         ]]>
       </content:encoded>
       <pubDate>Tue, 23 Jul 2024 18:32:54 GMT</pubDate>
-    </item>
-    <item>
-      <link>https://jfg.name/projects/</link>
-      <guid isPermaLink="false">https://jfg.name/projects/</guid>
-      <content:encoded>
-        <![CDATA[<h2>Projects</h2>
-        <p><a href="https://git-for-graduates.pages.dev/">Git for Graduates</a> (2024)</p>
-        <img src="https://jfg.name/img/git-for-grads.webp" width="300"/>
-        <p>I wrote this guide after teaching some graduate developers how to use Git
-        effectively. Most universities don't teach it to the standard required in
-        industry, with many graduates being unable to distinguish between a merge and a
-        rebase in interview. This book is intended to be &quot;everything I wish I knew about
-        Git when I was a graduate&quot;, a halfway between &quot;just read the man file&quot; and <a href="https://git-scm.com/book/en/v2">the
-        excellent Pro Git book</a>.</p>
-        <p>This ebook is formatted to be easily readable on a phone screen during a lunch
-        break, and it is free, <em>forever</em>. I wrote it over a period of two weeks from
-        notes I put together. It uses <code>pandoc</code> to generate the PDF, and it is hosted
-        using a free <a href="https://pages.dev/">Cloudflare Pages</a> account.</p>
-        ]]>
-      </content:encoded>
-      <pubDate>Tue, 23 Jul 2024 17:37:47 GMT</pubDate>
     </item>
     <item>
       <title>Bring back .plan files</title>
