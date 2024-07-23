@@ -5,7 +5,7 @@
     <link>https://jfg.name/</link>
     <atom:link href="https://jfg.name/feed.rss" rel="self" type="application/rss+xml"/>
     <description></description>
-    <lastBuildDate>Tue, 23 Jul 2024 17:21:01 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jul 2024 19:55:20 GMT</lastBuildDate>
     <language>en</language>
     <generator>Lume v2.0.3</generator>
     <item>
@@ -13,21 +13,25 @@
       <guid isPermaLink="false">https://jfg.name/about/</guid>
       <content:encoded>
         <![CDATA[<h2>About</h2>
-        <p class="notice">
-        <b>Notice</b>
-        <br/>
-        The author does not leave contact details and does not wish to
-        engage in private communications with anyone he does not know in
-        person.
-        </p>
         <p>Joe is a software developer, with a current emphasis on Geospatial and
         Geomatics.</p>
+        <section class="notice">
+        <b>⚠️ NOTICE</b>
+        <br/>
+        The author does not provide contact details and does not wish to
+        engage in private correspondence with anyone he does not know in
+        person.
+        </section>
+        <h2>Colophon</h2>
         <p>This site is built with <a href="https://deno.com/">Deno</a>, <a href="https://lume.land/">Lume</a>,
         and <a href="https://simplecss.org/">Simple.css</a>, packaged together in
-        <a href="https://github.com/joefg/lume-simple-blog">lume-simple-blog</a>.</p>
+        <a href="https://github.com/joefg/lume-simple-blog">lume-simple-blog</a> and available
+        free-of-charge through that GitHub repository.</p>
+        <p>The contents of this site remain copyright of the author and must not be
+        reproduced elsewhere. Media must not be hotlinked.</p>
         ]]>
       </content:encoded>
-      <pubDate>Tue, 23 Jul 2024 17:17:13 GMT</pubDate>
+      <pubDate>Tue, 23 Jul 2024 19:48:06 GMT</pubDate>
     </item>
     <item>
       <link>https://jfg.name/</link>
@@ -81,7 +85,7 @@
         
         ]]>
       </content:encoded>
-      <pubDate>Tue, 23 Jul 2024 16:58:59 GMT</pubDate>
+      <pubDate>Tue, 23 Jul 2024 18:32:54 GMT</pubDate>
     </item>
     <item>
       <link>https://jfg.name/projects/</link>
@@ -102,7 +106,7 @@
         using a free <a href="https://pages.dev/">Cloudflare Pages</a> account.</p>
         ]]>
       </content:encoded>
-      <pubDate>Tue, 23 Jul 2024 16:53:25 GMT</pubDate>
+      <pubDate>Tue, 23 Jul 2024 17:37:47 GMT</pubDate>
     </item>
     <item>
       <title>Bring back .plan files</title>
