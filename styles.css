@@ -1,3 +1,7 @@
 @import "css/simple.css";
 @import "css/simple-plus.css";
 @import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/base16/tomorrow-night.min.css";
+
+:root {
+	font-size: 14px;
+}
