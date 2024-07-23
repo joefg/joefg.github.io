@@ -17,7 +17,6 @@ site
   .ignore("README.md")
   .copy("img")
   .copy("favicon.ico")
-  .copy(".plan")
   .use(postcss())
   .use(sitemap())
   .use(feed())
