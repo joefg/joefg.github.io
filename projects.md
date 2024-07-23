@@ -6,7 +6,7 @@ menu:
   order: 2
 ---
 
-# Projects
+## Projects
 
 [Git for Graduates](https://git-for-graduates.pages.dev) (2024)
 
