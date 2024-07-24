@@ -5,7 +5,7 @@
     <link>https://jfg.name/</link>
     <atom:link href="https://jfg.name/feed.rss" rel="self" type="application/rss+xml"/>
     <description></description>
-    <lastBuildDate>Tue, 23 Jul 2024 21:15:54 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jul 2024 10:24:54 GMT</lastBuildDate>
     <language>en</language>
     <generator>Lume v2.0.3</generator>
     <item>
@@ -16,8 +16,7 @@
         <h3 style="text-align: center">
         <a href="https://git-for-graduates.pages.dev/">Git for Graduates</a> (2024)
         </h3>
-        <p><img src="https://jfg.name/img/git-for-grads.webp" width="300" style="display: block;
-        margin: 0 auto"/></p>
+        <img class="centered-img" src="https://jfg.name/img/git-for-grads.webp" width="300"/>
         <p>I wrote this guide after teaching some graduate developers how to use Git
         effectively. Most universities don't teach it to the standard required in
         industry, with many graduates being unable to distinguish between a merge and a
@@ -30,7 +29,7 @@
         using a free <a href="https://pages.dev/">Cloudflare Pages</a> account.</p>
         ]]>
       </content:encoded>
-      <pubDate>Tue, 23 Jul 2024 21:15:07 GMT</pubDate>
+      <pubDate>Fri, 26 Jul 2024 10:24:44 GMT</pubDate>
     </item>
     <item>
       <link>https://jfg.name/about/</link>
@@ -55,7 +54,7 @@
         reproduced elsewhere. Media must not be hotlinked.</p>
         ]]>
       </content:encoded>
-      <pubDate>Tue, 23 Jul 2024 21:03:25 GMT</pubDate>
+      <pubDate>Fri, 26 Jul 2024 10:16:52 GMT</pubDate>
     </item>
     <item>
       <link>https://jfg.name/</link>

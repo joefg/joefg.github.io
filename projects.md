@@ -13,8 +13,7 @@ menu:
     <a href="https://git-for-graduates.pages.dev">Git for Graduates</a> (2024)
 </h3>
 
-<img src="/img/git-for-grads.webp" width="300" style="display: block;
-margin: 0 auto"/>
+<img class="centered-img" src="/img/git-for-grads.webp" width="300"/>
 
 I wrote this guide after teaching some graduate developers how to use Git
 effectively. Most universities don't teach it to the standard required in

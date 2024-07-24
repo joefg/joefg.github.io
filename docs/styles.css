@@ -473,4 +473,7 @@ samp {
   fill: currentColor;
 }:root {
 	font-size: 14px;
+}.centered-img {
+	display: block;
+	margin: 0 auto;
 }
