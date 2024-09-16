@@ -1,0 +1,8 @@
+{%- if bulletin or site.bulletin -%}
+<p/>
+<section class="notice">
+    <b>⚠️ NOTICE</b>
+    <br/>
+    {{ bulletin or site.bulletin }}
+</section>
+{%- endif -%}
