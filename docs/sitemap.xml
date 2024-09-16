@@ -2,11 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://jfg.name/</loc>
-    <lastmod>2024-09-16T13:28:28.748Z</lastmod>
+    <lastmod>2024-09-16T17:29:34.417Z</lastmod>
   </url>
   <url>
     <loc>https://jfg.name/about/</loc>
-    <lastmod>2024-09-16T13:28:21.182Z</lastmod>
+    <lastmod>2024-09-16T20:40:20.257Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jfg.name/colophon/</loc>
+    <lastmod>2024-09-16T20:38:33.132Z</lastmod>
   </url>
   <url>
     <loc>https://jfg.name/posts/2024-summer-notes/</loc>
