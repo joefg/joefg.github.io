@@ -1,7 +1,7 @@
 {
   "importMap": "import_map.json",
   "tasks": {
-    "build": "deno task lume --dest docs",
+    "build": "deno task lume",
     "serve": "deno task lume -s",
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -"
   }
