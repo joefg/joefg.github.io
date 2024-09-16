@@ -6,7 +6,7 @@ menu:
   order: 1
 ---
 
-## About
+<h2 id="about">About</h2>
 
 Joe is a software developer, with a current emphasis on Geospatial and
 Geomatics.
@@ -19,7 +19,7 @@ Geomatics.
     person.
 </section>
 
-## Colophon
+<h2 id="colophon">Colophon</h2>
 
 This site is built with [Deno](https://deno.com/), [Lume](https://lume.land/),
 and [Simple.css](https://simplecss.org/), packaged together in
