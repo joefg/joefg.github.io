@@ -12,11 +12,11 @@
   <body>
     <header>
       <br/>
-      {%- if site.mugshot -%}
-        <img src="{{ site.mugshot }}" width="100px"/>
+      {%- if site.header.mugshot -%}
+        <img src="{{ site.header.mugshot }}" width="100px"/>
       {%- endif -%}
-      <h1>{{ site.title }}</h1>
-      <p>{{ site.blurb }}</p>
+      <h1>{{ site.header.title }}</h1>
+      <p>{{ site.header.blurb }}</p>
       <nav>
         {%- for entry in search.pages("menu.visible=true", "menu.order") -%}
           <a href="{{ entry.url }}"{%- if entry.url == url -%} class="current" aria-current="page"{%- endif -%}>
@@ -31,7 +31,7 @@
         GitHub
         </a>
         {%- endif %}
-          {%- for name, link in site.links -%}
+          {%- for name, link in site.header.links -%}
             <a href="{{ link }}">
               {{ name }}
             </a>
@@ -44,14 +44,19 @@
     </main>
 
    <footer>
-    {%- if site.footer -%}
-      {{ site.footer }}
+    {%- if site.footer.text -%}
+      {{ site.footer.text }}
     {%- else -%}
       Site <a href="{{ site.repo }}">built</a> with <code>deno + lume + simple.css</code>.
     {%- endif -%}
 		<br/>
-    <a href="/feed.rss">RSS Feed</a> &bull;
-		<a href="/colophon">Colophon</a>
+    <a href="/feed.rss">RSS Feed</a>
+		{% for key, value in site.footer.links %}
+			&bull;
+			<a href="{{ value }}">
+				{{ key }}
+			</a>
+		{% endfor %}
     </footer>
   </body>
 </html>

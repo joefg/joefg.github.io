@@ -1,18 +1,21 @@
 title: joefg.github.io
-
 description: jfg.name, a blog
-
-#blurb: Computer programmer.
-#bulletin: Away for a bit.
-
-footer: Made with deno and lume in England 🏴󠁧󠁢󠁥󠁮󠁧󠁿.
-#repo: https://github.com/joefg/lume-simple-blog
-
-#mugshot: https://avatars.githubusercontent.com/u/13489445
-
 author:
   name: jfg
   email: jfg@jfg.name
+#github: https://github.com/joefg
 
-links:
-  🖥️ GitHub: https://github.com/joefg
+header:
+  title: joefg.github.io
+  #blurb: Computer programmer.
+  #mugshot: https://avatars.githubusercontent.com/u/13489445
+  links:
+    🖥️ GitHub: https://github.com/joefg
+
+#bulletin: This blog is no longer under active development.
+
+footer:
+  text: Made with deno and lume in England 🏴󠁧󠁢󠁥󠁮󠁧󠁿
+  repo: https://github.com/joefg/lume-simple-blog
+  links:
+    Colophon: /colophon
