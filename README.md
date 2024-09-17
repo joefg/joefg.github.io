@@ -10,7 +10,8 @@ Requires [Deno](https://deno.com). Make sure that is installed. Then:
 
 * `deno task build` compiles the site.
 
-At the moment this is hosted on GitHub Pages pointing to `docs/`.
+At the moment this is hosted on GitHub Pages using the action in
+`.github/workflows/publish.yaml`.
 
 ## Workflow
 
@@ -18,10 +19,8 @@ At the moment this is hosted on GitHub Pages pointing to `docs/`.
 
 2. Make your change-- new post in `posts/` or otherwise.
 
-3. Make sure your commit also contains the built site, because there is
-no deno build step at present in the Actions for this repo.
-
-4. Rebase onto `main` and push.
+3. Rebase onto `main` and push. The GitHub Action should take
+care of the rest.
 
 ## Colophon
 
