@@ -6,16 +6,17 @@ menu:
   order: 1
 ---
 
-<h2 id="about">About</h2>
+## About
 
 Joe is a software developer, with a current emphasis on Geospatial and
 Geomatics.
 
 <section class="notice">
     <b>⚠️ NOTICE</b>
-    <br/>
-    The author does not provide contact details and does not wish to
+    <p>The author does not provide contact details and does not wish to
     engage in private correspondence with anyone he does not know in
-    person.
+    person.<p/>
 </section>
-</br>
+
+He is based in [East Anglia](https://en.wikipedia.org/wiki/East_Anglia), and
+can be found kayaking or frequenting bourgeois coffee houses.
