@@ -1,16 +1,18 @@
 title: joefg.github.io
 description: jfg.name, a blog
+
 author:
   name: jfg
   email: jfg@jfg.name
-#github: https://github.com/joefg
+
+github: https://github.com/joefg
 
 header:
-  title: joefg.github.io
-  #blurb: Computer programmer.
+  title: joefg's blog
+  #blurb: Geo dev and data wrangler.
   #mugshot: https://avatars.githubusercontent.com/u/13489445
   links:
-    🖥️ GitHub: https://github.com/joefg
+    #🖥️ GitHub: https://github.com/joefg
 
 #bulletin: This blog is no longer under active development.
 
