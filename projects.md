@@ -8,7 +8,6 @@ menu:
 
 ## Projects
 
-
 <h3 style="text-align: center">
     <a href="https://git-for-graduates.pages.dev">Git for Graduates</a> (2024)
 </h3>
@@ -26,3 +25,12 @@ This ebook is formatted to be easily readable on a phone screen during a lunch
 break, and it is free, *forever*. I wrote it over a period of two weeks from
 notes I put together. It uses `pandoc` to generate the PDF, and it is hosted
 using a free [Cloudflare Pages](https://pages.dev) account.
+
+<h3 style="text-align: center">
+    <a href="https://github.com/joefg/lume-simple-blog">lume-simple-blog</a> (2023)
+</h3>
+
+This blog is powered by deno + lume + Simple.css, packaged neatly into
+[lume-simple-blog](https://github.com/joefg/lume-simple-blog).
+
+If I make changes to this blog's code I'll try to replicate it over there.
