@@ -8,10 +8,18 @@ menu:
 
 ## Colophon
 
+### Technology
+
 This site is built with [Deno](https://deno.com/), [Lume](https://lume.land/),
 and [Simple.css](https://simplecss.org/), packaged together in
 [lume-simple-blog](https://github.com/joefg/lume-simple-blog) and available
-free-of-charge through that GitHub repository.
+free-of-charge through that GitHub repository. It is hosted on [GitHub
+Pages](https://pages.github.com/).
+
+Click [here](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjoefg.github.io%2F)
+for W3's validator results for this site.
+
+### Content
 
 **Unless stated otherwise**, this site contains zero AI generated content.
 
