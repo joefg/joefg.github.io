@@ -17,7 +17,7 @@ header:
 #bulletin: This blog is no longer under active development.
 
 footer:
-  text: Made with deno and lume in England 🏴󠁧󠁢󠁥󠁮󠁧󠁿
+  text: Built with Deno and Lume in England 🏴󠁧󠁢󠁥󠁮󠁧󠁿
   repo: https://github.com/joefg/lume-simple-blog
   links:
     Colophon: /colophon
