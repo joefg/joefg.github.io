@@ -49,14 +49,14 @@
     {%- else -%}
       Site <a href="{{ site.repo }}">built</a> with <code>deno + lume + simple.css</code>.
     {%- endif -%}
-		<br/>
+    <br/>
     <a href="/feed.rss">RSS Feed</a>
-		{% for key, value in site.footer.links %}
-			&bull;
-			<a href="{{ value }}">
-				{{ key }}
-			</a>
-		{% endfor %}
+    {% for key, value in site.footer.links %}
+      &bull;
+      <a href="{{ value }}">
+        {{ key }}
+      </a>
+    {% endfor %}
     </footer>
   </body>
 </html>
