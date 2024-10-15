@@ -16,7 +16,9 @@
         <img src="{{ site.header.mugshot }}" width="100px"/>
       {%- endif -%}
       <h1>{{ site.header.title }}</h1>
-      <p>{{ site.header.blurb }}</p>
+      {%- if site.header.blurb -%}
+        <p>{{ site.header.blurb }}</p>
+      {%- endif -%}
       <nav>
         {%- for entry in search.pages("menu.visible=true", "menu.order") -%}
           <a href="{{ entry.url }}"{%- if entry.url == url -%} class="current" aria-current="page"{%- endif -%}>
