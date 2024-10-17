@@ -8,6 +8,13 @@ menu:
 
 ## Colophon
 
+### Content
+
+**Unless stated otherwise**, this site contains zero AI generated content.
+
+The contents of this site remain copyright of the author and must not be
+reproduced elsewhere. Media must not be hotlinked.
+
 ### Technology
 
 This site is built with [Deno](https://deno.com/), [Lume](https://lume.land/),
@@ -18,10 +25,3 @@ Pages](https://pages.github.com/).
 
 Click [here](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjoefg.github.io%2F)
 for W3's validator results for this site.
-
-### Content
-
-**Unless stated otherwise**, this site contains zero AI generated content.
-
-The contents of this site remain copyright of the author and must not be
-reproduced elsewhere. Media must not be hotlinked.
