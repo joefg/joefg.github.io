@@ -10,3 +10,9 @@
 	display: block;
 	margin: 0 auto;
 }
+
+.no-select {
+  -webkit-user-select: none;
+	-ms-user-select: none;
+  user-select: none;
+}
