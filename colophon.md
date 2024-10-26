@@ -8,6 +8,10 @@ menu:
 
 ## Colophon
 
+### Author
+
+All content on this blog authored by [@joefg](http://github.com/joefg).
+
 ### Content
 
 **Unless stated otherwise**, this site contains zero AI generated content.
