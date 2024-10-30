@@ -10,7 +10,8 @@ menu:
 
 ### Author
 
-All content on this blog authored by [@joefg](http://github.com/joefg).
+All content on this blog authored by [@joefg](http://github.com/joefg). Topics
+include software, software development, and the impact of software on society.
 
 ### Content
 
