@@ -24,15 +24,29 @@ jobs:
 
       - name: Build site
         run: deno task build
-      
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
-      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
           path: '_site'
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v3
+  deploy:
+      needs: build
+
+      permissions:
+        pages: write
+        id-token: write
+
+      runs-on: ubuntu-latest
+
+      environment:
+        name: github-pages
+        url: ${{ steps.deployment.output.page_url }}
+
+      steps:
+        - name: Deploy to GitHub Pages
+          id: deployment
+          uses: actions/deploy-pages@v3
