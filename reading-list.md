@@ -8,10 +8,17 @@ menu:
 
 ## Reading List
 
-This is a dumping place for pages/blogs/books/whatever that I like to recommend
-to people.
+This is a dumping place for reading material that I find interesting and useful.
 
-### Blogs
+### Contents
+
+* [Blogs](#blogs)
+* [Articles](#articles)
+* [Papers](#papers)
+* [Web Fiction](#web-fiction)
+* [Books](#books)
+
+<h3 id="blogs">Blogs</h3>
 
 - [Scott Alexander](https://readscottalexander.com/), very rarely a bad take,
 and certainly zero poor-faith argumentation. Some highlights:
@@ -33,7 +40,7 @@ thinkers alive today. Highlights:
     (2018)](https://gwern.net/complement). Everyone in tech should read this
     document. It will explain so much about the industry.
 
-### Articles
+<h3 id="articles">Articles</h3>
 
 - [Cowboys and Pit Crews
 (2011)](https://www.newyorker.com/news/news-desk/cowboys-and-pit-crews). I give
@@ -52,7 +59,17 @@ is humanity so alone?
 - [Simulation, Consciousness, Existence (1998)](https://archive.is/uqCeA) by Hans
 Moravec.
 
-### Web Fiction
+<h3 id="papers">Papers</h3>
+
+- [Philosophical Aspects of Artificial Life
+(1996)](https://people.reed.edu/~mab/publications/papers/ecal91.pdf) by Mark A.
+Bedau. Essential reading for anyone interested in the subject of Artificial
+Intelligence.
+
+- Anything from [Papers for Software
+Engineers](https://github.com/facundoolano/software-papers) is worth reading.
+
+<h3 id="web-fiction">Web Fiction</h3>
 
 - [Manna: Two Views of Humanity's Future (2003)](https://marshallbrain.com/manna1) by
 Marshall Brain. A novella on what society could do with automation.
@@ -60,7 +77,7 @@ Marshall Brain. A novella on what society could do with automation.
 - [After Life (2006)](https://sifter.org/~simon/AfterLife/) by Simon Funk. A
 sci-fi novella about artificial intelligence and conscience transfer.
 
-### Books
+<h3 id="books">Books</h3>
 
 - [The Steve Jobs Archive](https://stevejobsarchive.com/book). A collection of
 Steve Jobs's writings and speeches. The ebook is beautifully typeset, too. They
@@ -70,6 +87,8 @@ did publish a book, but it goes for stupid money on eBay and isn't worth it.
 François Fleuret. A good introduction to Deep Learning for someone who knows
 their mathematics. Otherwise, [fast.ai](https://fast.ai) is also good.
 
-- [The Network State](https://thenetworkstate.com/) by `@balajis` is very *of
+- [The Network State](https://thenetworkstate.com/) by Balaji Srinivasan is very *of
 the moment*. You may disagree with it (I certainly do), but because "people" are
-aware of it, you should be aware of it too.
+aware of it, you should be aware of it too. Think of it as a tech bro's
+rediscovery of pre-nation-state tribal structures but with WiFi and a
+blockchain.
