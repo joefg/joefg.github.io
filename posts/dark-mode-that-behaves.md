@@ -4,6 +4,13 @@ description: Dark mode that follows your system
 date: 2025-01-03
 ---
 
+<p/>
+<section class="notice">
+<b>UPDATE 8/1/25:</b> Added a script to quickly change tmux themes based on
+gsettings's preferred colour scheme, and a few words on VSCode's terminal
+profile system.
+</section>
+
 A new year's resolution of mine was to use light colour palettes more often.
 Dark colour schemes are OK in low-light, but unfortunately have several problems
 in non-low-light situations.
@@ -80,7 +87,35 @@ handled by the terminal, but status bar colours can't be.
 I keep a `tomorrow-night.conf` file and a `tomorrow.conf` file in tmux's XDG directory,
 and just `source-file ~/.config/tmux/<tomorrow|tomorrow-night>.conf` to change themes.
 
-Not ideal but the perfect is the enemy of the good enough. This could probably be scripted.
+I wrote a quick script called `curtains` that simply changes this `source-file`
+based on the current Gnome preferred colour scheme.
+
+```sh
+#!/usr/bin/env sh
+
+function darken_tmux(){
+	echo "Closing curtains..."
+	sed -i -e 's/tomorrow.conf/tomorrow-night.conf/g' ~/.config/tmux/tmux.conf
+	echo "Please reload your tmux config."
+}
+
+function lighten_tmux(){
+	echo "Opening curtains..."
+	sed -i -e 's/tomorrow-night.conf/tomorrow.conf/g' ~/.config/tmux/tmux.conf
+	echo "Please reload your tmux config."
+}
+
+function curtains(){
+	COLORSCHEME="$(gsettings get org.gnome.desktop.interface color-scheme)"
+	if [ $COLORSCHEME = "'prefer-dark'" ]; then
+		darken_tmux
+	else
+		lighten_tmux
+	fi
+}
+
+curtains $1
+```
 
 ## Text editors
 
@@ -102,3 +137,7 @@ what your operating system prefers.
 I use the `Tomorrow` and `Tomorrow-Night` colour schemes and set those though
 the `Workbench: Preferred Light Color Theme` and `Workbench: Preferred Dark Color Theme`
 options respectively.
+
+As for the terminal, it depends what terminal you're using. If you're using
+`gnome-terminal`, you can change the profile through [Terminal
+Profiles](https://code.visualstudio.com/docs/terminal/profiles).
