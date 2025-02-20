@@ -1,4 +1,5 @@
 ---
+title: Reading List
 layout: layouts/base.njk
 menu:
   visible: true
