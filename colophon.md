@@ -20,6 +20,11 @@ include software, software development, and the impact of software on society.
 The contents of this site remain copyright of the author and must not be
 reproduced elsewhere. Media must not be hotlinked.
 
+The author requests that this site is not used to train any form of AI, or used
+as part of a
+[RAG](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/)
+strategy for enhancing language model output.
+
 ### Technology
 
 This site is built with [Deno](https://deno.com/), [Lume](https://lume.land/),
