@@ -17,7 +17,7 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v4
 
-      - name: Setup Deno environment
+      - name: Setup Deno
         uses: denoland/setup-deno@v2
         with:
           deno-version: v2.1.4
@@ -31,7 +31,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '_site'
+          path: '_site/'
 
   deploy:
       needs: build
