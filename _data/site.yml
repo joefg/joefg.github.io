@@ -1,15 +1,15 @@
 title: joefg.github.io
-description: jfg.name, a blog
+description: joefg's development blog
 
 author:
-  name: jfg
-  email: jfg@jfg.name
+  name: joefg
+  email: joefg@jfg.name
 
 github: https://github.com/joefg
 
 header:
-  title: joefg's blog
-  blurb: Software musings.
+  title: joefg.github.io
+  #blurb: Software musings.
   #mugshot: https://avatars.githubusercontent.com/u/13489445
   links:
     #🖥️ GitHub: https://github.com/joefg
