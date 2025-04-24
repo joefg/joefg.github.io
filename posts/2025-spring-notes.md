@@ -5,6 +5,13 @@ date: 2025-04-17
 location: Silicon Fen, England
 ---
 
+<div class="notice">
+    ⚠️ <b>UPDATES</b>
+
+    24/04/2025: Added small bit on using Telegram Bots for service
+    notifications.
+</div>
+
 Some notes from this fine year's Lent. If you're wondering, I gave up fizzy
 drinks for Lent.
 
@@ -308,6 +315,40 @@ GitLab) is making a collapsible section for long-winded skippable paragraphs.
     <p>This is something that is hidden.</p>
 </details>
 ```
+
+### Using Telegram for alerting
+
+The messaging app [Telegram](https://telegram.org) has a pretty sweet trick:
+its [Bot API](https://core.telegram.org/bots) is the nicest one I've used. You
+can stand up a bot using [Botfather](https://t.me/botfather), and using the
+given API key, you can just ping notifications to a chat (user, group, or
+channel) with a simple `curl` request.
+
+```sh
+#!/usr/bin/env sh
+
+function notify(){
+	local id="$1"
+	local msg_string="$2"
+	local token="$TG_TOKEN"
+	local url="https://api.telegram.org/bot$token/sendMessage"
+	curl -s -X POST $url -d chat_id=$id -d text="$msg_string"
+}
+
+notify "$@"
+```
+
+Using this is as simple as:
+
+```sh
+TG_TOKEN="<your-token-here>" ./notify "<chat-id>" "<message>"
+```
+
+I released some improved helper scripts as
+[tg-tools](https://github.com/joefg/tg-tools). All it requires is `sh` and
+`curl`. Small enough to copy/paste, but comes with a simple Makefile installer
+so you can add them to a container if you want. Just add the repo as a
+submodule, then `cd tg-tools; make install` to install.
 
 ### Tools
 
