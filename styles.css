@@ -16,3 +16,17 @@
 	-ms-user-select: none;
   user-select: none;
 }
+
+.postlist {
+	list-style: none;
+
+	.postlist-post {
+		time, span {
+			user-select: none;
+		};
+
+		time {
+			font-style: italic;
+		}
+	};
+}
