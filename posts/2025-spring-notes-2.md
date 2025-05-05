@@ -8,7 +8,7 @@ location: Cambridge, England
 Some more notes from the spring. Didn't want to update the previous post,
 but some of this is something that I don't want to leave until the Summer Notes.
 
-<img class="centered-img" src="/img/springtime-2025.webp" width=400/>
+<img class="centered-img" src="/img/spring-25.webp" width=600/>
 
 ### Looking For Growth
 
@@ -173,3 +173,5 @@ would recommend to use now.
 I also like to include [editorconfig](https://editorconfig.org/) files in
 repositories I own because I know full well `neovim` isn't the only editor which
 edits those files.
+
+<img class="centered-img" src="/img/springtime-2025.webp" width=400/>
