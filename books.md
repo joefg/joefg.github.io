@@ -8,21 +8,22 @@ menu:
 
 ## Reading List
 
+Some of the books I have read end up on this page.
+
+<nav class="links-nav">
+    <a href="#fiction">Fiction</a> &bull;
+    <a href="#non-fiction">Non-Fiction</a> &bull;
+    <a href="#technical">Technical</a>
+</nav>
+
+<h3 id="fiction">Fiction</h3>
+
 <div class="notice">
     ⚠️ <b>NOTICE</b>
 
     Much of the fiction I recommend is for adults, containing violence and other
     adult themes. I shouldn't have to put this notice here, but here it is.
 </div>
-
-Some of the books I have read end up on this page.
-
-<nav class="links-nav">
-    <a href="#fiction">Fiction</a> &bull;
-    <a href="#non-fiction">Non-Fiction</a>
-</nav>
-
-<h3 id="fiction">Fiction</h3>
 
 **After Life** by Simon Funk, 2006. [Available
 here](https://sifter.org/simon/AfterLife/index.html). A digital trip. No
@@ -97,3 +98,26 @@ outsider personality, unwilling and unable to conform to the mainstream of
 society. Uses a variety of sources, from Franz Kafka to Friedrich Nietzsche.
 Interesting, but loses a few points because the author treats his own positions
 on outsideness as self-evident truths. ★★★☆☆ (3/5)
+
+<h3 id="technical">Technical</h3>
+
+**The Pragmatic Programmer, 20th Anniversary Edition: Your Journey To Mastery**
+by David Thomas and Andrew Hunt, 2019. As one reviewer put it: "this book is
+proof lightning does indeed strike twice". This book could replace most
+University Software Engineering courses. ★★★★★ (5/5)
+
+**The Design of Everyday Things** by Donald Norman, 1988. Explores
+human-centred design. Introduced the term "cognitive load" into common
+engineering parlance. Every engineer should read it. ★★★★★ (5/5)
+
+**The Little Book Of Deep Learning** by François Fleuret, last updated in May
+2024. Available [here](https://fleuret.org/francois/lbdl.html) free of charge,
+although my hard copy stays in my laptop bag, and I keep a PDF copy on my phone
+at all times. It does require a mathematical background to understand it.
+★★★★☆ (4/5)
+
+**Eloquent Javascript (4th Edition)** by Marijn Haverbeke, 2024. I like to
+recommend this book to developers who have no code taste. I like to see
+functional programming styles, and chapter 5 is a reasonable introduction to
+that. Loses a couple of stars because it isn't that technical a document.
+★★★☆☆ (3/5)
