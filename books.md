@@ -17,7 +17,12 @@ menu:
 
 Some of the books I have read end up on this page.
 
-### Fiction
+<nav class="links-nav">
+    <a href="#fiction">Fiction</a> &bull;
+    <a href="#non-fiction">Non-Fiction</a>
+</nav>
+
+<h3 id="fiction">Fiction</h3>
 
 **After Life** by Simon Funk, 2006. [Available
 here](https://sifter.org/simon/AfterLife/index.html). A digital trip. No
@@ -59,7 +64,7 @@ innovative, but mildly inconsistent at times. ★★★☆☆ (3/5)
 through the OASIS, a virtual reality MMORPG. Interesting premise, but I'm
 removing a few stars because of its reliance on 1980s culture. ★★★☆☆ (3/5)
 
-### Non-Fiction
+<h3 id="non-fiction">Non-Fiction</h3>
 
 **Masters of Doom** by David Kushner, 2003. Incredibly well-researched book on a
 games company called Id Software, which created the Doom and Quake franchises.
