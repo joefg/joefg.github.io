@@ -6,11 +6,11 @@ menu:
   order: 1
 ---
 
-## Reading List
+<h2 id="page-header">Reading List</h2>
 
 Some of the books I have read end up on this page.
 
-<nav class="links-nav">
+<nav id="nav-bar" class="links-nav">
     <a href="#fiction">Fiction</a> &bull;
     <a href="#non-fiction">Non-Fiction</a> &bull;
     <a href="#technical">Technical</a>
@@ -65,6 +65,8 @@ innovative, but mildly inconsistent at times. ★★★☆☆ (3/5)
 through the OASIS, a virtual reality MMORPG. Interesting premise, but I'm
 removing a few stars because of its reliance on 1980s culture. ★★★☆☆ (3/5)
 
+[Back to top](#page-header)
+
 <h3 id="non-fiction">Non-Fiction</h3>
 
 **Masters of Doom** by David Kushner, 2003. Incredibly well-researched book on a
@@ -99,6 +101,8 @@ society. Uses a variety of sources, from Franz Kafka to Friedrich Nietzsche.
 Interesting, but loses a few points because the author treats his own positions
 on outsideness as self-evident truths. ★★★☆☆ (3/5)
 
+[Back to top](#page-header)
+
 <h3 id="technical">Technical</h3>
 
 **The Pragmatic Programmer, 20th Anniversary Edition: Your Journey To Mastery**
@@ -121,3 +125,5 @@ recommend this book to developers who have no code taste. I like to see
 functional programming styles, and chapter 5 is a reasonable introduction to
 that. Loses a couple of stars because it isn't that technical a document.
 ★★★☆☆ (3/5)
+
+[Back to top](#page-header)
