@@ -14,11 +14,15 @@
 .no-select {
 	-webkit-user-select: none;
 	-ms-user-select: none;
-  user-select: none;
+	user-select: none;
 }
 
 .links-nav {
 	text-align: center;
+
+	a {
+		font-weight: bold;
+	}
 }
 
 .postlist {
