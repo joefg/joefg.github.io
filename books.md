@@ -10,6 +10,8 @@ menu:
 
 Some of the books I have read end up on this page.
 
+**Last update: 16th May 2025**
+
 <nav id="nav-bar" class="links-nav">
     <a href="#fiction">Fiction</a> &bull;
     <a href="#non-fiction">Non-Fiction</a> &bull;
@@ -52,9 +54,16 @@ consumerist, decadent society. I put it under Fiction even though it's a
 roman à clef based on Jack Kerouac and Neal Cassady's journeys across America.
 ★★★★☆ (4/5)
 
+**Manna - Two Views of Humanity's Future** by Marshall Brain, 2003. A nuanced
+view of what automation can do *to* humans, but also *for* humans. Discusses
+many topics: brain-computer interfaces, the impact of AI and robotics on
+society, different economic structures among others. Given four stars because it
+is a bit technical in places. ★★★★☆ (4/5)
+
 **A Very British Coup** by Chris Mullin, 1982. A window into 1980s political
-intrigue. I don't usually recommend political thrillers, but this is a good
-example of the genre. ★★★★☆ (4/5)
+intrigue. Many predictions didn't come true. but some did. I don't usually
+recommend political thrillers, but this is a good example of the genre.
+The TV adaptation's pretty good too. Skip the sequel. ★★★★☆ (4/5)
 
 **Daemon** and **Freedom** by Daniel Suarez, 2006 and 2010. Written by an
 engineer, the story of a dead man's AI curse unleashed on the world, highly
@@ -95,11 +104,23 @@ how the poor truly lived, intended to show the middle and upper classes what
 poverty is really like. Orwell actually gave up a post as a policeman in Burma
 to write this book. ★★★★☆ (4/5)
 
+**Shop Class as Soulcraft: An Inquiry Into the Value of Work** by Matthew B.
+Crawford, 2010. Reading it made me realise how much I miss working with my
+hands and convinced me to buy a motorcycle. If your mechanic had a PhD from
+UChicago, he would write something like this. ★★★★☆ (4/5)
+
 **The Outsider** by Colin Wilson, 1956. This book explores the concept of the
 outsider personality, unwilling and unable to conform to the mainstream of
 society. Uses a variety of sources, from Franz Kafka to Friedrich Nietzsche.
 Interesting, but loses a few points because the author treats his own positions
 on outsideness as self-evident truths. ★★★☆☆ (3/5)
+
+**The Network State** by Balaji Srinivasan, 2022. A [free
+book](https://thenetworkstate.com), it's an interesting read about how nation
+states may develop in future using modern technology. It has a polarising
+reputation because of the author's own personal leanings. I'm personally
+interested in it because interesting people are interested in it, although I
+found it a bit long winded at parts. ★★★☆☆ (3/5)
 
 [Back to top](#page-header)
 
