@@ -13,6 +13,10 @@ menu:
 All content on this blog authored by [@joefg](http://github.com/joefg). Topics
 include software, software development, and the impact of software on society.
 
+The author sometimes looks at his very seldom used [𝕏](https://x.com/joefg_)
+mentions and DMs, but it's not a regular occurrence as he dislikes aspects of
+the platform.
+
 ### Content
 
 **Unless stated otherwise**, this site contains zero AI generated content.
