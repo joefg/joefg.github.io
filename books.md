@@ -10,7 +10,7 @@ menu:
 
 Some of the books I have read end up on this page.
 
-**Last update: 16th May 2025**
+**Last update: 12th June 2025**
 
 <nav id="nav-bar" class="links-nav">
     <a href="#fiction">Fiction</a> &bull;
@@ -64,6 +64,14 @@ is a bit technical in places. ★★★★☆ (4/5)
 intrigue. Many predictions didn't come true. but some did. I don't usually
 recommend political thrillers, but this is a good example of the genre.
 The TV adaptation's pretty good too. Skip the sequel. ★★★★☆ (4/5)
+
+**Cryptonomicon** by Neal Stephenson, 1999. It's a strange book set in two
+time periods: World War 2, and the late 1990s tech boom. It's about a lot of
+gold that was stashed somewhere in South East Asia. One group wants to sell it.
+Another group wants to build an Internet Bank using this gold as a backstop
+to their currency. Highly inventive. Required reading for Cryptocurrency and
+Network Security people. Loses points because the author can't write endings
+very well. ★★★☆☆ (3/5)
 
 **Daemon** and **Freedom** by Daniel Suarez, 2006 and 2010. Written by an
 engineer, the story of a dead man's AI curse unleashed on the world, highly
