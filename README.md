@@ -6,9 +6,9 @@ A developer blog.
 
 Requires [Deno](https://deno.com). Make sure that is installed. Then:
 
-* `deno task serve` spawns a development server
+* `./run serve` spawns a server.
 
-* `deno task build` compiles the site.
+* `./run build` compiles the site.
 
 At the moment this is hosted on GitHub Pages using the action in
 `.github/workflows/publish.yaml`.

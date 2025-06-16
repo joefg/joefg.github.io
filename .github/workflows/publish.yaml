@@ -23,7 +23,7 @@ jobs:
           deno-version: v2.1.4
 
       - name: Build site
-        run: deno task build
+        run: ./run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
