@@ -20,8 +20,8 @@ If you find this page, hello!
 
 <h3 id="radio">Radio</h3>
 
-<iframe class="centered-img"
-    width="560" height="315"
+<iframe class="centered"
+    width="500" height="300"
     src="https://www.youtube.com/embed/2s25Q_GFGlE?si=pIepw7I4krmXiBEg"
     title="YouTube video player"
     frameborder="0"
