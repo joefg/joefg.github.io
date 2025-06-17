@@ -76,7 +76,8 @@ very well. ★★★☆☆ (3/5)
 **Daemon** and **Freedom** by Daniel Suarez, 2006 and 2010. Written by an
 engineer, the story of a dead man's AI curse unleashed on the world, highly
 innovative, but mildly inconsistent at times. The author once gave a
-[talk to Google employees](https://www.youtube.com/watch?v=sUEGzjnGsiA) about
+[talk to Google employees](https://www.youtube.com/watch?v=sUEGzjnGsiA) and
+to [The Long Now](https://www.youtube.com/watch?v=RS5i1S8FXno) about
 topics and themes explored in *Daemon*. ★★★☆☆ (3/5)
 
 **Ready Player One** by Ernest Cline, 2011. A love letter to video games and
