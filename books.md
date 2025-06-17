@@ -75,7 +75,9 @@ very well. ★★★☆☆ (3/5)
 
 **Daemon** and **Freedom** by Daniel Suarez, 2006 and 2010. Written by an
 engineer, the story of a dead man's AI curse unleashed on the world, highly
-innovative, but mildly inconsistent at times. ★★★☆☆ (3/5)
+innovative, but mildly inconsistent at times. The author once gave a
+[talk to Google employees](https://www.youtube.com/watch?v=sUEGzjnGsiA) about
+topics and themes explored in *Daemon*. ★★★☆☆ (3/5)
 
 **Ready Player One** by Ernest Cline, 2011. A love letter to video games and
 1980s culture, set in a world so crappy that most people seek to escape it
