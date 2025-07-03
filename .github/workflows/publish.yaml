@@ -25,9 +25,6 @@ jobs:
       - name: Build site
         run: ./run build
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -43,10 +40,11 @@ jobs:
       runs-on: ubuntu-latest
 
       environment:
-        name: github-pages
+        name: cloudflare-pages
         url: ${{ steps.deployment.output.page_url }}
 
       steps:
-        - name: Deploy to GitHub Pages
+        - name: Deploy to Cloudflare Pages
           id: deployment
-          uses: actions/deploy-pages@v4
+          uses: cloudflare/wrangler-action@v3
+          with: ${{ secrets.CLOUDFLARE_API_TOKEN }}
