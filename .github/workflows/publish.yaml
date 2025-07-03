@@ -47,4 +47,6 @@ jobs:
         - name: Deploy to Cloudflare Pages
           id: deployment
           uses: cloudflare/wrangler-action@v3
-          with: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          with:
+            apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+            workingDirectory: "_site"
