@@ -6,7 +6,7 @@ menu:
   order: 0
 ---
 {% include "templates/bulletin.njk" %}
-
+{% include "templates/blurb.njk" %}
 <h2>Posts</h2>
 {% set postslist = search.pages("type=posts", "date=desc") %}
 {% include "templates/postslist.njk" %}
