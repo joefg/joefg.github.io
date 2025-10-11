@@ -15,24 +15,18 @@ style="border-radius: 10%; float: left; padding: 10px"
 src="https://avatars.githubusercontent.com/u/13489445?v=1"
 width="200"/>
 
-All content on this blog authored by [@joefg](http://github.com/joefg). Topics
+All content on this blog is authored by [@joefg](http://github.com/joefg). Topics
 include software, software development, and the impact of software on society.
 
 The author's profile picture was generated via style transfer by Grok, using
 the style of artist Norman Rockwell.
 
-The author sometimes looks at his [𝕏](https://x.com/joefg_)
+He doesn't use much social media, so just drop him an
+<a href="mailto:joe.fuller.gray@gmail.com">E-Mail</a>.
+Turnaround time is about a week, and if it's spam, he won't respond.
+
+He sometimes looks at his [𝕏](https://x.com/joefg_)
 mentions and DMs, but it's not a regular occurrence as he dislikes the platform.
-
-<br/>
-
-If you want to send him an email:
-
-```
-joe (dot) fuller (dot) gray (at) gmail (dot) com
-```
-
-Turnaround time is around 48 hours and I won't respond to spam.
 
 ### Content
 

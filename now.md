@@ -3,7 +3,7 @@ layout: layouts/base.njk
 menu:
   visible: true
   title: 🕐 Now
-  order: 1
+  order: 2
 ---
 
 ## Now
@@ -36,7 +36,3 @@ Bolt. 950cc of V-Twin makes for great fun on old Fen roads. My only complaints
 are that it's a little bit low, the fuel light is a little confused, and the
 air filter is right where my knee wants to be, but other than that, it's pretty
 good. At the moment it's in the workshop having some suspension work done.
-
-If you want to see pictures, add my
-[📷 Instagram](https://instagram.com/joe_isnt_normal).
-You may also bump into me if you're in the Cambridge area.

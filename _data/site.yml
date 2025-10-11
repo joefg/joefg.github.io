@@ -1,5 +1,5 @@
-title: joefg's blog
-description: joefg's blog
+title: joefg's website
+description: joefg's website
 
 author:
   name: joefg
@@ -8,15 +8,13 @@ author:
 github: https://github.com/joefg
 
 header:
-  title: joefg's blog
+  title: joefg's website
   #blurb: Software yapbox.
   #mugshot: https://avatars.githubusercontent.com/u/13489445
   #links:
     #🖥️ GitHub: https://github.com/joefg
 
 #bulletin: This blog is no longer under active development.
-blurb: Joe is an AgriTech swe currently doing computer vision research
-  at the University of Essex. This is his blog.
 
 footer:
   text: Built with Deno and Lume in England 🏴󠁧󠁢󠁥󠁮󠁧󠁿
