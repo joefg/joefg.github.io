@@ -1,8 +1,8 @@
 ---
 layout: layouts/base.njk
 menu:
-  visible: false
-  title: Now
+  visible: true
+  title: 🕐 Now
   order: 1
 ---
 
