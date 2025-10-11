@@ -21,6 +21,9 @@ I'm returning to the University of Essex to do a
 The subject of my research is using pose estimation to detect behaviours
 in livestock.
 
+[Git for Graduates](https://git-for-graduates.pages.dev/) doesn't get much love
+these days. If there was demand for it, I would start a print run.
+
 ### Play
 
 I've been riding motorcycles. I used to ride a
