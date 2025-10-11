@@ -10,12 +10,27 @@ menu:
 
 ### Author
 
+<img
+style="border-radius: 10%; float: left; padding: 10px"
+src="https://avatars.githubusercontent.com/u/13489445?v=1"
+width="200"/>
+
 All content on this blog authored by [@joefg](http://github.com/joefg). Topics
 include software, software development, and the impact of software on society.
 
-The author sometimes looks at his very seldom used [𝕏](https://x.com/joefg_)
-mentions and DMs, but it's not a regular occurrence as he dislikes aspects of
-the platform.
+The author's profile picture was generated via style transfer by Grok, using
+the style of artist Norman Rockwell.
+
+The author sometimes looks at his [𝕏](https://x.com/joefg_)
+mentions and DMs, but it's not a regular occurrence as he dislikes the platform.
+
+If you want to send him an email:
+
+```
+joe (dot) fuller (dot) gray (at) gmail (dot) com
+```
+
+Turnaround time is around 48 hours and I won't respond to spam.
 
 ### Content
 
