@@ -24,6 +24,8 @@ the style of artist Norman Rockwell.
 The author sometimes looks at his [𝕏](https://x.com/joefg_)
 mentions and DMs, but it's not a regular occurrence as he dislikes the platform.
 
+<br/>
+
 If you want to send him an email:
 
 ```
@@ -50,7 +52,8 @@ This site is built with [Deno](https://deno.com/), [Lume](https://lume.land/),
 and [Simple.css](https://simplecss.org/), packaged together in
 [lume-simple-blog](https://github.com/joefg/lume-simple-blog) and available
 free-of-charge through that GitHub repository. It is hosted on [GitHub
-Pages](https://pages.github.com/).
+Pages](https://pages.github.com/) and is deployed via a GitHub Action on
+push to `main`.
 
-Click [here](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjoefg.github.io%2F)
-for W3's validator results for this site.
+As of 10/10/25, this website achieved an A+ on the [Website Carbon
+Calculator](https://www.websitecarbon.com/website/jfg-name/).
