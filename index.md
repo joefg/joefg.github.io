@@ -9,7 +9,7 @@ menu:
 ## Hello!
 
 <img
-style="border-radius: 10%; float: left; padding: 10px"
+class="left-img"
 src="https://avatars.githubusercontent.com/u/13489445?v=1"
 width="200"/>
 
