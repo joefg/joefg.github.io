@@ -17,7 +17,6 @@ site
   .ignore("README.md")
   .copy("img")
   .copy("favicon.ico")
-  .use(postcss())
   .use(sitemap())
   .use(feed())
   .use(date())
@@ -25,6 +24,8 @@ site
   .use(codeHighlight())
   .use(basePath())
   .use(slugifyUrls({ alphanumeric: false }))
-  .use(resolveUrls());
+  .use(resolveUrls())
+  .use(postcss())
+  .add([".css"]);
 
 export default site;
