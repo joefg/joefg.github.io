@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: layouts/index.njk
 menu:
   visible: True
   title: 🏠 Home
@@ -11,7 +11,7 @@ menu:
 <img
 class="left-img"
 src="https://avatars.githubusercontent.com/u/13489445?v=1"
-width="200"/>
+width="180"/>
 
 My name is Joe, and this is my website.
 
@@ -23,8 +23,3 @@ detect feeding periods of livestock.
 
 For a more up-to-date summary of what I've been up to, have a look at the
 [Now page](./now).
-
-## Selected Projects
-
-* [Git for Graduates](https://git-for-graduates.pages.dev), a pocket book on the
-    effective use of Git. Sometimes receives updates.

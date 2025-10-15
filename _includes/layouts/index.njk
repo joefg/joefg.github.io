@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+bodyClass: body-home
+---
+
+{{ content | safe }}
+<div>
+		<h3>Recent posts</h3>
+		{% set postslist = search.pages("type=posts", "date=desc", 8) %}
+		{% include "templates/postslist.njk" %}
+		<a href="./posts">See more...</a>
+</div>
