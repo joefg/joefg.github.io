@@ -15,8 +15,6 @@ width="180"/>
 
 My name is Joe, and this is my website.
 
-It contains a humble [blog](./posts), and little else.
-
 I am a software developer currently studying computer vision at the University
 of Essex, my research area being in the use of pose estimation algorithms to
 detect feeding periods of livestock.
