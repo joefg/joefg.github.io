@@ -26,6 +26,7 @@
 		border: 1px solid var(--accent-bg);
 		border-radius: 1%;
 		margin: 0 auto;
+		min-width: 29rem;
 		padding: 10px;
 
 		h2, h3, h4 {
