@@ -65,9 +65,11 @@ Schmidhuber.
 Technology](https://www.sciencedirect.com/journal/smart-agricultural-technology/vol/12/suppl/C).
 Agriculture is a high-tech field now!
 
-[Automated detection and quantification of contact behaviour in pigs using
-deep learning](https://www.sciencedirect.com/science/article/pii/S1537511022002240) by
-Alameer et al. My research is a continuation of this.
+Outside of papers, I'm reading some [Marshall
+McLuhan](https://www.amazon.co.uk/Essential-Mcluhan/dp/0465019951), and outside
+of dry non-fiction, I'm reading John Brunner's [The Shockwave
+Rider](https://en.wikipedia.org/wiki/The_Shockwave_Rider). I will review it one
+day.
 
 </div>
 <div>
