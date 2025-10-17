@@ -19,5 +19,5 @@ I am a software developer currently studying computer vision at the University
 of Essex, my research area being in the use of pose estimation algorithms to
 detect feeding periods of livestock.
 
-For a more up-to-date summary of what I've been up to, have read the
+For a more up-to-date summary of what I've been up to, read the
 [Now page](./now).
