@@ -15,6 +15,16 @@
 	margin: 0 auto;
 }
 
+.grid-parent {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+    div {
+        background-color: --accent-bg;
+        padding: 10px;
+    }
+}
+
 .left, .left-img {
 	border-radius: 10%;
 	float: left;
