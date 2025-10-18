@@ -8,14 +8,13 @@ menu:
 
 ## Now
 
-Last updated: <time>17/10/25</time>
+Last updated: <time>29/10/25</time>
 
 This page shows what I'm doing currently. For more information on
 Now Pages, see
 [this page](https://nownownow.com/about).
 
 <div class="grid-parent">
-
 <div>
 
 ### Work
@@ -35,7 +34,6 @@ test some commodity pose estimators.
 these days. If there was demand for it, I would start a print run.
 
 </div>
-
 <div>
 
 ### Play
@@ -81,9 +79,10 @@ I now use [Starship](https://starship.rs) to build my command prompt.
 [eza](https://eza.rocks/) is a pretty replacement for `ls`. It's worth it just to
 be able to see file permissions in octal.
 
-I tried [Omarchy](https://omarchy.org/) but couldn't get used to hyprland. Kept
-the wallpapers though! I get most of what I want from either
-[BredOS](https://bredos.org/) or [EndeavourOS](https://endeavouros.com/).
+I have been experimenting with what I call "solo developer stacks", which
+for me looks like [FastHTML](https://github.com/joefg/uv-fasthtml) and
+[Telegram bots](https://github.com/joefg/uv-telegram-bot), both written in
+Python and using SQLite as a datastore.
 
 </div>
 </div>
