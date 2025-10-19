@@ -20,4 +20,5 @@ of Essex, my research area being in the use of pose estimation algorithms to
 detect feeding periods of livestock.
 
 For a more up-to-date summary of what I've been up to, read the
-[Now page](./now).
+[Now page](./now). To look at open-source stuff I build, have a look
+at my [GitHub profile](https://github.com/joefg).
