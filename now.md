@@ -8,7 +8,7 @@ menu:
 
 ## Now
 
-Last updated: <time>24/11/25</time>
+Last updated: <time>26/11/25</time>
 
 This page shows what I'm doing currently. For more information on
 Now Pages, see
@@ -73,6 +73,10 @@ I have been experimenting with what I call "solo developer stacks", which
 for me looks like [FastHTML](https://github.com/joefg/uv-fasthtml) and
 [Telegram bots](https://github.com/joefg/uv-telegram-bot), both written in
 Python and using SQLite as a datastore.
+
+I'm appreciating the [fast.ai coding style](https://docs.fast.ai/dev/style.html)
+more. As my programming style becomes more functional, I find that PEP8 is a bit
+verbose.
 
 </div>
 </div>
