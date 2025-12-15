@@ -1,0 +1,21 @@
+layout: layouts/base.vto
+header:
+  title: Joe Fuller-Gray
+  description: Postgraduate research student at the University of Essex.
+  avatar: 'https://avatars.githubusercontent.com/u/13489445' 
+metas:
+  title: =header.title
+  description: =header.description
+  image: =header.avatar
+  generator: true
+links:
+  - type: github
+    text: GitHub
+    href: 'https://github.com/joefg'
+  - type: x
+    text: X (Unused)
+    href: 'https://x.com/joefg_'
+  - text: Blog
+    href: 'https://joefg.pages.dev'
+footer: "Powered by [Lume](https://lume.land) & [SimpleMe](https://github.com/lumeland/theme-simple-me) theme. Hosted on GitHub Pages."
+extra_head: ''

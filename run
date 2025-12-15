@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+THISDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+function help(){
+cat << EOF
+joefg.github.io
+
+help  : Display help text
+clean : Remove artefacts
+build : Compile site
+serve : Serve on localhost:3000
+EOF
+}
+
+function run_clean(){
+    rm -rf _site/
+}
+
+function run_build(){
+    deno task build
+}
+
+function run_serve(){
+    deno task serve
+}
+
+function main(){
+    cmd=${1-default}
+    shift || true
+    case "$cmd" in
+        help|default)
+            help "$@"
+            ;;
+        clean)
+            run_clean
+            ;;
+        build)
+            run_build
+            ;;
+        serve)
+            run_serve
+            ;;
+        *)
+            echo "no-op $cmd"
+            ;;
+    esac
+}
+
+main "$@"
