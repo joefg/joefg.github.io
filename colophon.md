@@ -45,9 +45,7 @@ strategy for enhancing language model output.
 This site is built with [Deno](https://deno.com/), [Lume](https://lume.land/),
 and [Simple.css](https://simplecss.org/), packaged together in
 [lume-simple-blog](https://github.com/joefg/lume-simple-blog) and available
-free-of-charge through that GitHub repository. It is hosted on [GitHub
-Pages](https://pages.github.com/) and is deployed via a GitHub Action on
-push to `main`.
+free-of-charge through that GitHub repository.
 
-As of 10/10/25, this website achieved an A+ on the [Website Carbon
-Calculator](https://www.websitecarbon.com/website/jfg-name/).
+It is hosted on [Cloudflare's pages.dev](https://pages.dev/) and is deployed on
+push to `main`.
