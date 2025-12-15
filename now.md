@@ -14,9 +14,6 @@ This page shows what I'm doing currently. For more information on
 Now Pages, see
 [this page](https://nownownow.com/about).
 
-<div class="grid-parent">
-<div>
-
 ### Work
 
 I'm returning to the University of Essex to do a
@@ -33,9 +30,6 @@ test some commodity pose estimators.
 [Git for Graduates](https://git-for-graduates.pages.dev/) doesn't get much love
 these days. If there was demand for it, I would start a print run.
 
-</div>
-<div>
-
 ### Play
 
 I bought a
@@ -50,9 +44,6 @@ My only complaints are that it's a little bit low, the fuel light is a little
 confused, and the air filter is right where my knee wants to be, but other than
 that, it's pretty good.
 
-</div>
-<div>
-
 ### Read
 
 [Driven by Compression Progress](https://arxiv.org/abs/0812.4360) by Juergen
@@ -64,9 +55,6 @@ Schmidhuber.
 Technology](https://www.sciencedirect.com/journal/smart-agricultural-technology/vol/12/suppl/C).
 Agriculture is a high-tech field now!
 
-</div>
-<div>
-
 ### Use
 
 I have been experimenting with what I call "solo developer stacks", which
@@ -77,6 +65,3 @@ Python and using SQLite as a datastore.
 I'm appreciating the [fast.ai coding style](https://docs.fast.ai/dev/style.html)
 more. As my programming style becomes more functional, I find that PEP8 is a bit
 verbose.
-
-</div>
-</div>
