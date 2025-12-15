@@ -5,7 +5,7 @@ THISDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 function help(){
 cat << EOF
-joefg.github.io
+joefg.pages.dev
 
 help  : Display help text
 clean : Remove artefacts

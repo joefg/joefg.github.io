@@ -1,4 +1,4 @@
-# joefg.github.io
+# joefg.pages.dev
 
 A developer blog.
 
@@ -10,8 +10,17 @@ Requires [Deno](https://deno.com). Make sure that is installed. Then:
 
 * `./run build` compiles the site.
 
-At the moment this is hosted on GitHub Pages using the action in
-`.github/workflows/publish.yaml`.
+At the moment this is hosted on [Cloudflare Pages](https://pages.dev).
+
+### Cloudflare
+
+The Cloudflare runners don't have Deno installed, so the build command is:
+
+```bash
+curl -fsSL https://deno.land/x/install/install.sh | sh && /opt/buildhome/.deno/bin/deno task build
+```
+
+This will be the subject of automation at some stage.
 
 ## Workflow
 
@@ -19,8 +28,8 @@ At the moment this is hosted on GitHub Pages using the action in
 
 2. Make your change-- new post in `posts/` or otherwise.
 
-3. Rebase onto `main` and push. The GitHub Action should take
-care of the rest.
+3. Rebase onto `main` and push. Cloudflare will take care of everything
+else.
 
 ## Colophon
 
