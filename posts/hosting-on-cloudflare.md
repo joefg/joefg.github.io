@@ -5,6 +5,18 @@ date: 2025-12-15
 location: Silicon Fen, England
 ---
 
+<p/>
+<section class="notice">
+
+⚠️ **UPDATES**
+
+15/12/25: Amended typo in the `migration` section. It should point to the
+Cloudflare runner deno bin location, not the vercel one.
+
+Also added aside on the $1 VPS.
+
+</section>
+
 This blog is now hosted at [joefg.pages.dev](https://joefg.pages.dev).
 
 A few reasons why:
@@ -29,7 +41,8 @@ Migration was actually rather easy.
     For posterity:
 
 ```sh
-curl -fsSL https://deno.land/x/install/install.sh | sh && /vercel/.deno/bin/deno task build
+curl -fsSL https://deno.land/x/install/install.sh | sh \
+    && /opt/buildhome/.deno/bin/deno task build
 ```
 
 * Point Cloudflare to the repository and set it to run on pushes to `main`. This
@@ -45,3 +58,5 @@ Vercel is also an option that I've used professionally in the past.
 
 Really though, I just like Cloudflare. The free tier allows for unlimited
 requests and unlimited bandwidth.
+
+One day I'll snag the mythical $1 VPS and just stick it on there.
