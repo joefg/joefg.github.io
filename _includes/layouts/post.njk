@@ -14,6 +14,9 @@ bodyClass: body-post
       📍 {{ location }}
       {%- endif -%}
     </em>
+    {%- if topic -%}
+    <span style="float: right"><em>{{ topic }}</em></span>
+    {%- endif -%}
   </div>
   <hr/>
   <div class="post-body">
