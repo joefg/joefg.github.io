@@ -12,6 +12,11 @@
         <code>{{ post.url }}</code>
       {%- endif -%}
     </a>
+    {%- if post.topic -%}
+    <span class="topic">
+        (<em>{{ post.topic }}</em>)
+    </span>
+    {% endif -%}
   </li>
 {% endfor %}
 </ul>

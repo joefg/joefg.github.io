@@ -2,6 +2,7 @@
 title: "Static hosting on Cloudflare"
 description: Various dishes
 date: 2025-12-15
+topic: Ops
 location: Silicon Fen, England
 ---
 
