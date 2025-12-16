@@ -2,6 +2,7 @@
 title: "Configuring neovim with Lua"
 description: Curate your IDE
 date: 2024-10-16
+topic: Editor
 ---
 
 > TL;DR use <https://github.com/nvim-lua/kickstart.nvim/tree/master>

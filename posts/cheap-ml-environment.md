@@ -3,6 +3,7 @@ title: "Cheap ML Environment"
 description: Reject cloud, embrace PC under the desk
 date: 2025-11-24
 location: Cambridge, England
+topic: Ops
 ---
 
 It's certainly true that machine learning model training is compute intensive, but

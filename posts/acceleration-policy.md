@@ -3,6 +3,7 @@ title: "Acceleration Policy: Four easy pieces"
 location: Silicon Fen, England
 description: Easy policies for a brighter Britain
 date: 2025-03-21
+topic: Acceleration
 ---
 
 Since 2008, Britain has averaged a measly 0.8% yearly productivity growth, being

@@ -3,6 +3,7 @@ title: "2024's Summer Potpourri"
 description: Various dishes
 date: 2024-08-27
 location: Lyme Regis, England
+topic: Work notes
 ---
 
 Some notes in various forms from over the summer. Some ideas complete; some

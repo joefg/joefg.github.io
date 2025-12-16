@@ -2,6 +2,7 @@
 title: CGI's not dead, I wrote some yesterday
 description: Build like it's 1999 with CGI
 date: 2023-04-01
+topic: Old tech
 ---
 
 > The past is a different place; they do things differently there.

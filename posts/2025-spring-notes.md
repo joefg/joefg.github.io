@@ -3,6 +3,7 @@ title: "2025's Spring Potpourri"
 description: Various dishes
 date: 2025-04-17
 location: Silicon Fen, England
+topic: Work notes
 ---
 
 <div class="notice">

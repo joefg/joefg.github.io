@@ -3,6 +3,7 @@ title: "2025's Autumn Potpourri"
 description: Various dishes
 date: 2025-11-04
 location: Wivenhoe, England
+topic: Work notes
 ---
 
 Some notes from the autumn.

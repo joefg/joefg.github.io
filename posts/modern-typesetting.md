@@ -2,6 +2,7 @@
 title: "Modern Typesetting"
 description: How to produce textual content for many systems
 date: 2025-01-24
+topic: Old tech
 ---
 
 My writing workflow is established at this point: I like writing text in

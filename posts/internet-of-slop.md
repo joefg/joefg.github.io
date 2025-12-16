@@ -3,6 +3,7 @@ title: "The Internet of Slop"
 description: Why the internet's dying
 date: 2024-09-29
 location: Cambridge, England
+topic: Rant
 ---
 
 In a few years, the consumer web will be completely unusable for most people.

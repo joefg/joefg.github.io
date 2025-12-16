@@ -3,6 +3,7 @@ title: "2025's Spring Potpourri: Second Serving"
 description: Various dishes
 date: 2025-05-05
 location: Cambridge, England
+topic: Work notes
 ---
 
 Some more notes from the spring. Didn't want to update the previous post,
