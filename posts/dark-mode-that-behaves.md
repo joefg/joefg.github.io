@@ -2,6 +2,7 @@
 title: "Dark mode that behaves"
 description: Dark mode that follows your system
 date: 2025-01-03
+topic: Work notes
 ---
 
 <p/>

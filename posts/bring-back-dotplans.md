@@ -2,6 +2,7 @@
 title: "Bring back .plan files"
 description: Why we should go back to the future and embrace plain text
 date: 2024-05-29
+topic: Old tech
 ---
 
 > TL;DR we should bring back dotplans using Markdown and HTTP(S)

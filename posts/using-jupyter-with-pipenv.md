@@ -2,6 +2,7 @@
 title: Using Jupyter with Pipenv
 description: Building a data science environment
 date: 2024-04-19
+topic: Python
 ---
 
 Being vaguely involved in data science tooling means I have some exposure to

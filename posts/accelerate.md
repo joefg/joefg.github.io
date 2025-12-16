@@ -2,6 +2,7 @@
 title: "White Heat: The case for Acceleration"
 description: Acceleration and its future
 date: 2024-02-23
+topic: Acceleration
 ---
 
 A nation needs three key elements:

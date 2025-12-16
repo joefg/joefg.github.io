@@ -2,6 +2,7 @@
 title: "Adding interactive maps to Markdown documents"
 description: You might not need a GIS platform!
 date: 2025-03-28
+topic: Work notes
 ---
 
 You don't need to add so many dependencies if you just want to stick a few

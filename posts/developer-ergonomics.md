@@ -3,6 +3,7 @@ title: "Developer Ergonomics"
 description: Building a comfy setup
 date: 2024-05-07
 location: Cambridge, England
+topic: Work notes
 ---
 
 I spend six-plus hours a day developing software. This is what I use to stay

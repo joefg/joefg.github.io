@@ -3,6 +3,7 @@ title: "Another look at FastHTML"
 description: Second stab.
 date: 2025-05-24
 location: Ely, England
+topic: Python
 ---
 
 I decided to have another look at [FastHTML](https://fastht.ml).
