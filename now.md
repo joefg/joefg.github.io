@@ -8,7 +8,7 @@ menu:
 
 ## Now
 
-Last updated: <time>26/11/25</time>
+Last updated: <time>02/01/26</time>
 
 This page shows what I'm doing currently. For more information on
 Now Pages, see
@@ -16,52 +16,35 @@ Now Pages, see
 
 ### Work
 
-I'm returning to the University of Essex to do a
-[Master of Science by Dissertation](https://www.essex.ac.uk/postgraduate/research).
+Still knee-deep in pose estimators and computer vision for livestock.
 
-The subject of my research is using pose estimation to detect behaviours
-in livestock.
-
-At the moment, I'm reading a lot of literature. I'm using the dataset developed
-in [this
-paper](https://www.sciencedirect.com/science/article/pii/S1537511020301707) to
-test some commodity pose estimators.
-
-[Git for Graduates](https://git-for-graduates.pages.dev/) doesn't get much love
-these days. If there was demand for it, I would start a print run.
+My radical opinion is that for specialist tasks Convnets are still better than
+Vision Transformers.
 
 ### Play
 
-I bought a
-[Yamaha XV950](https://www.visordown.com/reviews/first-ride/first-ride-yamaha-xv950-review)
-this summer.
-
-Elsewhere in the world it was sold as the Yamaha Bolt. 950cc of V-Twin makes for
-great fun on old Fen roads. It is quintessential motorcycle: everything you need, and
-nothing more.
-
-My only complaints are that it's a little bit low, the fuel light is a little
-confused, and the air filter is right where my knee wants to be, but other than
-that, it's pretty good.
+Still riding my motorcycle. I went up to [Old
+Hunstanton](https://www.visitnorfolk.co.uk/destination/old-hunstanton) on New
+Years Day on it.
 
 ### Read
 
-[Driven by Compression Progress](https://arxiv.org/abs/0812.4360) by Juergen
-Schmidhuber.
+[War and Peace in the Global
+Village](https://en.wikipedia.org/wiki/War_and_Peace_in_the_Global_Village) by
+Marshall McLuhan. He wrote that in 1968 and it feels eerily prescient. We're
+definitely in thunder 10.
 
-[Simulation, Consciousnessness, Existence](https://philpapers.org/rec/MORSCE) by Hans Moravec.
-
-[Smart Agricultural
-Technology](https://www.sciencedirect.com/journal/smart-agricultural-technology/vol/12/suppl/C).
-Agriculture is a high-tech field now!
+[The Creative
+Act](https://www.theguardian.com/music/2022/feb/11/rick-rubin-def-jam-founder-producer-debut-book)
+by Rick Rubin. Thanks to `@coastalfuturist` for shilling it so hard, I finally
+got around to reading it.
 
 ### Use
 
-I have been experimenting with what I call "solo developer stacks", which
-for me looks like [FastHTML](https://github.com/joefg/uv-fasthtml) and
-[Telegram bots](https://github.com/joefg/uv-telegram-bot), both written in
-Python and using SQLite as a datastore.
+I replaced my old Arch Linux install with [CachyOS](https://cachyos.org), which
+feels much slicker. Sticking with Gnome: yes it's a bit "budget MacOS" in feel,
+but I find that it handles my 4K external monitor better than KDE or LXDE.
 
-I'm appreciating the [fast.ai coding style](https://docs.fast.ai/dev/style.html)
-more. As my programming style becomes more functional, I find that PEP8 is a bit
-verbose.
+My ML rig still runs Ubuntu though. It annoys me, but it annoys me in ways that
+have been thoroughly documented. With [Tailscale](https://tailscale.com), I can
+access it anywhere in the world.
