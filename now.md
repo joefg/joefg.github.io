@@ -8,7 +8,7 @@ menu:
 
 ## Now
 
-Last updated: <time>02/01/26</time>
+Last updated: <time>12/01/26</time>
 
 This page shows what I'm doing currently. For more information on
 Now Pages, see
@@ -18,21 +18,21 @@ Now Pages, see
 
 Still knee-deep in pose estimators and computer vision for livestock.
 
-My radical opinion is that for specialist tasks Convnets are still better than
-Vision Transformers.
+~~My radical opinion is that for specialist tasks Convnets are still better than
+Vision Transformers.~~
+
+I'm coming around to Vision Transformers, especially when considering they fare
+better than ConvNets for occlusions.
+
+Currently experimenting with pruning and quantisation, which should shrink a ViT
+from ~300MB to something quite a bit less than that.
 
 ### Play
 
-Still riding my motorcycle. I went up to [Old
-Hunstanton](https://www.visitnorfolk.co.uk/destination/old-hunstanton) on New
-Years Day on it.
+My motorcycle isn't much fun in the cold with all the mud on the road, so it's
+currently resting in the barn.
 
 ### Read
-
-[War and Peace in the Global
-Village](https://en.wikipedia.org/wiki/War_and_Peace_in_the_Global_Village) by
-Marshall McLuhan. He wrote that in 1968 and it feels eerily prescient. We're
-definitely in thunder 10.
 
 [The Creative
 Act](https://www.theguardian.com/music/2022/feb/11/rick-rubin-def-jam-founder-producer-debut-book)
@@ -41,10 +41,20 @@ got around to reading it.
 
 ### Use
 
-I replaced my old Arch Linux install with [CachyOS](https://cachyos.org), which
-feels much slicker. Sticking with Gnome: yes it's a bit "budget MacOS" in feel,
-but I find that it handles my 4K external monitor better than KDE or LXDE.
+I replaced `ls` with [eza](https://github.com/eza-community/eza) on my laptop.
+It's worth it for one feature alone, which is the ability to show a file's
+permissions in Octal. It certainly saves the `ls <file>` and `stat <file>` dance
+to see its permissions.
 
-My ML rig still runs Ubuntu though. It annoys me, but it annoys me in ways that
-have been thoroughly documented. With [Tailscale](https://tailscale.com), I can
-access it anywhere in the world.
+I also use [tomb](https://dyne.org/docs/tomb/) to secure files on a server,
+using the following:
+
+```sh
+# Open a remote location with sshfs
+sshfs -o alow_root <server>:/home/me/secure /mnt/cloud/
+
+# Open a tomb in that location with tomb
+tomb open /mnt/cloud/secure.tomb -k opening-key.key
+```
+
+It works rather well!
