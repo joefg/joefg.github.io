@@ -46,6 +46,10 @@ It's worth it for one feature alone, which is the ability to show a file's
 permissions in Octal. It certainly saves the `ls <file>` and `stat <file>` dance
 to see its permissions.
 
+I also replaced [nnn](https://github.com/jarun/nnn) with
+[lf](https://github.com/gokcehan/lf). nnn is definitely lightweight, but lf does
+more.
+
 I also use [tomb](https://dyne.org/docs/tomb/) to secure files on a server,
 using the following:
 
