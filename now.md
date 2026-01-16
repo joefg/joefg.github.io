@@ -8,7 +8,7 @@ menu:
 
 ## Now
 
-Last updated: <time>12/01/26</time>
+Last updated: <time>16/01/26</time>
 
 This page shows what I'm doing currently. For more information on
 Now Pages, see
@@ -22,7 +22,19 @@ Still knee-deep in pose estimators and computer vision for livestock.
 Vision Transformers.~~
 
 I'm coming around to Vision Transformers, especially when considering they fare
-better than ConvNets for occlusions.
+better than ConvNets for occlusions. My problem with ViTs is that they're still
+quite chunky compared to ConvNets, and you get 95% of the way there in a
+controlled environment with a ConvNet.
+
+Consider the following: a camera pointing top-down into a pig pen is likely to
+have a limited stage. There are pigs, a trough, some hay, and that's it. The
+occlusion you're likely to find is between pigs, not between pigs and
+non-pigs-that-look-like-pigs. In this case, a ConvNet may well suffice.
+
+If the camera includes background elements, there's a greater chance of
+occlusion for these non-pig elements. At least one paper suggested a mask
+applied prior to inference, which is all well and good but is an additional step
+for our hypothetical Farmer Giles to set up.
 
 Currently experimenting with pruning and quantisation, which should shrink a ViT
 from ~300MB to something quite a bit less than that.
@@ -46,19 +58,25 @@ It's worth it for one feature alone, which is the ability to show a file's
 permissions in Octal. It certainly saves the `ls <file>` and `stat <file>` dance
 to see its permissions.
 
-I also replaced [nnn](https://github.com/jarun/nnn) with
+~~I also replaced [nnn](https://github.com/jarun/nnn) with
 [lf](https://github.com/gokcehan/lf). nnn is definitely lightweight, but lf does
-more.
+more.~~ I went back to `nnn`. It's just lighter, and does what I want
+a file manager to do and nothing more.
 
 I also use [tomb](https://dyne.org/docs/tomb/) to secure files on a server,
-using the following:
+where the files are kept on-server but the keys are kept on my laptop:
 
 ```sh
 # Open a remote location with sshfs
-sshfs -o alow_root <server>:/home/me/secure /mnt/cloud/
+sshfs <server>:/home/me/secure /tmp/cloud/
 
 # Open a tomb in that location with tomb
-tomb open /mnt/cloud/secure.tomb -k opening-key.key
+tomb open /tmp/cloud/secure.tomb -k opening-key.key
 ```
-
 It works rather well!
+
+Incidentally, you could also use `sshfs` as a poor man's VSCode Remote. If you
+have all your vim plugins on your machine, you may not need to reinstall all of
+those on your server. If you use Tailscale SSH, make sure you start an SSH
+session before using sshfs, otherwise sshfs tends to swallow the authorisation
+magic link.
