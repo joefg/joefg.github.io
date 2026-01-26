@@ -8,75 +8,92 @@ menu:
 
 ## Now
 
-Last updated: <time>16/01/26</time>
+<section class="notice">
+Last updated: <time>26/01/26</time>
 
 This page shows what I'm doing currently. For more information on
 Now Pages, see
 [this page](https://nownownow.com/about).
+</section>
+
+<div class="grid-parent">
+
+<div>
 
 ### Work
 
 Still knee-deep in pose estimators and computer vision for livestock.
-
-~~My radical opinion is that for specialist tasks Convnets are still better than
-Vision Transformers.~~
 
 I'm coming around to Vision Transformers, especially when considering they fare
 better than ConvNets for occlusions. My problem with ViTs is that they're still
 quite chunky compared to ConvNets, and you get 95% of the way there in a
 controlled environment with a ConvNet.
 
-Consider the following: a camera pointing top-down into a pig pen is likely to
-have a limited stage. There are pigs, a trough, some hay, and that's it. The
-occlusion you're likely to find is between pigs, not between pigs and
-non-pigs-that-look-like-pigs. In this case, a ConvNet may well suffice.
+I found some lighter architectures that work on similar principles to ViTs:
+[Mobile ViTs](https://arxiv.org/abs/2206.02680), which have more of a focus on
+speed than accuracy.
 
-If the camera includes background elements, there's a greater chance of
-occlusion for these non-pig elements. At least one paper suggested a mask
-applied prior to inference, which is all well and good but is an additional step
-for our hypothetical Farmer Giles to set up.
-
-Currently experimenting with pruning and quantisation, which should shrink a ViT
-from ~300MB to something quite a bit less than that.
+</div>
+<div>
 
 ### Play
 
 My motorcycle isn't much fun in the cold with all the mud on the road, so it's
-currently resting in the barn.
+currently resting in the barn. I bought some panniers which I should fit ahead
+of my planned summer road trip.
+
+I haven't published my recordings, but if you want a decent feel for how it
+sounds, [this is pretty good](https://www.youtube.com/watch?v=6ZXD4AM-h6Q).
+
+Once it gets warmer, I'll unearth the kayak, and take it up the broads, or over
+to Dedham.
+
+</div>
+
+<div>
 
 ### Read
 
-[The Creative
-Act](https://www.theguardian.com/music/2022/feb/11/rick-rubin-def-jam-founder-producer-debut-book)
-by Rick Rubin. Thanks to `@coastalfuturist` for shilling it so hard, I finally
-got around to reading it.
+[MobileViT: Light-weight, General-purpose,
+and Mobile-friendly Vision Transformer](https://arxiv.org/pdf/2110.02178) by
+Mehta and Rastegari looks to be the ticket for getting a video-rate pig
+behaviour detector working on a mobile device. ViTs will always be slower than
+ConvNets, even with specialist hardware.
+
+Apart from literature on using Vision Transformers, I'm reading:
+
+* Erik Dietrich's [Developer
+    Hegemony](https://daedtech.com/developer-hegemony-the-crazy-idea-that-software-developers-should-run-software-development/);
+
+* Daniel Suarez's [Daemon](https://www.goodreads.com/book/show/6665847-daemon?) and
+    [Freedom(tm)](https://www.goodreads.com/book/show/8488830-freedom). I've
+    read these before, so I'm visiting again.
+
+Some smaller pieces:
+
+* [How Complex Systems Fail](https://how.complexsystems.fail) by Richard Cook. I
+    give this to newbies on team.
+
+</div>
+
+<div>
 
 ### Use
 
-I replaced `ls` with [eza](https://github.com/eza-community/eza) on my laptop.
-It's worth it for one feature alone, which is the ability to show a file's
-permissions in Octal. It certainly saves the `ls <file>` and `stat <file>` dance
-to see its permissions.
+Alias du jour: this one opens a new tmux session in your current directory with
+the name of that directory as the session name.
 
-~~I also replaced [nnn](https://github.com/jarun/nnn) with
-[lf](https://github.com/gokcehan/lf). nnn is definitely lightweight, but lf does
-more.~~ I went back to `nnn`. It's just lighter, and does what I want
-a file manager to do and nothing more.
-
-I also use [tomb](https://dyne.org/docs/tomb/) to secure files on a server,
-where the files are kept on-server but the keys are kept on my laptop:
-
-```sh
-# Open a remote location with sshfs
-sshfs <server>:/home/me/secure /tmp/cloud/
-
-# Open a tomb in that location with tomb
-tomb open /tmp/cloud/secure.tomb -k opening-key.key
+```bash
+function td() {
+    tmux new -ADs "${PWD##*/}"
+}
 ```
-It works rather well!
+In addition, I swapped [VSCode](https://code.visualstudio.com) for
+[Zed](https://zed.dev). I found Code to get really clunky and it dropped
+a lot when connected to my development server, whereas Zed stays connected.
+There are a few things I would change, I would like Zed to use the LSPs
+specified in my `.venv` directory for that project, but nothing's perfect.
 
-Incidentally, you could also use `sshfs` as a poor man's VSCode Remote. If you
-have all your vim plugins on your machine, you may not need to reinstall all of
-those on your server. If you use Tailscale SSH, make sure you start an SSH
-session before using sshfs, otherwise sshfs tends to swallow the authorisation
-magic link.
+I'm also experimenting with [tinygrad](https://github.com/tinygrad/tinygrad).
+
+</div>
