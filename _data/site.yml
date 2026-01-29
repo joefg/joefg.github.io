@@ -1,5 +1,5 @@
-title: joefg.pages.dev
-description: joefg's website
+title: joefg's blog
+description: Software yapbox.
 
 author:
   name: joefg
@@ -8,8 +8,8 @@ author:
 github: https://github.com/joefg
 
 header:
-  title: joefg.pages.dev
-  blurb: Software yapbox.
+  title: joefg's blog
+  #blurb: Software yapbox.
   #mugshot: https://avatars.githubusercontent.com/u/13489445
   #links:
     #🖥️ GitHub: https://github.com/joefg
