@@ -22,7 +22,7 @@ The author's profile picture was generated via style transfer by Grok, using
 the style of artist Norman Rockwell.
 
 He doesn't use much social media, so just drop him an
-<a href="mailto:joe.fuller.gray@gmail.com">E-Mail</a>.
+<a href="mailto:me@jfg.name">E-Mail</a>.
 Turnaround time is about a week, and if it's spam, he won't respond.
 
 He sometimes looks at his [𝕏](https://x.com/joefg_)
