@@ -1,0 +1,44 @@
+body {
+	color: #444;
+	font: 16px/1.5 Inter, sans-serif;
+	margin: 40px auto;
+	max-width: 650px;
+	padding: 0 10px;
+}
+
+section {
+	clear: both;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+header, footer, nav {
+	text-align: center;
+	user-select: none;
+}
+
+h1, h2, h3 {
+	line-height: 1.2;
+}
+
+img {
+	border-radius: 5px;
+	float: left;
+	margin-right: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: #0d1117;
+		color: #c9d1d9;
+	}
+
+	a:link {
+		color: #58a6ff;
+	}
+
+	a:visited {
+		color: #8e96f0;
+	}
+}
+
