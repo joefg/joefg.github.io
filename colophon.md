@@ -13,13 +13,6 @@ menu:
 All content on this blog is authored by [@joefg](https://jfg.name). Topics
 include software, software development, and the impact of software on society.
 
-The author's profile picture was generated via style transfer by Grok, using
-the style of artist Norman Rockwell.
-
-He doesn't use much social media, so just drop him an
-<a href="mailto:me@jfg.name">E-Mail</a>.
-Turnaround time is about a week, and if it's spam, he won't respond.
-
 ### Content
 
 **Unless stated otherwise**, this site contains zero AI generated content.
