@@ -6,6 +6,15 @@ location: Ely, England
 topic: Work notes
 ---
 
+<br/>
+<section class="notice">
+
+**UPDATES**
+
+**9/2/26**: Amend typos
+
+</section>
+
 Half-way through my MSc, and here are some notes from going from software
 development to computer vision research. Some things to expect, and some things
 that you should consider if you want to do this as well.
@@ -29,13 +38,14 @@ feeding from a trough) suggests that you don't need massive models to get
 state-of-the-art performance. Careful consideration of your data, augmentation,
 and tinkering is better than just finding the biggest model.
 
-### Tradeoffs
+### Trade-offs
 
-A big model may well be more accurate, but can you deploy it? A big ViT model
-may well work on your compute cluster, but it rapidly fills the memory of a
-smartphone when inferring stuff, and it won't work at video rate. Accuracy in
-model isn't everything. A 95% accurate State-of-the-Art model might work on
-cluster but if it's unusable in the field, it is 95% accurate 0% of the time.
+A big model may well be more accurate, but can you deploy it? A big Vision
+Transformer model may well work on your compute cluster, but it rapidly fills
+the memory of a smartphone when inferring stuff, and it won't work at video
+rate. Accuracy in model isn't everything. A 95% accurate State-of-the-Art model
+might work on cluster but if it's unusable in the field, it is 95% accurate 0%
+of the time.
 
 ### Hardware is important
 
@@ -69,10 +79,10 @@ def reset_linear(layer):
     layer.apply(reset_fn)
 
 
-class MobilenetV3Large(torch.nn.Module):
+class MobileNetV3Large(torch.nn.Module):
     def __init__(self, n_outputs):
         super().__init__()
-        self.model= models.mobilenet_v3_large(pretrained=True)
+        self.model = models.mobilenet_v3_large(pretrained=True)
         self.model.classifier[3] = torch.nn.Linear(1280, n_outputs)
 
     def forward(self, x):
@@ -89,7 +99,7 @@ class MobilenetV3Large(torch.nn.Module):
 
 dataset = load_data()
 
-m = MobilenetV3Large(5) # for five output classes
+m = MobileNetV3Large(5) # for five output classes
 m.freeze()
 m.reset_parameters()
 
@@ -110,7 +120,7 @@ AI work is taxing on your brain, so take the load off by adopting a
 functional programming style.
 
 Once you're comfortable with functions on structs over methods on objects,
-you'll find that your're able to keep state in your head at an abstract
+you'll find that you're able to keep state in your head at an abstract
 level.
 
 Note that this conflicts with the above example. Sometimes it's necessary to
@@ -129,7 +139,7 @@ were being carried over between folds.
 
 ### Export to ONNX
 
-Once you're done, export to [ONNX](https://onnx.ai/). The default Pytorch format
+Once you're done, export to [ONNX](https://onnx.ai/). The default Torch format
 is a Pickle, which can execute code on load via `__repr__`. Don't do that!
 Export to ONNX. Although I hear good things about
 [Safetensors](https://huggingface.co/docs/safetensors/en/index).
