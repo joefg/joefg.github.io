@@ -8,6 +8,14 @@ topic: Assorted notes
 
 Some notes from the winter.
 
+<section class="notice">
+
+**AMENDMENTS**
+
+23/2/26: Fix header sizes and add bit on OpenClaw
+
+</section
+
 <figure>
     <img class="centered-img" width="400" src="/img/burnt-out-truck.webp"/>
     <br/>
@@ -18,7 +26,7 @@ Some notes from the winter.
 </figure>
 
 
-## The right to compute
+### The right to compute
 
 I always suspected that computers (including the one with the modem and touch
 screen in your pocket) will one day stop getting better, and will instead start
@@ -66,7 +74,7 @@ graphics cards, it may be through degraded software performance on
 compute so cheap nobody bother sells graphics cards to the general public, but
 my hunch is that it will happen.
 
-## FastAPI performance
+### FastAPI performance
 
 It's pretty good as-is, but the most recent update added [Response
 Models](https://fastapi.tiangolo.com/tutorial/response-model/). Consider
@@ -107,7 +115,25 @@ For best results, use
 [SQLModel](https://sqlmodel.tiangolo.com/), which is a SQLAlchemy ORM and a
 Pydantic model in combination. **You cannot lose!**
 
-## Software is not a spectator sport
+### Claws
+
+I spent a few weeks playing with
+[OpenClaw](https://github.com/openclaw/openclaw). As much as I would love to say
+"oh, this will change the world", "it's a game changer" etc: the ecosystem
+surrounding it needs work.
+
+For one thing: giving a non-deteministic system permissions to clear your inbox
+is a **stupid, stupid idea**. One Xitter user reported having to dive for the
+Mac Mini on their desk once it started to nuke their GMail inbox.
+
+It was good though: I could ask Claude to fix a bug on a product without ever
+opening my laptop. All I needed to do was ask the bot on the Telegram channel
+to do it and send me diffs on what the fix was. I was able to do this while
+waiting for a coffee at my usual haunt. It has value, just be careful. It's like
+the early days of the internet when people cheerily used string concatenation in
+SQL queries rather than escaping them.
+
+### Software is not a spectator sport
 
 I decided to hide my development graph on GitHub. Why?
 
@@ -130,7 +156,7 @@ I decided to hide my development graph on GitHub. Why?
    to-do list app to GitHub. Show me a living product with users, then we can have
    a proper discussion.
 
-## You didn't build that, Claude built that
+### You didn't build that, Claude built that
 
 Controversial opinion: vibe coded stuff should always be committed under the
 name of the AI system that created it. You didn't make that. Claude did. By all
@@ -149,7 +175,7 @@ There's probably a web comic to be had here. The quickest way to stop developers
 from vibe coding everything is if they had to put the agent's name on the
 commit's author section.
 
-## Cache and Carry
+### Cache and Carry
 
 I use the `@cache` and `@lru_cache` decorators a lot in prod services. It's a
 cheap way of caching in Python, and tends to work. That said:
@@ -170,7 +196,7 @@ similar in [cachetools](https://cachetools.readthedocs.io/en/stable/).
 Tempted to release my own implmentation at some point. This is a good interview
 question for Python backend positions.
 
-## Ordnance Survey Open Data
+### Ordnance Survey Open Data
 
 The [Open Data](https://osdatahub.os.uk/data/downloads/open) is pretty good. My
 recommendation is to download and store in
@@ -183,7 +209,7 @@ Don't forget to cite it under the
 I use this quite a lot, and I find it easier to work with than the [Open
 Geography Portal](https://geoportal.statistics.gov.uk/).
 
-## LinkedIn is still terrible
+### LinkedIn is still terrible
 
 I don't like it, and somehow it's worse. I used to tolerate it because "everyone
 else is on it" (and the minigames were actually pretty fun), but I can't bear it
