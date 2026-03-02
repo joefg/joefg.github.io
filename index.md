@@ -23,4 +23,5 @@ He also maintains <a href="https://git-for-graduates.pages.dev">Git for
 Graduates</a>, a book on the effective use of Git that fits on your phone.
 
 When he's not making computers see things or draw lines, he can be found riding
-motorcycles in East Anglia or paddling kayaks on the Norfolk Broads.
+motorcycles in East Anglia or paddling kayaks on the Norfolk Broads. For more
+details, read my [dotplan](./now).
