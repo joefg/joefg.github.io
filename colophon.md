@@ -10,7 +10,7 @@ menu:
 
 ### Author
 
-All content on this blog is authored by Joe Fuller-Gray.
+All content on this blog is authored by Joe.
 
 Topics include software, software development, and the impact of software on society.
 
@@ -21,6 +21,8 @@ comment.
 ### Content
 
 **Unless stated otherwise**, this site contains zero AI generated content.
+
+There are no external contributors except stated otherwise.
 
 The contents of this site remain copyright of the author and must not be
 reproduced elsewhere. Media must not be hotlinked.
@@ -40,3 +42,7 @@ time, however.
 
 It is hosted on [GitHub Pages](https://docs.github.com/en/pages) and is deployed on
 push to `main`.
+
+This site does not use any JavaScript in the browser, has no analytics, and does
+not track the user. This site does not require a login and does not collect
+personal information. This may change at any time without warning.
