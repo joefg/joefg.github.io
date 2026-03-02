@@ -14,8 +14,6 @@ header:
   #links:
     #🖥️ GitHub: https://github.com/joefg
     
-#bulletin: This blog is no longer under active development.
-
 footer:
   text: Built with Deno and Lume in England 🏴󠁧󠁢󠁥󠁮󠁧󠁿
   repo: https://github.com/joefg/lume-simple-blog
