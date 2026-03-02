@@ -6,7 +6,9 @@ menu:
   order: 1
 ---
 
-## .plan (also known as the nowpage)
+## .plan
+
+(also known as a nowpage)
 
 <section class="notice">
 
