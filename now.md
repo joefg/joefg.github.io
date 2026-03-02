@@ -8,15 +8,18 @@ menu:
 
 ## .plan
 
-(also known as a nowpage)
-
 <section class="notice">
 
 **LAST UPDATE:** 2/2/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
+I call it a `.plan` to be different, it's really a nowpage. I miss `.plan`
+files. The joys of being an oldhead...
+
 </section>
+
+<img src="img/march-26-kayak.webp" width=300 class="right-img">
 
 ### Doing
 
@@ -45,3 +48,19 @@ Technology](https://darioamodei.com/essay/the-adolescence-of-technology) and
 Grace](https://darioamodei.com/essay/machines-of-loving-grace) are worth reading
 again. I have objections to both essays that I would love to expand on if I find
 the time.
+
+### Using
+
+[OpenCode](https://opencode.ai) works really well. I use the MiniMax model. No
+wonder Anthropic's
+[scared](https://www.reddit.com/r/opencodeCLI/comments/1r9em99/anthropic_legal_demanded_opencode_anthropics/).
+
+I tried [OpenClaw](https://openclaw.ai/), and as much as I like using it, I'm
+still a little bit wary of giving it the full beans access. I want to use it
+sandboxed. I don't want it to nuke my inbox or cancel my train ticket because it
+found a way to get a ticket from CBG to WAE for 20p less.
+
+I replaced VSCode with [zed](https://zed.dev/). I still use neovim as the
+terminal editor. nvim for the first draft, zed for lsps and debuggers.
+
+
