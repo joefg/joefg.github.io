@@ -38,5 +38,5 @@ and [Simple.css](https://simplecss.org/), packaged together in
 free-of-charge through that GitHub repository. It hasn't been updated in some
 time, however.
 
-It is hosted on [Cloudflare's pages.dev](https://pages.dev/) and is deployed on
+It is hosted on [GitHub Pages](https://docs.github.com/en/pages) and is deployed on
 push to `main`.
