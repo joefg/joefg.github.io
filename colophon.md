@@ -10,8 +10,13 @@ menu:
 
 ### Author
 
-All content on this blog is authored by [@joefg](https://jfg.name). Topics
-include software, software development, and the impact of software on society.
+All content on this blog is authored by Joe Fuller-Gray.
+
+Topics include software, software development, and the impact of software on society.
+
+At present he does not make contact details readily available, but if you find
+them, feel free to send an email. He does not respond to spam or requests to
+comment.
 
 ### Content
 
