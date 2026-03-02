@@ -1,0 +1,11 @@
+---
+layout: layouts/base.njk
+menu:
+  visible: false
+  title: 📝 Archive
+  order: 1
+---
+
+<h2>All posts</h2>
+{% set postslist = search.pages("type=posts", "date=desc") %}
+{% include "templates/postslist.njk" %}

@@ -6,4 +6,3 @@ menu:
   order: 1
 ---
 
-# Hello!

@@ -5,6 +5,7 @@ bodyClass: body-home
 
 {{ content | safe }}
 
-<h2>Posts</h2>
-{% set postslist = search.pages("type=posts", "date=desc") %}
+<h2>Recent posts</h2>
+{% set postslist = search.pages("type=posts", "date=desc", 10) %}
 {% include "templates/postslist.njk" %}
+<a href="./archive">See more posts...</a>
