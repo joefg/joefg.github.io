@@ -14,9 +14,6 @@ menu:
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
-I call it a `.plan` to be different, it's really a nowpage. I miss `.plan`
-files. The joys of being an oldhead...
-
 </section>
 
 <img src="img/march-26-kayak.webp" width=300 class="right-img">
