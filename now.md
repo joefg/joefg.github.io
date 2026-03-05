@@ -6,11 +6,11 @@ menu:
   order: 1
 ---
 
-## .plan
+## Now
 
 <section class="notice">
 
-**LAST UPDATE:** 2/2/26
+**LAST UPDATE:** 05/02/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -33,12 +33,13 @@ It's kayak season once again. Time to hit the water!
 
 ### Reading
 
-[Areopagitica](https://www.gutenberg.org/files/608/608-h/608-h.htm) by John
-Milton. A defence of free speech that hasn't aged a single day.
-
 [Simulation, Consciousness,
 Existence](https://frc.ri.cmu.edu/~hpm/project.archive/general.articles/1998/SimConEx.98.html)
 by Hans Moravec, 1998.
+
+[Driven by Compression Progress](https://arxiv.org/pdf/0812.4360) by Jürgen
+Schmidhuber is another banger read. 35 pages including footnotes make it a bit
+chunky though.
 
 Given the recent hubhub surrounding Anthropic's refusal to let the American
 government use its technology for war-like purposes, the CEO's pieces
@@ -62,5 +63,3 @@ found a way to get a ticket from CBG to WAE for 20p less.
 
 I replaced VSCode with [zed](https://zed.dev/). I still use neovim as the
 terminal editor. nvim for the first draft, zed for lsps and debuggers.
-
-
