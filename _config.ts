@@ -8,6 +8,7 @@ import codeHighlight from "lume/plugins/code_highlight.ts";
 import basePath from "lume/plugins/base_path.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
+import transformImages from "lume/plugins/transform_images.ts";
 
 const site = lume({
   location: new URL("https://jfg.name"),
@@ -26,6 +27,7 @@ site
   .use(slugifyUrls({ alphanumeric: false }))
   .use(resolveUrls())
   .use(postcss())
+  .use(transformImages())
   .add([".css"]);
 
 export default site;
