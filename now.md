@@ -10,7 +10,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 05/02/26
+**LAST UPDATE:** 09/03/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -38,25 +38,12 @@ by Hans Moravec, 1998.
 Schmidhuber is another banger read. 35 pages including footnotes make it a bit
 chunky though.
 
-Given the recent hubhub surrounding Anthropic's refusal to let the American
-government use its technology for war-like purposes, the CEO's pieces
-[The Adolescence of
-Technology](https://darioamodei.com/essay/the-adolescence-of-technology) and
-[Machines of Loving
-Grace](https://darioamodei.com/essay/machines-of-loving-grace) are worth reading
-again. I have objections to both essays that I would love to expand on if I find
-the time.
-
 ### Using
 
 [OpenCode](https://opencode.ai) works really well. I use the MiniMax model. No
 wonder Anthropic's
-[scared](https://www.reddit.com/r/opencodeCLI/comments/1r9em99/anthropic_legal_demanded_opencode_anthropics/).
-
-I tried [OpenClaw](https://openclaw.ai/), and as much as I like using it, I'm
-still a little bit wary of giving it the full beans access. I want to use it
-sandboxed. I don't want it to nuke my inbox or cancel my train ticket because it
-found a way to get a ticket from CBG to WAE for 20p less.
-
-I replaced VSCode with [zed](https://zed.dev/). I still use neovim as the
-terminal editor. nvim for the first draft, zed for lsps and debuggers.
+[scared](https://www.reddit.com/r/opencodeCLI/comments/1r9em99/anthropic_legal_demanded_opencode_anthropics/). As an experiment, I asked
+the then-current Big Pickle model to port this site over to
+[eleventy](https://11ty.dev) and [Bun](https://bun.sh), and while it didn't
+oneshot it, it took what would have been probably at least two hours of
+head-scratching and turned it into about twenty minutes of head-scratching.
