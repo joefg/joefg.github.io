@@ -6,6 +6,14 @@ location: Cambridge, England
 topic: Python
 ---
 
+<section class="notice">
+
+**AMENDMENTS**
+
+09/03/26 - Typo in code example.
+
+</section>
+
 Some useful bits for [FastHTML](https://fastht.ml) that I picked up.
 
 Note that because [FastHTML is based on
@@ -169,7 +177,7 @@ class User(SQLModel, table=True):
 new_user = User(
     gh_login="foo",
     is_active=True,
-    gh_created_at: datetime.now()
+    gh_created_at=datetime.now()
 )
 
 with database.connect() as session:
