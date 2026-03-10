@@ -6,6 +6,8 @@ location: Cambridge, England
 topic: Python
 ---
 
+Some useful bits for [FastHTML](https://fastht.ml) that I picked up.
+
 <section class="notice">
 
 **AMENDMENTS**
@@ -13,8 +15,6 @@ topic: Python
 09/03/26 - Typo in code example.
 
 </section>
-
-Some useful bits for [FastHTML](https://fastht.ml) that I picked up.
 
 Note that because [FastHTML is based on
 Starlette](https://gist.github.com/jph00/e91192e9bdc1640f5421ce3c904f2efb),
