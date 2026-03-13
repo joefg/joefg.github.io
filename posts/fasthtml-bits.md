@@ -14,6 +14,8 @@ Some useful bits for [FastHTML](https://fastht.ml) that I picked up.
 
 09/03/26 - Typo in code example.
 
+13/03/26 - Various typos in code examples.
+
 </section>
 
 Note that because [FastHTML is based on
@@ -29,9 +31,6 @@ service](https://oauth-mock.mock.beeceptor.com).
 ```python
 from fasthtml.common import Button
 from fasthtml.oauth import redir_url, _AppClient
-
-import config
-from icons import github as github_icon
 
 auth_callback = "/auth/oauth-redirect"
 
@@ -73,8 +72,9 @@ This is a very basic rate limiter which gives each IP address a quota
 of 100 requests per minute.
 
 ```python
-from fasthtml import Beforeware
 from time import time
+
+from fasthtml import Beforeware
 from starlette.responses import JSONResponse
 
 # Simple in-memory fixed-window limiter (per IP)
@@ -124,7 +124,7 @@ health_app = APIRouter(prefix="/health")
 
 @health_app.get("/")
 async def get_health():
-    return {"database": ("ok" if database.is_alive() else "error")}
+    return {"database": "ok" if database.is_alive() else "error"}
 ```
 
 ```python
