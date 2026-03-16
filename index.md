@@ -24,4 +24,4 @@ Graduates</a>, a book on the effective use of Git that fits on your phone.
 
 When he's not making computers see things or draw lines, he can be found riding
 motorcycles in East Anglia or paddling kayaks on the Norfolk Broads. For more
-details, read the [Nowpage](./now).
+details, read the [Now Page](./now).

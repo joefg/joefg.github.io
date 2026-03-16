@@ -10,7 +10,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 09/03/26
+**LAST UPDATE:** 16/03/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -28,6 +28,12 @@ sorted its irritating misfire out, it'll be my summer steed.
 
 It's kayak season once again. Time to hit the water!
 
+### Using
+
+[OpenCode](https://opencode.ai) works really well. I use the ~~MiniMax~~ Kimi K2.5 model.
+No wonder Anthropic's
+[scared](https://www.reddit.com/r/opencodeCLI/comments/1r9em99/anthropic_legal_demanded_opencode_anthropics/).
+
 ### Reading
 
 [Simulation, Consciousness,
@@ -38,12 +44,21 @@ by Hans Moravec, 1998.
 Schmidhuber is another banger read. 35 pages including footnotes make it a bit
 chunky though.
 
-### Using
+### Brewing
 
-[OpenCode](https://opencode.ai) works really well. I use the MiniMax model. No
-wonder Anthropic's
-[scared](https://www.reddit.com/r/opencodeCLI/comments/1r9em99/anthropic_legal_demanded_opencode_anthropics/). As an experiment, I asked
-the then-current Big Pickle model to port this site over to
-[eleventy](https://11ty.dev) and [Bun](https://bun.sh), and while it didn't
-oneshot it, it took what would have been probably at least two hours of
-head-scratching and turned it into about twenty minutes of head-scratching.
+Iced Coffee. Here's my [AeroPress](https://www.aeropress.co.uk/) recipe. I use
+[Silver Oak](https://silveroakcoffee.co.uk/products/arufa-ax-png) for my beans.
+
+1. Put 100g ice into the mug.
+
+2. Put filter in cap.
+
+3. Add 17g of fine grind coffee to press (keep press normal orientation).
+
+4. Add 190g of hot water quickly.
+
+5. Stir for fifteen seconds and sit for a minute.
+
+6. Press gently.
+
+7. Swirl mug and add more ice to dilute, then add milk.
