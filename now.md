@@ -10,7 +10,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 16/03/26
+**LAST UPDATE:** 21/03/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -33,6 +33,12 @@ It's kayak season once again. Time to hit the water!
 [OpenCode](https://opencode.ai) works really well. I use the ~~MiniMax~~ Kimi K2.5 model.
 No wonder Anthropic's
 [scared](https://www.reddit.com/r/opencodeCLI/comments/1r9em99/anthropic_legal_demanded_opencode_anthropics/).
+
+I have also been playing around with [Coolify](https://coolify.io/) on my
+self-hosted home AI server. It's pretty good! One gotcha: if you don't want
+to use a `sslip.io` domain when hosting on the Coolify host, you have to specify
+that hostname. Under the domain when standing up a service, you'll want to
+replace the `sslip.io` domain with `<coolify-hostname>:<port>`.
 
 ### Reading
 
