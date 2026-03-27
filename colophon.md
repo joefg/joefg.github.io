@@ -18,6 +18,12 @@ At present he does not make contact details readily available, but if you find
 them, feel free to send an email. He does not respond to spam or requests to
 comment.
 
+For the benefit of identify verification, this is [his 𝕏](https://x.com/joefg_).
+
+He doesn't use it very often as he disagrees with many of its design decisions,
+but if Musk actually succeeds in making it an Everything App, it makes sense to
+keep an account with a username alive.
+
 ### Content
 
 **Unless stated otherwise**, this site contains zero AI generated content.
