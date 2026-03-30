@@ -10,7 +10,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 21/03/26
+**LAST UPDATE:** 30/03/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -23,10 +23,7 @@ A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 Still doing research for my Master's degree. If you see me around the University
 of Essex, feel free to say hi!
 
-Dusted my motorcycle off and brought it out of a winter slumber. Once I've
-sorted its irritating misfire out, it'll be my summer steed.
-
-It's kayak season once again. Time to hit the water!
+Now the bulk of experimentation has concluded, I'm writing the dissertation.
 
 ### Using
 
@@ -42,13 +39,11 @@ replace the `sslip.io` domain with `<coolify-hostname>:<port>`.
 
 ### Reading
 
-[Simulation, Consciousness,
-Existence](https://frc.ri.cmu.edu/~hpm/project.archive/general.articles/1998/SimConEx.98.html)
-by Hans Moravec, 1998.
-
-[Driven by Compression Progress](https://arxiv.org/pdf/0812.4360) by Jürgen
-Schmidhuber is another banger read. 35 pages including footnotes make it a bit
-chunky though.
+[On Art and
+Life](https://www.amazon.co.uk/Penguin-Great-Ideas-Art-Life/dp/014101895X)
+by John Ruskin. It's a robust defence of craftsmanship and good work, suggests
+that art reflects the health of society, and argues against mass production of
+everything. Timely, especially in the age of "intelligence too cheap to meter".
 
 ### Brewing
 
