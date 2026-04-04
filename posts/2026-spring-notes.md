@@ -6,6 +6,14 @@ location: Cambridge, England
 topic: Assorted notes
 ---
 
+<div class="notice">
+    ⚠️ <b>Updates</b>
+
+    4/4/26: Moved URL from 2026-spring-potpourri to 2026-spring-notes.
+
+    4/4/26: Amended a typo.
+</div>
+
 Some notes from before Easter.
 
 <figure>
@@ -239,7 +247,7 @@ def grad_cam(model, target_layer, x, class_idx=None):
     score = logits[:, class_idx].sum()
     score.backward(retain_graph=True)
 
-    weights = gradientss.mean(dim=(2, 3), keepdim=True)
+    weights = gradients.mean(dim=(2, 3), keepdim=True)
     camap = (weights * activations).sum(dim=1, keepdim=True)
     camap = F.relu(camap)
 
