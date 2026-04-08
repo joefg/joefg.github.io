@@ -10,6 +10,8 @@ menu:
 
 ### Author
 
+<img class="right-img" width=200px src="https://avatars.githubusercontent.com/u/13489445?v=4"/>
+
 All content on this blog is authored by Joe.
 
 Topics include software, software development, and the impact of software on society.
