@@ -10,7 +10,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 30/03/26
+**LAST UPDATE:** 10/04/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -27,15 +27,19 @@ Now the bulk of experimentation has concluded, I'm writing the dissertation.
 
 ### Using
 
-[OpenCode](https://opencode.ai) works really well. I use the ~~MiniMax~~ Kimi K2.5 model.
-No wonder Anthropic's
-[scared](https://www.reddit.com/r/opencodeCLI/comments/1r9em99/anthropic_legal_demanded_opencode_anthropics/).
+Currently using [pi](https://pi.dev) as my coding agent. I love
+[OpenCode](https://opencode.ai/) but it's getting a bit porky.
 
-I have also been playing around with [Coolify](https://coolify.io/) on my
-self-hosted home AI server. It's pretty good! One gotcha: if you don't want
-to use a `sslip.io` domain when hosting on the Coolify host, you have to specify
-that hostname. Under the domain when standing up a service, you'll want to
-replace the `sslip.io` domain with `<coolify-hostname>:<port>`.
+My current setup for local AI is: A second-hand Dell OptiPlex workstation 
+PC with an [RTX A2000
+Ada](https://www.nvidia.com/en-gb/products/workstations/rtx-2000/) under my
+desk. Currently partially solar powered. It runs [Coolify](https://coolify.io/),
+on which I have [ollama](https://ollama.com/) and [Open
+WebUI](https://openwebui.com/). It has [tailscale](https://tailscale.com/) so I
+can connect to it from anywhere in the world.
+
+My model of choice is [gemma4:26b](https://ollama.com/library/gemma4:26b), which
+does fill the VRAM but is otherwise very good.
 
 ### Reading
 
