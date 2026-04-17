@@ -10,7 +10,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 10/04/26
+**LAST UPDATE:** 17/04/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -23,23 +23,17 @@ A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 Still doing research for my Master's degree. If you see me around the University
 of Essex, feel free to say hi!
 
-Now the bulk of experimentation has concluded, I'm writing the dissertation.
-
 ### Using
 
 Currently using [pi](https://pi.dev) as my coding agent. I love
 [OpenCode](https://opencode.ai/) but it's getting a bit porky.
 
-My current setup for local AI is: A second-hand Dell OptiPlex workstation 
-PC with an [RTX A2000
-Ada](https://www.nvidia.com/en-gb/products/workstations/rtx-2000/) under my
-desk. Currently partially solar powered. It runs [Coolify](https://coolify.io/),
-on which I have [ollama](https://ollama.com/) and [Open
-WebUI](https://openwebui.com/). It has [tailscale](https://tailscale.com/) so I
-can connect to it from anywhere in the world.
-
 My model of choice is [gemma4:26b](https://ollama.com/library/gemma4:26b), which
 does fill the VRAM but is otherwise very good.
+
+AI allows people to build their own tailored tools. I release some of my
+[vibeslop](https://github.com/joefg/vibeslop), but I keep the really good
+stuff for myself.
 
 ### Reading
 
