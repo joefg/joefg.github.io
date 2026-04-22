@@ -16,12 +16,13 @@ All content on this blog is authored by Joe.
 
 Topics include software, software development, and the impact of software on society.
 
-At present he does not make contact details readily available, but if you find
-them, feel free to send an email. He does not respond to spam or requests to
-comment.
+At present he does not make contact details readily available owing to the
+proliferation of AI spam in the past year. They're not difficult to find
+if you have some technical nous. If you find them, make sure there's a
+subject line, but be aware he does not respond to spam and turn-around time
+is measured in weeks and not hours.
 
 For the benefit of identify verification, this is [his 𝕏](https://x.com/joefg_).
-
 He doesn't use it very often as he disagrees with many of its design decisions,
 but if Musk actually succeeds in making it an Everything App, it makes sense to
 keep an account with a username alive.
