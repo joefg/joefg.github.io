@@ -10,7 +10,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 21/04/26
+**LAST UPDATE:** 23/04/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -43,11 +43,13 @@ tower in the SW1A postcode area that they can buy.
 
 ### Reading
 
-[On Art and
-Life](https://www.amazon.co.uk/Penguin-Great-Ideas-Art-Life/dp/014101895X)
-by John Ruskin. It's a robust defence of craftsmanship and good work, suggests
-that art reflects the health of society, and argues against mass production of
-everything. Timely, especially in the age of "intelligence too cheap to meter".
+Jürgen Schmidhuber dropped another banger: [Neural
+Computers](https://arxiv.org/abs/2604.06425). This one has legs.
+
+> We outline a roadmap toward (Completely Neural Computers), to establish a new
+> computing paradigm beyond today's agents and conventional computers.
+
+Doesn't this excite you?
 
 ### Brewing
 
