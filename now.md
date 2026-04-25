@@ -10,7 +10,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 23/04/26
+**LAST UPDATE:** 25/04/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -50,6 +50,9 @@ Computers](https://arxiv.org/abs/2604.06425). This one has legs.
 > computing paradigm beyond today's agents and conventional computers.
 
 Doesn't this excite you?
+
+On the fiction front, *The Crying of Lot 49* by Thomas Pynchon. Like anything
+else Pynchon, it is *weird*, but in a fun way.
 
 ### Brewing
 
