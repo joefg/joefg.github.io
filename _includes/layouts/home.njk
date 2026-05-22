@@ -4,8 +4,3 @@ bodyClass: body-home
 ---
 
 {{ content | safe }}
-
-<h2>Recent posts</h2>
-{% set postslist = search.pages("type=posts", "date=desc", 10) %}
-{% include "templates/postslist.njk" %}
-<a href="./posts">See more posts...</a>
