@@ -2,7 +2,7 @@
 title: "Migrating Pipenv projects to uv"
 description: How to migrate your Pipenv Python projects to uv
 date: 2025-02-24
-Topic: Python
+topic: Python
 ---
 
 <div class="notice">
