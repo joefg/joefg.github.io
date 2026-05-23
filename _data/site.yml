@@ -1,4 +1,4 @@
-title: Joe Fuller-Gray • jfg.name
+title: jfg.name
 description: Website 
 
 author:
@@ -8,8 +8,8 @@ author:
 github: https://github.com/joefg
 
 header:
-  title: Joe Fuller-Gray • jfg.name
-  blurb:
+  title: jfg.name
+  #blurb: Joe Fuller-Gray
   #mugshot: https://avatars.githubusercontent.com/u/13489445
   #links:
     #🖥️ GitHub: https://github.com/joefg
