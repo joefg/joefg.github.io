@@ -51,13 +51,13 @@ keep an account with a username alive.
 
 **Unless stated otherwise**, this site contains zero AI generated content.
 
-There are no external contributions except stated otherwise, and will not
+There are no external contributions and I will not
 be accepting any.
 
 The contents of this site remain copyright of the author and must not be
 reproduced elsewhere. Media must not be hotlinked.
 
-The author requests that this site is not used to train any form of AI, or used
+I request that this site is not used to train any form of AI, or used
 as part of a
 [RAG](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/)
 strategy for enhancing language model output.
