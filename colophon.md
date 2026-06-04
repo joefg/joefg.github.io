@@ -34,14 +34,28 @@ as part of a
 [RAG](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/)
 strategy for enhancing language model output.
 
+### Technology
+
+This site is built with [Deno](https://deno.com/), [Lume](https://lume.land/),
+and [Simple.css](https://simplecss.org/), source code available
+[here](https://github.com/joefg/joefg.github.io).
+
+It is hosted on [GitHub Pages](https://docs.github.com/en/pages) and is deployed on
+push to `main`.
+
+This site has no analytics, and does not track the user. This site does not
+require a login and does not collect personal information. This may change at
+any time without warning.
+
 ### Contact details
 
 <button style="display: none" id="copy-on-click">
 Click to copy my E-Mail address to your clipboard</button>
 
-Make sure there's a subject line. I do not respond to spam and
-turn-around time is measured in days or weeks and not hours.
-Preference goes to people who I know in person.
+Make sure there's a subject line. Preference goes to people who I know in
+person.
+
+I do not respond to spam and turn-around time is measured in days or weeks.
 
 <script>
 const copyTextToClipboard = (element, text) => {
@@ -63,19 +77,5 @@ copyOnClick.onclick = () => {
 </script>
 
 For the benefit of identify verification, this is [my 𝕏](https://x.com/joefg_).
-I don't use it very often as I disagree with many of its design decisions,
-but if Musk actually succeeds in making it an Everything App, it makes sense to
-keep an account with a username alive.
-
-### Technology
-
-This site is built with [Deno](https://deno.com/), [Lume](https://lume.land/),
-and [Simple.css](https://simplecss.org/), source code available
-[here](https://github.com/joefg/joefg.github.io).
-
-It is hosted on [GitHub Pages](https://docs.github.com/en/pages) and is deployed on
-push to `main`.
-
-This site has no analytics, and does not track the user. This site does not
-require a login and does not collect personal information. This may change at
-any time without warning.
+I don't use it very often as I disagree with many of its design decisions
+though.
