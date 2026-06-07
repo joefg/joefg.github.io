@@ -3,6 +3,12 @@ name: Publish on GitHub Pages
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+
+# Ensure only one build/deploy runs at a time for this branch
+concurrency:
+  group: "pages-${{ github.ref }}."
+  cancel-in-progress: true
 
 permissions:
   contents: read
