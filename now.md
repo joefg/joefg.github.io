@@ -25,7 +25,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 06/06/26
+**LAST UPDATE:** 09/06/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -145,6 +145,17 @@ const features = {
         ],
         "type": "Point"
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.7189256,
+          52.0794696
+        ]
+      }
     }
   ]
 }
@@ -250,3 +261,17 @@ agent I use [Hermes](https://hermes-agent.nousresearch.com/).
 
 Liking both so far, and I'm prototyping a set of GIS tools to use
 with them.
+
+### Reading
+
+A bit late to the party, but [this Encyclical
+Letter](https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html)
+by the Pontifex is worth reading.
+A reminder: the first commandment is "Thou shalt not have any other Gods than
+me".
+
+> Humanity, created by God in all its grandeur, is today facing a pivotal
+> choice: either to construct a new Tower of Babel or to build the city in which
+> God and humanity dwell together.
+
+Banger!
