@@ -12,6 +12,16 @@ Requires [Deno](https://deno.com). Make sure that is installed. Then:
 
 At the moment this is hosted on [GitHub Pages](https://docs.github.com/en/pages).
 
+### Container
+
+It is possible to run the site from a container. `./run container <command>` and
+it creates a container and serves it from localhost at port 3000.
+
+To halt, you will need to `./run container halt`. 
+
+**Note: this command destroys the container and rebuilds it on every run**. This
+is OK because no data is created in the container.
+
 ## Workflow
 
 1. Checkout to a feature branch.

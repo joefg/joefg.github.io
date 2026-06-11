@@ -3,14 +3,18 @@
 set -euo pipefail
 THISDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+IMAGE_NAME="jfg.name"
+CONTAINER_NAME="jfg.name-container"
+
 function help(){
 cat << EOF
 joefg.pages.dev
 
-help  : Display help text
-clean : Remove artefacts
-build : Compile site
-serve : Serve on localhost:3000
+help:            Display help text
+clean:           Remove artefacts
+build:           Compile site
+container {cmd}: Run command in container
+serve:           Serve on localhost:3000
 EOF
 }
 
@@ -20,6 +24,23 @@ function run_clean(){
 
 function run_build(){
     deno task build
+}
+
+function run_container(){
+    cd $THISDIR
+    cmd=${1-help}
+
+    case "$cmd" in
+        halt)
+            docker kill "$CONTAINER_NAME"
+            ;;
+        *)
+            docker build . -t "$IMAGE_NAME"
+            (docker container rm "$CONTAINER_NAME" || true)
+            docker run -p 127.0.0.1:3000:3000 --name "$CONTAINER_NAME" \
+                "$IMAGE_NAME" "$cmd" 
+            ;;
+        esac
 }
 
 function run_serve(){
@@ -38,6 +59,9 @@ function main(){
             ;;
         build)
             run_build
+            ;;
+        container)
+            run_container "$@"
             ;;
         serve)
             run_serve
