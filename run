@@ -10,11 +10,11 @@ function help(){
 cat << EOF
 joefg.pages.dev
 
-help:            Display help text
-clean:           Remove artefacts
-build:           Compile site
-container {cmd}: Run command in container
-serve:           Serve on localhost:3000
+help:                    Display help text
+clean:                   Remove artefacts
+build:                   Compile site
+container {cmd|halt|rm}: Run command in container
+serve:                   Serve on localhost:3000
 EOF
 }
 
@@ -26,6 +26,11 @@ function run_build(){
     deno task build
 }
 
+function remove_container(){
+    container_name="$1"
+    docker ps -aq --filter "name=^?$container_name$" | xargs -r docker rm -f
+}
+
 function run_container(){
     cd $THISDIR
     cmd=${1-help}
@@ -34,10 +39,15 @@ function run_container(){
         halt)
             docker kill "$CONTAINER_NAME"
             ;;
+        rm)
+            remove_container "$CONTAINER_NAME"
+            ;;
         *)
             docker build . -t "$IMAGE_NAME"
-            (docker container rm "$CONTAINER_NAME" || true)
-            docker run -p 127.0.0.1:3000:3000 --name "$CONTAINER_NAME" \
+            remove_container "$CONTAINER_NAME"
+            docker run \
+                -p 127.0.0.1:3000:3000 \
+                --name "$CONTAINER_NAME" \
                 "$IMAGE_NAME" "$cmd" 
             ;;
         esac
