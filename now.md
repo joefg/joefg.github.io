@@ -25,7 +25,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 09/06/26
+**LAST UPDATE:** 15/06/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -249,18 +249,23 @@ map.on('load', async () => {
 
 ### Using
 
-I'm fortunate to be GPU-middle-class and have access to an [RTX
-Ada](https://www.nvidia.com/en-gb/products/workstations/rtx-2000/),
-on which I can run some decent LLMs for coding: flavour of the
-month is [gemma4:12b](https://ollama.com/library/gemma4). While
-not up to the standards of Opus, it's pretty neat that it runs on
-a small PC under my desk.
+After a recent
+[attack on the Arch User
+Repository](https://archlinux.org/news/active-aur-malicious-packages-incident/),
+I decided to try another distribution. Sadly, the AUR debacle shows that
+the existing security settlement of Linux is no longer adequate and
+that containerisation might be the lesser evil.
 
-For my coding harness I use [pi](https://pi.dev), and for my
-agent I use [Hermes](https://hermes-agent.nousresearch.com/).
+I'm giving [Bluefin](https://projectbluefin.io/) a try. It's a bit
+quirky, it's an immutable root system and as much as possible is
+sandboxed. You won't need to use a package manager which writes
+to root, instead it's either writing to your user or runs
+from a container.
 
-Liking both so far, and I'm prototyping a set of GIS tools to use
-with them.
+[Distrobox](https://distrobox.it/#distrobox) is pretty good too. I can
+see the utility in having a development container separate from your host.
+Tip: create a `~/.distrobox` directory and keep your distrobox home directories
+in there if you want a properly separate container.
 
 ### Reading
 
