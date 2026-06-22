@@ -22,16 +22,13 @@ I use it principally to search. My agent has the ability to search
 ArXiV and I use it to summarise papers of interest.
 
 I also use it to generate code, **but I never let it commit**. I read
-every single line. When I do commit, I make sure it shares equal billing
-with the name of the model used.
-
-I rarely use someone else's hosted model, but if I do, **I never send anything
-to it that I would not tell someone else without permission**, chiefly:
-
-- Source code and proprietary information;
-- Personal information.
+every single line. When I do commit, I make sure I share the billing
+with the model used.
 
 **I never use it to write as myself or anyone else**.
+
+**I never send the personal information or intellectual property
+of myself or others to a hosted service** without explicit permission.
 
 ### My setup
 
