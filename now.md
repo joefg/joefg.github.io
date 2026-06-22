@@ -25,7 +25,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 15/06/26
+**LAST UPDATE:** 22/06/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -37,6 +37,10 @@ A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
 Writing the disseration for my Master's degree.
 If you see me around the University of Essex, feel free to say hi!
+
+Decided to have a mild re-work of my site. I want it to have more of
+a technical focus, so I archived a lot of old, waffly postings. They're
+still available if you know how to look.
 
 ### Going
 
