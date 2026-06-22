@@ -3,7 +3,7 @@ layout: layouts/base.njk
 menu:
   visible: true
   title: 🕒 Now
-  order: 1
+  order: 2
 ---
 
 <style>
