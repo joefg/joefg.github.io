@@ -3,10 +3,17 @@
 @import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/base16/tomorrow-night.min.css";
 
 :root {
+	--sans-font: sans-serif;
+	--mono-font: monospace;
 	font-size: 14px;
 
 	body {
 		grid-template-columns: 1fr min(50rem, 90%) 1fr;
+
+		header {
+			background-color: unset;
+			padding: unset;
+		}
 	}
 }
 
@@ -22,6 +29,7 @@
 	justify-content: center;
 	margin: 0 auto;
 	row-gap: 5px;
+	
 	div {
 		border: 1px solid var(--accent-bg);
 		border-radius: 1%;
