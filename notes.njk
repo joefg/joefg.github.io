@@ -2,10 +2,10 @@
 layout: layouts/base.njk
 menu:
   visible: true
-  title: 📝 Blog
+  title: 📝 Notes
   order: 2
 ---
 
-<h2>All posts</h2>
+<h2>All notes</h2>
 {% set postslist = search.pages("type=posts", "date=desc") %}
 {% include "templates/postslist.njk" %}

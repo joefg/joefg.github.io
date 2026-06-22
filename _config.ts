@@ -28,6 +28,7 @@ site
   .use(resolveUrls())
   .use(postcss())
   .use(transformImages())
-  .add([".css"]);
+  .add([".css"])
+  .ignore("archive");
 
 export default site;
