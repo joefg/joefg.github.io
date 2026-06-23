@@ -12,7 +12,8 @@ Some notes from the midsummer.
 
 **Updates**
 
-23/6/26: Added a section on light and dark modes.
+23/6/26: Added a section on light and dark modes,
+fix some typos.
 
 </section>
 
@@ -109,7 +110,7 @@ body {
 <script>
 const switchTheme = () => {
     const element = document.body;
-    element.classList.toggle("dark-mode")
+    element.classList.toggle("dark-mode");
 }
 </script>
 ```
