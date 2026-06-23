@@ -8,6 +8,14 @@ topic: Assorted notes
 
 Some notes from the midsummer.
 
+<section class="notice">
+
+**Updates**
+
+23/6/26: Added a section on light and dark modes.
+
+</section>
+
 ### Goodbye Arch
 
 The [AUR
@@ -72,3 +80,68 @@ SQL and Bash), then send it on its way. Once your agent has done its
 job, you give the final touches, then merge.
 
 How long before the human is out of this loop?
+
+### How many web browsers does it take to change a light bulb?
+
+As part of a rejig of this site, I wanted to change colour palette
+from a fairly plain (and light/dark mode friendly) one to a
+[gruvbox](https://github.com/morhetz/gruvbox)-inspired one.
+
+So how many ways do you think there are of switching?
+
+There's a button which adds/removes a class from some tags.
+
+```text
+<!-- Styling -->
+<style>
+body {
+    color: black;
+    background-color: white;
+}
+
+.dark-mode {
+    color: white;
+    background-color: black;
+}
+</style>
+
+<!-- JavaScript toggle -->
+<script>
+const switchTheme = () => {
+    const element = document.body;
+    element.classList.toggle("dark-mode")
+}
+</script>
+```
+
+There's the native CSS method using `prefers-color-scheme`.
+
+```css
+body {
+    color: black;
+    background-color: white;
+}
+
+@media (prefers-color-scheme: dark){
+    body {
+        color: white;
+        background-color: black;
+    }
+}
+```
+
+There's *yet another way to do it*: `light-dark`.
+
+```css
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    color: light-dark(white, black);
+    background-color: light-dark(black, white);
+}
+```
+
+This is what I settled on. For goodness' sake, I hope people
+settle on this one too.
