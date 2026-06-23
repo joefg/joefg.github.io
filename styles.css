@@ -1,11 +1,24 @@
 @import "css/simple.css";
 @import "css/simple-plus.css";
-@import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/base16/tomorrow-night.min.css";
+@import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/base16/gruvbox-light-soft.min.css";
 
 :root {
 	--sans-font: sans-serif;
 	--mono-font: monospace;
 	font-size: 14px;
+
+	/* Adapted from Gruvbox */
+	color-scheme: light dark;
+		--bg: light-dark(#fbf1c7, #282828);
+	--accent: light-dark(#665c54, #bdae93);
+	--accent-bg: light-dark(#fbf1c7, #282828);
+	--border: light-dark(#7c6f64, #a89984);
+	--text: light-dark(#3c3836, #ebdbb2);
+	--text-light: light-dark(#7c6f74, #a89984);
+	--code: light-dark(#504945, #d5c4a1);
+	--preformatted: light-dark(#7c6f74, #a89984);
+	--marked: light-dark(#928374, #928374));
+	--disabled: light-dark(#7c6f64, #efefef);
 
 	body {
 		grid-template-columns: 1fr min(50rem, 90%) 1fr;
