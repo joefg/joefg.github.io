@@ -25,7 +25,7 @@ function run_clean(){
 
 function run_lint(){
     shellcheck "$THISDIR/run"
-    deno lint
+    (deno check && deno lint)
 }
 
 function run_build(){
