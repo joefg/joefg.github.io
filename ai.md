@@ -42,13 +42,13 @@ and runs partially on solar power.
 #### Software
 
 I use [ollama](https://ollama.com/) to serve models from that OptiPlex
-and [OpenWebUI](https://openwebui.com/) to interact with models through a
+and [Open WebUI](https://openwebui.com/) to interact with models through a
 chat application.
 
 For development purposes, I use [pi.dev](https://pi.dev/) and
 have recently started to use [omp](https://github.com/can1357/oh-my-pi).
 
-For agentic work I use [hermes](https://github.com/nousresearch/hermes-agent).
+For agentic work I use [Hermes](https://github.com/nousresearch/hermes-agent).
 
 #### Models
 
