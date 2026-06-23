@@ -12,14 +12,20 @@ joefg.pages.dev
 
 help:                    Display help text
 clean:                   Remove artefacts
+lint:                    Lint project
 build:                   Compile site
-container {cmd|halt|rm}: Run command in container
+container <cmd|halt|rm>: Run command in container
 serve:                   Serve on localhost:3000
 EOF
 }
 
 function run_clean(){
     rm -rf _site/
+}
+
+function run_lint(){
+    shellcheck "$THISDIR/run"
+    deno lint
 }
 
 function run_build(){
@@ -32,9 +38,8 @@ function remove_container(){
 }
 
 function run_container(){
-    cd $THISDIR
+    cd "$THISDIR"
     cmd=${1-help}
-
     case "$cmd" in
         halt)
             docker kill "$CONTAINER_NAME"
@@ -66,6 +71,9 @@ function main(){
             ;;
         clean)
             run_clean
+            ;;
+        lint)
+            run_lint
             ;;
         build)
             run_build
