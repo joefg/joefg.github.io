@@ -5,6 +5,7 @@
 :root {
 	--sans-font: sans-serif;
 	--mono-font: monospace;
+	font-family: var(--mono-font);
 	font-size: 14px;
 
 	/* Adapted from Gruvbox */
