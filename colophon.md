@@ -23,6 +23,8 @@ its authorship, and its present status.
 All content on this blog is authored by me and me alone. Topics include software
 and technology.
 
+I sometimes write about motorcycles and kayaking, too.
+
 ### Content
 
 There are no external contributions and I will not be accepting any. I
