@@ -16,12 +16,12 @@ const site = lume({
 
 site
   .ignore("README.md")
-  .copy("img")
   .copy("favicon.ico")
   .use(sitemap())
   .use(postcss())
   .use(basePath())
   .use(slugifyUrls({ alphanumeric: false }))
+  .add("./img")
   .use(transformImages())
   .use(feed())
   .use(date())
