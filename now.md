@@ -31,7 +31,7 @@ A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
 </section>
 
-<img src="img/orford-26.webp" width=300 class="right-img">
+<img src="/img/orford-26.webp" width=300 class="right-img">
 
 ### Doing
 
