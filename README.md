@@ -1,14 +1,22 @@
-# joefg.github.io
+# joefg.github.io (jfg.name)
 
 A developer blog.
 
 ## Use
 
-Requires [Deno](https://deno.com). Make sure that is installed. Then:
+Requires [Deno](https://deno.com). Make sure that is installed.
+A runfile is provided for your convenience.
 
-* `./run serve` spawns a server.
+```
+joefg.github.io (jfg.name)
 
-* `./run build` compiles the site.
+help:                    Display help text
+clean:                   Remove artefacts
+lint:                    Lint project
+build:                   Compile site
+container <cmd|halt|rm>: Run command in container
+serve:                   Serve on localhost:3000
+```
 
 ## Deploy
 

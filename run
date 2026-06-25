@@ -8,7 +8,7 @@ CONTAINER_NAME="jfg.name-container"
 
 function help(){
 cat << EOF
-joefg.pages.dev
+joefg.pages.dev (jfg.name)
 
 help:                    Display help text
 clean:                   Remove artefacts
