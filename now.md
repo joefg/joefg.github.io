@@ -25,7 +25,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 22/06/26
+**LAST UPDATE:** 26/06/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -253,34 +253,26 @@ map.on('load', async () => {
 
 ### Using
 
-After a recent
-[attack on the Arch User
-Repository](https://archlinux.org/news/active-aur-malicious-packages-incident/),
-I decided to try another distribution. Sadly, the AUR debacle shows that
-the existing security settlement of Linux is no longer adequate and
-that containerisation might be the lesser evil.
+I'm starting to use [Marimo](https://marimo.io) over Jupyter.
 
-I'm giving [Bluefin](https://projectbluefin.io/) a try. It's a bit
-quirky, it's an immutable root system and as much as possible is
-sandboxed. You won't need to use a package manager which writes
-to root, instead it's either writing to your user or runs
-from a container.
+I'm also exploring AI agents more. I tried
+[LangChain](https://www.langchain.com/) but found it a mild pain to
+set up with my own inference infrastructure. I tried
+[CrewAI](https://crewai.com/) but found it a bit porky, but I can
+understand the appeal. It reminds me of DAG stuff like Airflow.
 
-[Distrobox](https://distrobox.it/#distrobox) is pretty good too. I can
-see the utility in having a development container separate from your host.
-Tip: create a `~/.distrobox` directory and keep your distrobox home directories
-in there if you want a properly separate container.
+Maybe I'll have better luck with [Pydantic
+AI](https://pydantic.dev/docs/ai/overview/). I like Pydantic and FastAPI.
+Hopefully this isn't just a "quick, stick an AI badge on it for more
+funding" wheeze.
 
 ### Reading
 
-A bit late to the party, but [this Encyclical
-Letter](https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html)
-by the Pontifex is worth reading.
-A reminder: the first commandment is "Thou shalt not have any other Gods than
-me".
+I like re-reading the Dune series. For every passing year there's
+something that I missed the previous year.
 
-> Humanity, created by God in all its grandeur, is today facing a pivotal
-> choice: either to construct a new Tower of Babel or to build the city in which
-> God and humanity dwell together.
-
-Banger!
+> “When I am weaker than you, I ask you for freedom because that is according to
+> your principles; when I am stronger than you, I take away your freedom because
+> that is according to my principles.”
+>
+> -- Frank Herbert, *Children of Dune*
