@@ -46,11 +46,7 @@ still available if you know how to look.
 
 I tend to travel on my motorcycle at weekends.
 
-So far this year, I have visited the places on the map. If you're
-really interested, here's the
-[📷 Instagram](https://instagram.com/joe_isnt_normal), feel free to
-send a follow request.
-
+So far this year, I have visited the places on the map.
 A visit is when I park my motorcycle and have a drink for reasons
 strictly of leisure, so my weekly visits to the University don't
 count.
