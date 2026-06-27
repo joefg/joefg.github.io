@@ -1,9 +1,19 @@
 ---
-title: "Adding interactive maps to Markdown documents"
+title: "Adding maps to Markdown documents"
 description: You might not need a GIS platform!
 date: 2025-03-28
 topic: Work notes
 ---
+
+</br>
+<section class="notice">
+
+**UPDATES**
+
+27/6/26: Changed title to fit on the notes index page.
+Used to read "Adding interactive maps to Markdown documents".
+
+</section>
 
 You don't need to add so many dependencies if you just want to stick a few
 points on a map on your blog. Here's how I do it.
