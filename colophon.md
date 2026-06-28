@@ -55,6 +55,9 @@ require a login and does not collect personal information.
 This website [uses less than 0.01g of CO2 per
 visit](https://www.websitecarbon.com/website/jfg-name/).
 
+<div id="wcb" class="carbonbadge"></div>
+<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+
 ### Contact details
 
 <button style="display: none" id="copy-on-click">
