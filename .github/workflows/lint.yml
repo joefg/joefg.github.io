@@ -16,5 +16,8 @@ jobs:
         with:
           cache: true
 
+      - name: Restore project environment
+        run: ./run restore
+
       - name: Lint project
         run: ./run lint

@@ -11,12 +11,17 @@ cat << EOF
 joefg.pages.dev (jfg.name)
 
 help:                    Display help text
+restore:                 Fetch dependencies
 clean:                   Remove artefacts
 lint:                    Lint project
 build:                   Compile site
 container <cmd|halt|rm>: Run command in container
 serve:                   Serve on localhost:3000
 EOF
+}
+
+function run_restore(){
+    deno install
 }
 
 function run_clean(){
@@ -68,6 +73,9 @@ function main(){
     case "$cmd" in
         help|default)
             help "$@"
+            ;;
+        restore)
+            run_restore
             ;;
         clean)
             run_clean
