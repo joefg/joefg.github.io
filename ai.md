@@ -10,7 +10,7 @@ menu:
 
 <section class="notice">
 
-**Last update**: 22/6/26
+**Last update**: 29/6/26
 
 This page documents how I use AI and what I use it for.
 
@@ -54,3 +54,10 @@ For agentic work I use [Hermes](https://github.com/nousresearch/hermes-agent).
 
 Flavour of the month is [Gemma4:12b](https://huggingface.co/google/gemma-4-12B),
 affectionally called Twelvebie. It works very well for what I use it for.
+
+![Nvtop](/img/nvtop.webp)
+
+Twelvebie fits just fine on my RTX Ada Generation with room to spare for
+a few Pytorch projects.
+
+
