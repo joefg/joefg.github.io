@@ -43,7 +43,43 @@ and runs partially on solar power.
 
 I use [ollama](https://ollama.com/) to serve models from that OptiPlex
 and [Open WebUI](https://openwebui.com/) to interact with models through a
-chat application.
+chat application. A `docker-compose` for this is:
+
+```yaml
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    pull_policy: always
+    ports:
+      - "11434:11434"
+    volumes:
+    deploy:
+       resources:
+         reservations:
+           devices:
+             - driver: nvidia
+               count: all
+               capabilities: [gpu]
+
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    ports:
+      - "3000:8080"
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+    volumes:
+      - open_webui_data:/app/data
+    depends_on:
+      - ollama
+
+volumes:
+  ollama_data:
+    driver: local
+  open_webui_data:
+    driver: local
+```
 
 For development purposes, I use [pi.dev](https://pi.dev/) and
 have recently started to use [omp](https://github.com/can1357/oh-my-pi).
