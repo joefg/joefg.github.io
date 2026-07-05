@@ -10,7 +10,7 @@
     <link rel="alternate" href="/feed.json" type="application/json" title="{{ site.title }}">
   </head>
   <body>
-    <header>
+    <header class="no-select">
       <nav>
       <h1>{{ site.header.title }}</h1>
       {%- if site.header.blurb -%}
@@ -41,7 +41,7 @@
       {{ content | safe }}
     </main>
 
-   <footer>
+   <footer class="no-select">
     {%- if site.footer.text -%}
       {{ site.footer.text }}
     {%- else -%}
