@@ -25,7 +25,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 26/06/26
+**LAST UPDATE:** 05/07/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -37,10 +37,6 @@ A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
 Writing the disseration for my Master's degree.
 If you see me around the University of Essex, feel free to say hi!
-
-Decided to have a mild re-work of my site. I want it to have more of
-a technical focus, so I archived a lot of old, waffly postings. They're
-still available if you know how to look.
 
 ### Going
 
@@ -249,18 +245,30 @@ map.on('load', async () => {
 
 ### Using
 
-I'm starting to use [Marimo](https://marimo.io) over Jupyter.
+Geolocation in FastHTML. Here's a snippet.
 
-I'm also exploring AI agents more. I tried
-[LangChain](https://www.langchain.com/) but found it a mild pain to
-set up with my own inference infrastructure. I tried
-[CrewAI](https://crewai.com/) but found it a bit porky, but I can
-understand the appeal. It reminds me of DAG stuff like Airflow.
+```python
+from fasthtml.common import *
 
-Maybe I'll have better luck with [Pydantic
-AI](https://pydantic.dev/docs/ai/overview/). I like Pydantic and FastAPI.
-Hopefully this isn't just a "quick, stick an AI badge on it for more
-funding" wheeze.
+def geolocation():
+    status = Div(id="geolocation")
+    js = """
+    if (navigator.geolocation){
+        const setGeolocation = (position) => {
+            navigator.geo = position.coords;
+        };
+        const geolocationError = () => {
+            window.alert("Geolocation is not enabled in this browser.");
+        };
+        navigator.geolocation.getCurrentPosition(setGeolocation, geolocationError);
+    };
+    """
+    return Div(status, Script(js))
+```
+
+If the browser allows it, the JavaScript takes the browser's current
+coordinates through the browser API and hoists them up to the `navigator`
+object so it can be accessed elsewhere.
 
 ### Reading
 
