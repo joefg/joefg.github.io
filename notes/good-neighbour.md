@@ -1,5 +1,5 @@
 ---
-title: "Good Neighbour"
+title: "Short story: Good Neighbour"
 location: Silicon Fen, England
 description: Twenty minutes into the future
 date: 2025-12-16
