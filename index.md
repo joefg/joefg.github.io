@@ -1,7 +1,7 @@
 ---
 layout: layouts/home.njk
 menu:
-  visible: true
+  visible: false
   title: 🏠 Home
   order: 1
 ---
