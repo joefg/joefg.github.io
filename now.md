@@ -25,7 +25,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 05/07/26
+**LAST UPDATE:** 06/07/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -251,24 +251,23 @@ Geolocation in FastHTML. Here's a snippet.
 from fasthtml.common import *
 
 def geolocation():
-    status = Div(id="geolocation")
-    js = """
-    if (navigator.geolocation){
-        const setGeolocation = (position) => {
-            navigator.geo = position.coords;
+    return Script("""
+        if (navigator.geolocation){
+            const setGeolocation = (position) => {
+                navigator.geo = position.coords;
+            };
+            const geolocationError = () => {
+                window.alert("Geolocation is not enabled in this browser.");
+            };
+            navigator.geolocation.getCurrentPosition(setGeolocation, geolocationError);
         };
-        const geolocationError = () => {
-            window.alert("Geolocation is not enabled in this browser.");
-        };
-        navigator.geolocation.getCurrentPosition(setGeolocation, geolocationError);
-    };
-    """
-    return Div(status, Script(js))
+    """)
 ```
 
 If the browser allows it, the JavaScript takes the browser's current
 coordinates through the browser API and hoists them up to the `navigator`
-object so it can be accessed elsewhere.
+object so it can be accessed elsewhere in the application. I know it's abusing
+a browser API. I don't care. It works.
 
 ### Reading
 
