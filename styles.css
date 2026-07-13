@@ -40,8 +40,7 @@
 				}
 			}
 		}
-	}
-
+	
 	button {
 		font-family: var(--mono-font);
 	}
@@ -97,10 +96,10 @@
 		}
 	}
 
-	.postlist {
+	.post-list {
 		list-style: none;
 
-		.postlist-post {
+		.post-list-post {
 			time, span {
 				user-select: none;
 			};
