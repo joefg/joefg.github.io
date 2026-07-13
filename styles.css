@@ -40,7 +40,8 @@
 				}
 			}
 		}
-	
+	}
+
 	button {
 		font-family: var(--mono-font);
 	}
@@ -57,7 +58,7 @@
 		justify-content: center;
 		margin: 0 auto;
 		row-gap: 5px;
-		
+
 		div {
 			border: 1px solid var(--accent-bg);
 			border-radius: 1%;
@@ -72,16 +73,23 @@
 		}
 	}
 
-	.left, .left-img {
-		border-radius: 10%;
+	.left {
 		float: left;
-		padding: 10px
+		padding: 0.05rem;
 	}
 
-	.right, .right-img {
-		border-radius: 10%;
+	.right {
 		float: right;
-		padding: 10px
+		padding: 0.05rem;
+	}
+
+	.polaroid {
+		margin: 0 auto;
+		border: 1rem solid white;
+		border-bottom: 1rem solid white;
+		color: black;
+		background-color: white;
+		max-width: 30rem;
 	}
 
 	.no-select {
@@ -112,5 +120,5 @@
 				float: right;
 			};
 		};
-	};
+	}
 }
