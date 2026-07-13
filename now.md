@@ -25,13 +25,16 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 07/07/26
+**LAST UPDATE:** 13/07/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
 </section>
 
-<img src="/img/orford-26.webp" width=300 class="right-img">
+<figure class="polaroid right">
+    <img src="/img/orford-26.webp">
+    <figcaption">Orford, 2026</figcaption>
+</figure>
 
 ### Doing
 
