@@ -10,7 +10,7 @@
 
 	/* Adapted from Gruvbox */
 	color-scheme: light dark;
-		--bg: light-dark(#fbf1c7, #282828);
+	--bg: light-dark(#fbf1c7, #282828);
 	--accent: light-dark(#665c54, #bdae93);
 	--accent-bg: light-dark(#fbf1c7, #282828);
 	--border: light-dark(#7c6f64, #a89984);
@@ -45,75 +45,73 @@
 	button {
 		font-family: var(--mono-font);
 	}
-}
 
-.centered, .centered-img {
-	display: block;
-	margin: 0 auto;
-}
-
-.grid-parent {
-	column-gap: 5px;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, 29rem);
-	justify-content: center;
-	margin: 0 auto;
-	row-gap: 5px;
-	
-	div {
-		border: 1px solid var(--accent-bg);
-		border-radius: 1%;
+	.centered, .centered-img {
+		display: block;
 		margin: 0 auto;
-		min-width: 29rem;
-		padding: 10px;
+	}
 
-		h2, h3, h4 {
-			margin-top: 1rem;
-			text-align: center;
+	.grid-parent {
+		column-gap: 5px;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 29rem);
+		justify-content: center;
+		margin: 0 auto;
+		row-gap: 5px;
+		
+		div {
+			border: 1px solid var(--accent-bg);
+			border-radius: 1%;
+			margin: 0 auto;
+			min-width: 29rem;
+			padding: 10px;
+
+			h2, h3, h4 {
+				margin-top: 1rem;
+				text-align: center;
+			}
 		}
 	}
-}
 
-.left, .left-img {
-	border-radius: 10%;
-	float: left;
-	padding: 10px
-}
-
-.right, .right-img {
-	border-radius: 10%;
-	float: right;
-	padding: 10px
-}
-
-.no-select {
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-
-.links-nav {
-	text-align: center;
-
-	a {
-		font-weight: bold;
+	.left, .left-img {
+		border-radius: 10%;
+		float: left;
+		padding: 10px
 	}
-}
 
-.postlist {
-	list-style: none;
+	.right, .right-img {
+		border-radius: 10%;
+		float: right;
+		padding: 10px
+	}
 
-	.postlist-post {
-		time, span {
-			user-select: none;
-		};
+	.no-select {
+		user-select: none;
+	}
 
-		time {
-			font-style: italic;
-		};
+	.links-nav {
+		text-align: center;
 
-		.topic {
-			float: right;
+		a {
+			font-weight: bold;
+		}
+	}
+
+	.postlist {
+		list-style: none;
+
+		.postlist-post {
+			time, span {
+				user-select: none;
+			};
+
+			time {
+				font-style: italic;
+			};
+
+			.topic {
+				float: right;
+			};
 		};
 	};
 }
