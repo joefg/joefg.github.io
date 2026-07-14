@@ -10,7 +10,7 @@ menu:
 
 <section class="notice">
 
-**Last update**: 29/6/26
+**Last update**: 14/7/26
 
 This page documents how I use AI and what I use it for.
 
@@ -28,7 +28,7 @@ with the model used.
 **I never use it to write as myself or anyone else**.
 
 **I never send the personal information or intellectual property
-of myself or others to a hosted service** without explicit permission.
+of myself or others to a hosted service without explicit permission**.
 
 ### My setup
 
@@ -43,17 +43,29 @@ and runs partially on solar power.
 
 I use [ollama](https://ollama.com/) to serve models from that OptiPlex
 and [Open WebUI](https://openwebui.com/) to interact with models through a
-chat application. A `docker-compose` for this is:
+chat application, with [hermes](https://github.com/nousresearch/hermes-agent)
+as an agent.
 
-```yaml
+<div class="notice">
+
+Note that these are serving on localhost via a loopback interface.
+This is fine for a homelab environment under a VPN but if you're serving on a
+public box then you will need better authentication and a reverse proxy.
+
+</div>
+
+ A `docker-compose` for this is:
+
+ ```yaml
 services:
   ollama:
     image: ollama/ollama:latest
     container_name: ollama
-    pull_policy: always
+    restart: unless-stopped
     ports:
-      - "11434:11434"
+      - "127.0.0.1:11434:11434"
     volumes:
+      - ollama_data:/root/.ollama
     deploy:
        resources:
          reservations:
@@ -61,30 +73,43 @@ services:
              - driver: nvidia
                count: all
                capabilities: [gpu]
-
   open-webui:
     image: ghcr.io/open-webui/open-webui:main
     container_name: open-webui
+    restart: unless-stopped
     ports:
-      - "3000:8080"
+      - "127.0.0.1:3000:8080"
     environment:
       - OLLAMA_BASE_URL=http://ollama:11434
     volumes:
       - open_webui_data:/app/data
     depends_on:
       - ollama
+  hermes:
+    image: nousresearch/hermes-agent:latest
+    restart: unless-stopped
+    command: gateway run
+    ports:
+      - "127.0.0.1:8642:8642"
+      - "127.0.0.1:9119:9119"
+    volumes:
+      - ~/.hermes:/opt/data
+    environment:
+      - HERMES_DASHBOARD=1
+      - HERMES_DASHBOARD_BASIC_AUTH_USERNAME=${HERMES_DASHBOARD_BASIC_AUTH_USERNAME}
+      - HERMES_DASHBOARD_BASIC_AUTH_PASSWORD=${HERMES_DASHBOARD_BASIC_AUTH_PASSWORD}
+      - HERMES_DASHBOARD_BASIC_AUTH_SECRET=${HERMES_DASHBOARD_BASIC_AUTH_SECRET}
 
 volumes:
   ollama_data:
     driver: local
   open_webui_data:
     driver: local
+  hermes_data:
+    driver: local
 ```
 
-For development purposes, I use [pi.dev](https://pi.dev/) and
-have recently started to use [omp](https://github.com/can1357/oh-my-pi).
-
-For agentic work I use [Hermes](https://github.com/nousresearch/hermes-agent).
+For development purposes, I use [omp](https://github.com/can1357/oh-my-pi).
 
 #### Models
 
