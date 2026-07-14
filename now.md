@@ -8,7 +8,7 @@ menu:
 
 <style>
 #map {
-    height: 300px;
+    height: 400px;
 };
 
 .maplibregl-popup {
@@ -25,7 +25,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 13/07/26
+**LAST UPDATE:** 14/07/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -33,16 +33,23 @@ A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
 <figure class="polaroid right">
     <img src="/img/orford-26.webp">
+    <br/>
     <figcaption">Orford, 2026</figcaption>
 </figure>
+
 
 ### Doing
 
 Writing the dissertation for my Master's degree.
 If you see me around the University of Essex, feel free to say hi!
 
-Also [doodling](/doodles). Gotta keep those design skills up to date.
-Skeuomorphism isn't dead!
+Recent GitHub pushes:
+
+- [Uncle Joe's AI Stack](https://github.com/joefg/uncle-joes-ai-stack), which documents my
+self-hosted AI stack.
+
+- [.dotfiles](https://github.com/joefg/.dotfiles), after a refactor of my neovim
+config.
 
 ### Going
 
@@ -285,3 +292,6 @@ something that I missed the previous year.
 > that is according to my principles.”
 >
 > -- Frank Herbert, *Children of Dune*
+
+I'm also reading *On Quality* by *Robert Pirsig*. I saw it on the book stand at
+Cambridge market and bought it on impulse.
