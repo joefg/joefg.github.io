@@ -4,7 +4,6 @@
     <time datetime="{{ post.date | date('yyyy-MM-dd') }}">
       {{ post.date | date('dd/MM/yyyy') }}
     </time>
-    <span>&bull;</span>
     <a href="{{ post.url }}" {% if entry.data.url == url %} aria-current="page"{% endif %}>
       {%- if post.title -%}
         <strong>{{ post.title }}</strong>
@@ -12,9 +11,6 @@
         <code>{{ post.url }}</code>
       {%- endif -%}
     </a>
-    {% if post.topic %}
-      <span class="topic">({{ post.topic}})</span>
-    {% endif %}
   </li>
 {% endfor %}
 </ul>
