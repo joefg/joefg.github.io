@@ -68,7 +68,7 @@ image](https://hub.docker.com/r/blang/latex) to build it.
 docker pull blang/latex:latest
 
 docker run \
-    --mount "type=bind,src=$THISDIR,dst=/data" \
+    --mount "type=bind,src=$(pwd),dst=/data" \
     -it blang/latex \
     lualatex card.tex
 ```
