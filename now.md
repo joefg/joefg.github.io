@@ -25,31 +25,16 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 14/07/26
+**LAST UPDATE:** 06/08/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
 </section>
 
-<figure class="polaroid right">
-    <img src="/img/orford-26.webp">
-    <br/>
-    <figcaption">Orford, 2026</figcaption>
-</figure>
-
-
 ### Doing
 
 Writing the dissertation for my Master's degree.
 If you see me around the University of Essex, feel free to say hi!
-
-Recent GitHub pushes:
-
-- [Uncle Joe's AI Stack](https://github.com/joefg/uncle-joes-ai-stack), which documents my
-self-hosted AI stack.
-
-- [.dotfiles](https://github.com/joefg/.dotfiles), after a refactor of my neovim
-config.
 
 ### Going
 
@@ -256,42 +241,41 @@ map.on('load', async () => {
 });
 </script>
 
+<br/>
+
+<figure class="polaroid">
+    <img src="/img/orford-26.webp">
+    <br/>
+    <figcaption>Orford, Summer 2026</figcaption>
+</figure>
+
 ### Using
 
-Geolocation in FastHTML. Here's a snippet.
+It's an exciting time for open-weight models.
 
-```python
-from fasthtml.common import *
+[Bonsai 27b](https://prismml.com/news/bonsai-27b) is a quantised
+model small enough to run on smartphones (!!) but can fit onto
+my RTX 2000 Ada. Ternary Bonsai 27b occupies 6GB of VRAM, leaving
+10GB of VRAM for context and other things. It's also multimodal.
 
-def geolocation():
-    return Script("""
-        if (navigator.geolocation){
-            const setGeolocation = (position) => {
-                navigator.geo = position.coords;
-            };
-            const geolocationError = () => {
-                window.alert("Geolocation is not enabled in this browser.");
-            };
-            navigator.geolocation.getCurrentPosition(setGeolocation, geolocationError);
-        };
-    """)
-```
+This is *the shit*. The smaller cousin fits in 4GB of unified RAM,
+bringing what would have been frontier intelligence two years ago
+to a mobile device running in your pocket. This opens up a new class
+of professional product.
 
-If the browser allows it, the JavaScript takes the browser's current
-coordinates through the browser API and hoists them up to the `navigator`
-object so it can be accessed elsewhere in the application. I know it's abusing
-a browser API. I don't care. It works.
+The downside at the moment is that it requires a funky build of llama.cpp
+because it does not currently support 1-bit or ternary operations,
+and as such Ollama doesn't support it. But it won't be long.
 
 ### Reading
 
-I like re-reading the Dune series. For every passing year there's
-something that I missed the previous year.
+I like re-reading the *Dune* series. For every passing year there's
+something that I missed the previous year. *Dune* is to the American
+literary canon is what *The Lord of the Rings* is to the English canon.
+If you enjoyed the latter you'll enjoy the former.
 
 > “When I am weaker than you, I ask you for freedom because that is according to
 > your principles; when I am stronger than you, I take away your freedom because
 > that is according to my principles.”
 >
 > -- Frank Herbert, *Children of Dune*
-
-I'm also reading *On Quality* by *Robert Pirsig*. I saw it on the book stand at
-Cambridge market and bought it on impulse.
