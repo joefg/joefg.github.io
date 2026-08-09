@@ -25,7 +25,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 06/08/26
+**LAST UPDATE:** 09/08/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -254,11 +254,11 @@ map.on('load', async () => {
 It's an exciting time for open-weight models.
 
 [Bonsai 27b](https://prismml.com/news/bonsai-27b) is a quantised
-model small enough to run on smartphones (!!) but can fit onto
-my RTX 2000 Ada. Ternary Bonsai 27b occupies 6GB of VRAM, leaving
+model small enough to run on smartphones (!!). Its bigger brother
+Ternary Bonsai 27b occupies 6GB of VRAM, leaving
 10GB of VRAM for context and other things. It's also multimodal.
 
-This is *the shit*. The smaller cousin fits in 4GB of unified RAM,
+This is *the shit*. The smaller one fits in 4GB of unified RAM,
 bringing what would have been frontier intelligence two years ago
 to a mobile device running in your pocket. This opens up a new class
 of professional product.
@@ -269,13 +269,21 @@ and as such Ollama doesn't support it. But it won't be long.
 
 ### Reading
 
-I like re-reading the *Dune* series. For every passing year there's
-something that I missed the previous year. *Dune* is to the American
+I like re-reading the *Dune* series. *Dune* is to the American
 literary canon is what *The Lord of the Rings* is to the English canon.
-If you enjoyed the latter you'll enjoy the former.
+If you enjoyed the latter you'll enjoy the former. I can always respect someone
+who can recite the Litany Against Fear.
 
-> “When I am weaker than you, I ask you for freedom because that is according to
-> your principles; when I am stronger than you, I take away your freedom because
-> that is according to my principles.”
->
-> -- Frank Herbert, *Children of Dune*
+> I must not fear.
+> 
+> Fear is the mind-killer.
+> 
+> Fear is the little-death that brings total obliteration.
+> 
+> I will face my fear.
+> 
+> I will permit it to pass over me and through me.
+> 
+> And when it has gone past I will turn the inner eye to see its path.
+> 
+> Where the fear has gone there will be nothing. Only I will remain.
