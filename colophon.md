@@ -90,3 +90,22 @@ copyOnClick.onclick = () => {
 For the benefit of identify verification, this is [my 𝕏](https://x.com/joefg_).
 I don't use it very often as I disagree with many of its design decisions
 though.
+
+### Prior Knowledge Hashes
+
+<section class="notice">
+
+This section is a repository for prior committments of
+facts. If I post something here at time t in hashed format,
+then disclose what creates the hash later on, it can be
+reasonably surmised that I suggested something at a
+particular point in time.
+
+</section>
+
+09/08/2026
+
+```
+sha256(sha256(x)) =
+    691608fcc02c7bd362623a2e2c16e4f9c5a0b4d905fcf2515672f5acac6ad6b7
+```
