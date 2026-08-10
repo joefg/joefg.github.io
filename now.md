@@ -25,7 +25,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 09/08/26
+**LAST UPDATE:** 10/08/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -250,6 +250,23 @@ map.on('load', async () => {
 </figure>
 
 ### Using
+
+#### AI Stack
+
+I have stopped using [coolify](https://coolify.io) in favour of just
+using `docker compose`. I have nothing against Coolify. It's pretty good
+for just standing up services. If you're from the Cloud world it's a nice
+bridge into self-hosting. I just wanted something simpler, and what
+could be simpler than `docker compose up`?
+
+I put common tasks into a `Runfile`, so I don't even have to remember
+which `docker compose up` incantation to use. `./run restore` pulls
+images and sets up networks and volumes. `./run serve` stands up
+the application. `./run stop` halts the application.
+`./run console <service>` opens a shell into a given container
+for debugging.
+
+#### Models
 
 It's an exciting time for open-weight models.
 
