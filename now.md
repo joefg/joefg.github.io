@@ -1,4 +1,5 @@
 ---
+title: Now
 layout: layouts/base.njk
 menu:
   visible: true
@@ -25,7 +26,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 10/08/26
+**LAST UPDATE:** 15/08/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -251,23 +252,6 @@ map.on('load', async () => {
 
 ### Using
 
-#### AI Stack
-
-I have stopped using [coolify](https://coolify.io) in favour of just
-using `docker compose`. I have nothing against Coolify. It's pretty good
-for just standing up services. If you're from the Cloud world it's a nice
-bridge into self-hosting. I just wanted something simpler, and what
-could be simpler than `docker compose up`?
-
-I put common tasks into a `Runfile`, so I don't even have to remember
-which `docker compose up` incantation to use. `./run restore` pulls
-images and sets up networks and volumes. `./run serve` stands up
-the application. `./run stop` halts the application.
-`./run console <service>` opens a shell into a given container
-for debugging.
-
-#### Models
-
 It's an exciting time for open-weight models.
 
 [Bonsai 27b](https://prismml.com/news/bonsai-27b) is a quantised
@@ -304,3 +288,14 @@ who can recite the Litany Against Fear.
 > And when it has gone past I will turn the inner eye to see its path.
 > 
 > Where the fear has gone there will be nothing. Only I will remain.
+
+### Listening
+
+- [Dire Straits - Money for Nothing (Live at Knebworth)
+](https://www.youtube.com/watch?v=_zOjRlVpAOQ&)
+
+- [REM - Animal
+](https://www.youtube.com/watch?v=26GBKj3BnK4)
+
+- [Yugoslavian Funk & Jazz-Funk Mixtape
+](https://www.youtube.com/watch?v=aVZfl30zQXk)
