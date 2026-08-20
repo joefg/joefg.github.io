@@ -10,7 +10,7 @@ menu:
 
 <section class="notice">
 
-**Last update: 23/6/26**
+**Last update: 20/8/26**
 
 This is a [colophon](https://en.wikipedia.org/wiki/Colophon_(publishing)),
 which describes aspects of this website, including its preparation,
@@ -23,8 +23,6 @@ its authorship, and its present status.
 All content on this blog is authored by me and me alone. Topics include software
 and technology.
 
-I sometimes write about motorcycles and kayaking, too.
-
 ### Content
 
 There are no external contributions and I will not be accepting any. I
@@ -36,12 +34,6 @@ The contents of this site remain copyright of the author and must not be
 reproduced elsewhere, including in use for training any form of
 AI without explicit written consent.
 
-You may retain a private copy of any content on this site, but I ask that you do
-not mirror this site, fair use notwithstanding. Media must not be hotlinked.
-
-This site contains zero AI generated content. For more details on my AI
-use, please read [this document](/ai).
-
 ### Technology
 
 This site is built with [Deno](https://deno.com/), [Lume](https://lume.land/),
@@ -49,7 +41,7 @@ and [Simple.css](https://simplecss.org/), source code available
 [here](https://github.com/joefg/joefg.github.io). It is hosted on [GitHub
 Pages](https://docs.github.com/en/pages) and is deployed on push to `main`.
 
-This site has no analytics, and does not track the user. This site does not
+This site has no analytics and does not track the user. This site does not
 require a login and does not collect personal information.
 
 This website [uses less than 0.01g of CO2 per
@@ -66,7 +58,7 @@ Click to copy my E-Mail address to your clipboard</button>
 Make sure there's a subject line. Preference goes to people who I know in
 person.
 
-I do not respond to spam and turn-around time is measured in days or weeks.
+**I don't respond to spam and turn-around time is measured in days or weeks.**
 
 <script>
 const copyTextToClipboard = (element, text) => {
@@ -87,6 +79,10 @@ copyOnClick.onclick = () => {
 };
 </script>
 
+#### Social media
+
 For the benefit of identify verification, this is [my 𝕏](https://x.com/joefg_).
-I don't use it very often as I disagree with many of its design decisions
-though.
+I don't use it very often as I find the platform to be ill-suited for discussion.
+
+I have a LinkedIn, but that is only for people who I know in person and have
+worked with before.
