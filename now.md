@@ -26,7 +26,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 15/08/26
+**LAST UPDATE:** 26/08/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -254,19 +254,11 @@ map.on('load', async () => {
 
 It's an exciting time for open-weight models.
 
-[Bonsai 27b](https://prismml.com/news/bonsai-27b) is a quantised
-model small enough to run on smartphones (!!). Its bigger brother
-Ternary Bonsai 27b occupies 6GB of VRAM, leaving
-10GB of VRAM for context and other things. It's also multimodal.
+[Qwen 3.8 27B](https://huggingface.co/Qwen/Qwen3.8-27B) is my model of choice
+for coding right now. Not quite SotA, but still good.
 
-This is *the shit*. The smaller one fits in 4GB of unified RAM,
-bringing what would have been frontier intelligence two years ago
-to a mobile device running in your pocket. This opens up a new class
-of professional product.
-
-The downside at the moment is that it requires a funky build of llama.cpp
-because it does not currently support 1-bit or ternary operations,
-and as such Ollama doesn't support it. But it won't be long.
+One suspects we are reaching the capability frontier for the model, and any
+further improvements will be either harness or deploy.
 
 ### Reading
 
@@ -288,14 +280,3 @@ who can recite the Litany Against Fear.
 > And when it has gone past I will turn the inner eye to see its path.
 > 
 > Where the fear has gone there will be nothing. Only I will remain.
-
-### Listening
-
-- [Dire Straits - Money for Nothing (Live at Knebworth)
-](https://www.youtube.com/watch?v=_zOjRlVpAOQ&)
-
-- [REM - Animal
-](https://www.youtube.com/watch?v=26GBKj3BnK4)
-
-- [Yugoslavian Funk & Jazz-Funk Mixtape
-](https://www.youtube.com/watch?v=aVZfl30zQXk)
