@@ -10,7 +10,7 @@ menu:
 
 <section class="notice">
 
-**Last update: 20/8/26**
+**Last update: 26/8/26**
 
 This is a [colophon](https://en.wikipedia.org/wiki/Colophon_(publishing)),
 which describes aspects of this website, including its preparation,
@@ -20,8 +20,7 @@ its authorship, and its present status.
 
 ### Author
 
-All content on this blog is authored by me and me alone. Topics include software
-and technology.
+All content on this blog is authored by me and me alone.
 
 ### Content
 
@@ -79,10 +78,8 @@ copyOnClick.onclick = () => {
 };
 </script>
 
-#### Social media
-
 For the benefit of identify verification, this is [my 𝕏](https://x.com/joefg_).
 I don't use it very often as I find the platform to be ill-suited for discussion.
 
 I have a LinkedIn, but that is only for people who I know in person and have
-worked with before.
+worked with before. Same goes for Signal and other chat apps.
