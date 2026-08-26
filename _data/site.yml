@@ -1,5 +1,5 @@
 title: jfg.name
-description: Website 
+description: Joe's Website 
 
 author:
   name: Joe
@@ -18,4 +18,3 @@ footer:
   repo: https://github.com/joefg/lume-simple-blog
   links:
     Colophon: /colophon
-    AI: /ai
