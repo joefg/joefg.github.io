@@ -35,13 +35,16 @@ AI without explicit written consent.
 
 ### Technology
 
-This site is built with [Deno](https://deno.com/), [Lume](https://lume.land/),
+This website is built with [Deno](https://deno.com/), [Lume](https://lume.land/),
 and [Simple.css](https://simplecss.org/), source code available
 [here](https://github.com/joefg/joefg.github.io). It is hosted on [GitHub
 Pages](https://docs.github.com/en/pages) and is deployed on push to `main`.
 
-This site has no analytics and does not track the user. This site does not
+This website has no analytics and does not track the user. This site does not
 require a login and does not collect personal information.
+
+This website was not built or any articles written using any AI technology, and
+never will be.
 
 This website [uses less than 0.01g of CO2 per
 visit](https://www.websitecarbon.com/website/jfg-name/).
