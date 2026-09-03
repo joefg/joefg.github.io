@@ -10,7 +10,7 @@ menu:
 
 <section class="notice">
 
-**Last update: 26/8/26**
+**Last update: 03/09/26**
 
 This is a [colophon](https://en.wikipedia.org/wiki/Colophon_(publishing)),
 which describes aspects of this website, including its preparation,
@@ -54,8 +54,10 @@ visit](https://www.websitecarbon.com/website/jfg-name/).
 
 ### Contact details
 
-<button style="display: none" id="copy-on-click">
-Click to copy my E-Mail address to your clipboard</button>
+<div align="center">
+    <button style="display: none" id="copy-on-click">
+    Click to copy my E-Mail address to your clipboard</button>
+</div>
 
 Make sure there's a subject line. Preference goes to people who I know in
 person.
