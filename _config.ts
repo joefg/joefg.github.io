@@ -29,6 +29,7 @@ site
   .use(codeHighlight())
   .use(resolveUrls())
   .add([".css"])
-  .ignore("archive");
+  .ignore("archive")
+  .ignore("justfile");
 
 export default site;
