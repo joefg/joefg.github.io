@@ -23,6 +23,8 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v7
 
+      - uses: extractions/setup-just@v3
+
       - name: Setup Deno environment
         uses: denoland/setup-deno@v2
         with:
@@ -30,10 +32,10 @@ jobs:
           cache: true
 
       - name: Lint project
-        run: ./run lint
+        run: just lint
 
       - name: Build site
-        run: ./run build
+        run: just build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
