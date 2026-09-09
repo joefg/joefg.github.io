@@ -5,17 +5,21 @@ A developer blog.
 ## Use
 
 Requires [Deno](https://deno.com). Make sure that is installed.
-A runfile is provided for your convenience.
+A justfile is provided for your convenience. Run `just` to see
+what it can do.
 
 ```
-joefg.github.io (jfg.name)
+Available recipes:
+    clean             # Removes artefacts
+    lint              # Checks codebase
+    build             # Builds site
+    serve             # Serves site
 
-help:                    Display help text
-clean:                   Remove artefacts
-lint:                    Lint project
-build:                   Compile site
-container <cmd|halt|rm>: Run command in container
-serve:                   Serve on localhost:3000
+    [container]
+    container         # Builds container
+    remove-container  # Removes container
+    run-container cmd # Runs container
+    stop-container    # Stops container
 ```
 
 ## Deploy
@@ -26,10 +30,10 @@ through an action.
 
 ## Container
 
-It is possible to run the site from a container. `./run container <command>` and
-it creates a container and serves it from localhost at port 3000.
+It is possible to run the site from a container. `just container` builds the
+container and and `just run-container <cmd>` runs that container using an
+argument from the justfile.
 
-To halt, you will need to `./run container halt`. 
+To halt, you will need to run `just stop-container`. 
 
-**Note: this command destroys the container and rebuilds it on every run**. This
-is OK because no data is created in the container.
+To build it again, you will want to `just remove-container`.
