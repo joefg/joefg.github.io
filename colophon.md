@@ -10,7 +10,7 @@ menu:
 
 <section class="notice">
 
-**Last update: 03/09/26**
+**Last update: 15/09/26**
 
 This is a [colophon](https://en.wikipedia.org/wiki/Colophon_(publishing)),
 which describes aspects of this website, including its preparation,
@@ -49,42 +49,7 @@ never will be.
 This website [uses less than 0.01g of CO2 per
 visit](https://www.websitecarbon.com/website/jfg-name/).
 
-<div id="wcb" class="carbonbadge"></div>
-<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
-
-### Contact details
-
-<div align="center">
-    <button style="display: none" id="copy-on-click">
-    Click to copy my E-Mail address to your clipboard</button>
+<div id="wcb" class="carbonbadge">
 </div>
-
-Make sure there's a subject line. Preference goes to people who I know in
-person.
-
-**I don't respond to spam and turn-around time is measured in days or weeks.**
-
-<script>
-const copyTextToClipboard = (element, text) => {
-    navigator.clipboard.writeText(text).then(
-        (success) => {
-            element.innerText = "Copied to clipboard!";
-        },
-        (fail) => {
-            element.innerText = "Clipboard copy failed.";
-        },
-  );
-}
-
-const copyOnClick = document.getElementById("copy-on-click");
-copyOnClick.style.display = null;
-copyOnClick.onclick = () => {
-    copyTextToClipboard(copyOnClick, "me" + "@" + "jfg.name");
-};
+<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer>
 </script>
-
-For the benefit of identify verification, this is [my 𝕏](https://x.com/joefg_).
-I don't use it very often as I find the platform to be ill-suited for discussion.
-
-I have a LinkedIn, but that is only for people who I know in person and have
-worked with before. Same goes for Signal and other chat apps.
