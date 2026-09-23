@@ -5,6 +5,20 @@ date: 2026-09-23
 topic: Python
 ---
 
+<article>
+
+**UPDATES**
+
+23/09/26
+
+- Small errata on code examples.
+
+- Explain where to use CSRF tokens. (Thanks, Rob!)
+
+- Briefly explain Sec-Fetch-Site. (Thanks, Rob!)
+
+</article>
+
 A [Cross Site Request Forgery](https://community.owasp.org/attacks/csrf) attack
 is where a hostile website is able to make requests to another website
 using the user's cookies to perform actions as that user without that user's
@@ -118,11 +132,8 @@ def post(request, session, user_to_ban):
         user = users_model.find_user(username)
         if not user: raise Exception("User not found.")
         else:
-            csrf_token = token_hex(16)
-            session.auth["user"] = user.id
-            session.auth["csrf_token"] = csrf_token
-            htmx_headers = json.dumps({"x-csrf-token": csrf_token})
-            return Home(hx_headers=htmx_headers)
+            user.disable()
+            return "User banned"
 ```
 
 We want a CSRF token. HTMX has already sent it in the request headers, so
@@ -133,7 +144,7 @@ we can access it using `request.headers['x-csrf-token']`.
 def post(request, session, user_to_ban):
     has_csrf_token = request.headers['x-csrf-token'] == session['csrf_token']
     if not has_csrf_token: raise Exception("Unauthorised")
-    
+
     current_user_id = session.auth["id"]
     is_admin = users_model.find_user_by_id(current_user_id).is_admin
 
@@ -142,11 +153,8 @@ def post(request, session, user_to_ban):
         user = users_model.find_user(username)
         if not user: raise Exception("User not found.")
         else:
-            csrf_token = token_hex(16)
-            session.auth["user"] = user.id
-            session.auth["csrf_token"] = csrf_token
-            htmx_headers = json.dumps({"x-csrf-token": csrf_token})
-            return Home(hx_headers=htmx_headers)
+            user.disable()
+            return "User banned"
 ```
 
 ### Testing
@@ -174,6 +182,7 @@ have that header. You will want to extract the set header from the HTML document
 send that. We can do that with [lxml](https://lxml.de).
 
 ```python
+import json
 from starlette.testclient import TestClient
 import lxml
 
@@ -191,7 +200,7 @@ def test_csrf_token():
     ts = TestClient()
     ts = mock_admin_auth(ts)
     hx_hdr = extract_hx_hdr(ts.response)
-    
+
     ts.post("/ban-user",
         {"username": "other_user"},
         headers=hx_hdr
@@ -205,3 +214,89 @@ It's worth pointing out that there are other ways to handle CSRF tokens, but
 this is one I have found to work. Most other web frameworks do this for you,
 I think there is a case for FastHTML to do it for you too, but until that happens,
 you need to roll it yourself.
+
+### Postscript
+
+#### Where to put CSRF protection
+
+Usual practice is to apply CSRF protection on routes which alter the state of
+the website, mainly `POST`, `PUT`, `PATCH`, and `DELETE` operations.
+
+However, consider the following: CSRF affects `GET` requests too. The page can't
+see the output because of the [Same Origin
+Policy](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Same-origin_policy),
+but the action has still taken place.
+
+Suppose you have something on your web service that locks up the rest of the
+service, like a dashboard or something that makes a really big `SELECT` against
+a database. If an attacker requests that resource by putting it in an
+`<img>` tag on his site, that request is still made, tying up the web
+service for every other user.
+
+#### Other mitigations
+
+There are other ways of protecting against CSRF attacks. One is the
+`Sec-Fetch-Site` header. Setting it to `same-site`, which can't be set via
+JavaScript.
+
+The thinking is that just checking this header should be sufficient. The
+request can't be tinkered with by an attacking site through JavaScript as
+this header is set by the browser.
+
+The standard was formalised and all browsers after 2023 should
+use it.
+
+In theory at least, all you would need to do check for `sec-fetch-site`
+in your request headers.
+
+```python
+def same_origin(request):
+    return 'Sec-Fetch-Site' in request.headers \
+        and request.headers['Sec-Fetch-Site'] == "same-origin"
+
+@route("/ban-user")
+def post(request, session, user_to_ban):
+    if not same_origin(request): raise Exception("Unauthorised")
+
+    current_user_id = session.auth["id"]
+    is_admin = users_model.find_user_by_id(current_user_id).is_admin
+
+    if not is_admin: raise Exception("Unauthorised.")
+    else:
+        user = users_model.find_user(username)
+        if not user: raise Exception("User not found.")
+        else:
+            user.disable()
+            return "User banned"
+```
+
+If you're very flash, you could implement this as a decorator.
+
+```python
+def same_origin(request):
+    return 'Sec-Fetch-Site' in request.headers \
+        and request.headers['Sec-Fetch-Site'] == "same-origin"
+
+def require_same_origin(func):
+    @wraps(func)
+    async def wrapper(request, session, *args, **kwargs):
+        if not same_origin(request):
+            raise HTTPException(status_code=403)
+        return await func(request, session, *args, **kwargs)
+    return wrapper
+
+@require_same_origin
+@route("/ban-user")
+def post(request, session, user_to_ban):
+    current_user_id = session.auth["id"]
+    is_admin = users_model.find_user_by_id(current_user_id).is_admin
+    if not is_admin: raise Exception("Unauthorised.")
+    else:
+        user = users_model.find_user(username)
+        if not user: raise Exception("User not found.")
+        else:
+            user.disable()
+            return "User banned"
+```
+
+If backwards compatability isn't a large concern this could be the way to go.
