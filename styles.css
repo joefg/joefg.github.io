@@ -1,6 +1,6 @@
 @import "css/simple.css";
 @import "css/simple-plus.css";
-@import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/base16/gruvbox-light-soft.min.css";
+@import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/base16/gruvbox-dark-soft.min.css";
 
 :root {
 	--sans-font: sans-serif;
@@ -16,7 +16,6 @@
 	--border: light-dark(#7c6f64, #a89984);
 	--text: light-dark(#3c3836, #ebdbb2);
 	--text-light: light-dark(#7c6f74, #a89984);
-	--code: light-dark(#504945, #d5c4a1);
 	--preformatted: light-dark(#7c6f74, #a89984);
 	--marked: light-dark(#928374, #928374));
 	--disabled: light-dark(#7c6f64, #efefef);
