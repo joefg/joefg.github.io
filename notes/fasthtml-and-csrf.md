@@ -171,8 +171,7 @@ def mock_admin_auth(client: TestClient):
     return client
 
 def test_csrf_token():
-    ts = TestClient()
-    ts = mock_admin_auth(ts)
+    ts = mock_admin_auth(TestClient())
     ts.post("/ban-user", {"username": "other_user"})
     assert ts.status == 200
 ```
@@ -189,7 +188,7 @@ import lxml
 def extract_hx_hdr(html: str):
     html_tag = lx.fromstring(html).xpath('/html')[0]
     assert 'hx-headers' in html_tag.attrib
-    hx_hdr = html_tag.xpath('/html')[0].attrib['hx-headers']
+    hx_hdr = html_tag.attrib['hx-headers']
     return json.loads(hx_hdr)
 
 def mock_admin_auth(client: TestClient):
@@ -197,10 +196,8 @@ def mock_admin_auth(client: TestClient):
     return client
 
 def test_csrf_token():
-    ts = TestClient()
-    ts = mock_admin_auth(ts)
+    ts = mock_admin_auth(TestClient())
     hx_hdr = extract_hx_hdr(ts.response)
-
     ts.post("/ban-user",
         {"username": "other_user"},
         headers=hx_hdr
@@ -231,7 +228,7 @@ Suppose you have something on your web service that locks up the rest of the
 service, like a dashboard or something that makes a really big `SELECT` against
 a database. If an attacker requests that resource by putting it in an
 `<img>` tag on his site, that request is still made, tying up the web
-service for every other user.
+service for every other user. Maybe this is the role of making pages efficient.
 
 #### Other mitigations
 
@@ -268,6 +265,21 @@ def post(request, session, user_to_ban):
         else:
             user.disable()
             return "User banned"
+```
+
+You could put it in
+[Beforeware](https://www.fastht.ml/docs/tutorials/quickstart_for_web_devs.html#authentication-and-authorization).
+
+```python
+def same_origin(request, session):
+    is_same_origin = "Sec-Fetch-Site" in request.headers \
+        and (request.header["Sec-Fetch_Site"] == "same-origin")
+    if not is_same_origin: return "Access denied"
+
+origin_beforeware = Beforeware(
+    same_origin,
+    skip=[r'/favicon\.ico', r'/static/.*', r'.*\.css', '/login', '/send_login']
+)
 ```
 
 If you're very flash, you could implement this as a decorator.
