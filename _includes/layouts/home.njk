@@ -4,3 +4,8 @@ bodyClass: body-home
 ---
 
 {{ content | safe }}
+
+<h2>Notes</h2>
+
+{% set postslist = search.pages("type=posts", "date=desc") %}
+{% include "templates/postslist.njk" %}
