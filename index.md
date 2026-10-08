@@ -6,8 +6,6 @@ menu:
   order: 0
 ---
 
-## Summary
-
 Currently: AgriTech researcher, focus on GIS and computer vision.
 
 Previously: Textiles merchant, farmer, GIS developer for decarobonisation
