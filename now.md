@@ -11,7 +11,6 @@ menu:
 #map {
     height: 400px;
 };
-
 .maplibregl-popup {
     max-width: 400px;
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -26,7 +25,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 01/09/26
+**LAST UPDATE:** 15/10/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -67,3 +66,13 @@ who can recite the Litany Against Fear.
 > And when it has gone past I will turn the inner eye to see its path.
 > 
 > Where the fear has gone there will be nothing. Only I will remain.
+
+### Yapbox
+
+As an experiment, I am adding a comment box to this site. It's hosted on
+[comments.app](https://comments.app), which is in turn supported by
+[Telegram](https://telegram.org).
+
+Keep it clean please! All comments moderated.
+
+<script async src="https://comments.app/js/widget.js?3" data-comments-app-website="sOgTw5hu" data-limit="10" data-height="300" data-color="FFFFFF" data-dark="1"></script>
