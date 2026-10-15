@@ -67,12 +67,3 @@ who can recite the Litany Against Fear.
 > 
 > Where the fear has gone there will be nothing. Only I will remain.
 
-### Yapbox
-
-As an experiment, I am adding a comment box to this site. It's hosted on
-[comments.app](https://comments.app), which is in turn supported by
-[Telegram](https://telegram.org).
-
-Keep it clean please! All comments moderated.
-
-<script async src="https://comments.app/js/widget.js?3" data-comments-app-website="sOgTw5hu" data-limit="10" data-height="300" data-color="FFFFFF" data-dark="1"></script>
