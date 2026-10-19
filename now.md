@@ -25,7 +25,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 15/10/26
+**LAST UPDATE:** 19/10/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -36,10 +36,14 @@ A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 Writing the dissertation for my Master's degree.
 If you see me around the University of Essex, feel free to say hi!
 
+Finally got round to updating my [Git
+Book](https://git-for-graduates.pages.dev/), and I'm toying with an
+initial print run, contingent on demand.
+
 ### Going
 
-I tend to travel on my motorcycle at weekends. Now that summer's nearly over,
-I'm probably going to be using tin-top more often.
+It's getting colder, so the motorcycle gets less use. If you're loitering
+near Ely Market on weekends you may well see me.
 
 ### Using
 
