@@ -25,13 +25,15 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 19/10/26
+**LAST UPDATE:** 24/10/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
 </section>
 
 ### Doing
+
+![Whiteboard](/img/whiteboard-oct-26.webp)
 
 Writing the dissertation for my Master's degree.
 If you see me around the University of Essex, feel free to say hi!
@@ -70,4 +72,3 @@ who can recite the Litany Against Fear.
 > And when it has gone past I will turn the inner eye to see its path.
 > 
 > Where the fear has gone there will be nothing. Only I will remain.
-
