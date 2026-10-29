@@ -8,20 +8,6 @@ Requires [Deno](https://deno.com). Make sure that is installed.
 A justfile is provided for your convenience. Run `just` to see
 what it can do.
 
-```
-Available recipes:
-    clean             # Removes artefacts
-    lint              # Checks codebase
-    build             # Builds site
-    serve             # Serves site
-
-    [container]
-    container         # Builds container
-    remove-container  # Removes container
-    run-container cmd # Runs container
-    stop-container    # Stops container
-```
-
 ## Deploy
 
 This site is currently hosted on [GitHub
