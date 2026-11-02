@@ -10,7 +10,7 @@ menu:
 
 <section class="notice">
 
-**Last update: 15/09/26**
+**Last update: 02/11/26**
 
 This is a [colophon](https://en.wikipedia.org/wiki/Colophon_(publishing)),
 which describes aspects of this website, including its preparation,
@@ -22,6 +22,8 @@ its authorship, and its present status.
 
 All content on this blog is authored by me and me alone.
 
+Contact details available [here](/contact).
+
 ### Content
 
 There are no external contributions and I will not be accepting any. I
@@ -31,7 +33,7 @@ other SEO dark patterns.
 
 The contents of this site remain copyright of the author and must not be
 reproduced elsewhere, including in use for training any form of
-AI without explicit written consent.
+AI.
 
 ### Technology
 
@@ -49,7 +51,6 @@ never will be.
 This website [uses less than 0.01g of CO2 per
 visit](https://www.websitecarbon.com/website/jfg-name/).
 
-<div id="wcb" class="carbonbadge">
-</div>
+<div id="wcb" class="carbonbadge"></div>
 <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer>
 </script>
