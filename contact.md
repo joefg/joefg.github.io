@@ -8,15 +8,15 @@ menu:
 
 ## Contact
 
+E-Mail is my preferred method of contact for website and other enquiries.
+
 <div align="center">
     <button style="display: none" id="copy-on-click">
     Click to copy my E-Mail address to your clipboard</button>
 </div>
 
-Make sure there's a subject line. Preference goes to people who I know in
-person.
-
-**I don't respond to spam and turn-around time is measured in days or weeks.**
+Make sure there's a subject line.
+**Please note that turn-around time is measured in days or weeks.**
 
 <script>
 const copyTextToClipboard = (element, text) => {
@@ -37,7 +37,16 @@ copyOnClick.onclick = () => {
 };
 </script>
 
-For the benefit of identify verification, this is [my 𝕏](https://x.com/joefg_).
-I don't use it very often as I find the platform to be ill-suited for discussion.
+### Other platforms
 
-I have a LinkedIn, but that is only for people who I know in person.
+For the benefit of identify verification, this is [my 𝕏](https://x.com/joefg_).
+It's currently inactive as the algorithm is pretty much unusable and serious
+people stopped using it a good while ago.
+
+I have a [LinkedIn](https://linkedin.com/joseph-fg), but that is only for people
+who I know in person. I almost never use it either, because the serious
+discussion is elsewhere.
+
+The real good stuff is in
+[groupchats](https://sriramk.com/group-chats-rule-the-world). If we're mutuals,
+say hi!
