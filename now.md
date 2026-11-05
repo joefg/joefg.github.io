@@ -7,25 +7,11 @@ menu:
   order: 2
 ---
 
-<style>
-#map {
-    height: 400px;
-};
-.maplibregl-popup {
-    max-width: 400px;
-    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-}
-</style>
-
-<script src="https://unpkg.com/maplibre-gl@^5.1.0/dist/maplibre-gl.js"></script>
-<link href="https://unpkg.com/maplibre-gl@^5.1.0/dist/maplibre-gl.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
-
 ## Now
 
 <section class="notice">
 
-**LAST UPDATE:** 24/10/26
+**LAST UPDATE:** 05/11/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -45,12 +31,15 @@ initial print run, contingent on demand.
 ### Going
 
 It's getting colder, so the motorcycle gets less use. If you're loitering
-near Ely Market on weekends you may well see me.
+near Ely Market on weekends you may well see me with my Labrador. His
+name is Rufus. He's very friendly.
 
 ### Using
 
-I'm giving [Omarchy](https://omarchy.org) a whirl. I inherited an Intel
-MacBook Air and it seems to work quite well on that hardware.
+I find [RustGIS](https://rustgis.app/) a far more tempting proposition
+for GIS work than [QGIS](https://www.qgis.org/) these days. I know it's not
+a [strict comparison](https://rustgis.app/comparison/qgis/) but I find it to
+be substantially lighter in operation.
 
 ### Reading
 
