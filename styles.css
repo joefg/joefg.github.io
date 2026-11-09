@@ -19,7 +19,7 @@
 	--preformatted: light-dark(#7c6f74, #a89984);
 	--marked: light-dark(#928374, #928374));
 	--disabled: light-dark(#7c6f64, #efefef);
-	--page-width: 50rem;
+	--page-width: 60rem;
 
 	body {
 		grid-template-columns: 1fr min(var(--page-width), 90%) 1fr;
