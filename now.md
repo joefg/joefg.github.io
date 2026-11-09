@@ -11,7 +11,7 @@ menu:
 
 <section class="notice">
 
-**LAST UPDATE:** 05/11/26
+**LAST UPDATE:** 09/11/26
 
 A [nowpage](https://nownownow.com/about) is like a dotplan, but for the web.
 
@@ -41,23 +41,5 @@ for GIS work than [QGIS](https://www.qgis.org/) these days. I know it's not
 a [strict comparison](https://rustgis.app/comparison/qgis/) but I find it to
 be substantially lighter in operation.
 
-### Reading
-
-I like re-reading the *Dune* series. *Dune* is to the American
-literary canon is what *The Lord of the Rings* is to the English canon.
-If you enjoyed the latter you'll enjoy the former. I can always respect someone
-who can recite the Litany Against Fear.
-
-> I must not fear.
-> 
-> Fear is the mind-killer.
-> 
-> Fear is the little-death that brings total obliteration.
-> 
-> I will face my fear.
-> 
-> I will permit it to pass over me and through me.
-> 
-> And when it has gone past I will turn the inner eye to see its path.
-> 
-> Where the fear has gone there will be nothing. Only I will remain.
+For system monitoring I decided to get rid of Prometheus and Grafana
+in favour of [Beszel](https://github.com/henrygd/beszel). It's much lighter.
